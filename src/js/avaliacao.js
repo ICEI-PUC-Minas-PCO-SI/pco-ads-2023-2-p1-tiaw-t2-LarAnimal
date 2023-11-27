@@ -38,3 +38,12 @@ submitBtn.addEventListener('click', () => {
         alert('Por favor, preencha todos os campos: avaliação, comentário e nome do usuário.');
     }
 });
+
+
+
+
+
+
+
+
+
