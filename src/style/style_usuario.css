@@ -92,6 +92,19 @@ header {
 
 } 
 
+.botao-maps {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: #4285f4;
+}
+
+.botao-maps img {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}
+
 @media screen and (min-width: 320px) and (max-width: 945px) {
 
     .carrousel,
