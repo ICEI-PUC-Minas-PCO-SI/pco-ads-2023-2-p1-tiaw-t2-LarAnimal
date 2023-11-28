@@ -161,6 +161,10 @@ footer {
     margin-bottom: 13px; 
 }
 
+.servicos{
+    margin: 0 auto;
+}
+
 @media screen and (min-width: 320px) and (max-width: 945px) {
 
     .carrousel,
