@@ -29,6 +29,21 @@
       "telefone": "9775151",
       "tipo": "PF",
       "id": 2
+    },
+    {
+      "nome": "jefferson santos",
+      "email": "jeffsantosc@gmail.com",
+      "senha": "123456",
+      "documento": "123456",
+      "cep": "32668038",
+      "estado": "MG",
+      "cidade": "Betim",
+      "bairro": "Petrovale",
+      "logradouro": "Rua Cuba",
+      "numero": "dsad",
+      "telefone": "dsadsadsa",
+      "tipo": "PF",
+      "id": 3
     }
   ]
 }
