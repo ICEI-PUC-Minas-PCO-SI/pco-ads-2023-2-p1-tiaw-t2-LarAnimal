@@ -4,8 +4,12 @@ function salvarNovoPet() {
     var especie = document.getElementById("petEspecie").value;
     var idade = document.getElementById("petIdade").value;
     var descricao = document.getElementById("petDescricao").value;
-    var imagemInput = document.getElementById("petImagem");
-    var imagemUrl = URL.createObjectURL(imagemInput.files[0]); // Obter URL da imagem carregada
+    var imagemPet = document.getElementById("petImagem");
+    var imagemPetUrl = URL.createObjectURL(imagemPet.files[0]); // Obter URL da imagem carregada
+    var emailDono = document.getElementById("donoEmail").value;
+    var telefoneDono = document.getElementById("donoTelefone").value;
+    var imagemDono = document.getElementById("donoImagem");
+    var imagemDonoUrl = URL.createObjectURL(imagemDono.files[0]); // Obter URL da imagem carregada
 
     var newCard = document.createElement("div");
     newCard.className = "col";
@@ -13,7 +17,7 @@ function salvarNovoPet() {
         <div class="card">
             <div class="card-body text-center" style="background-color: #F2AA52;">
                 <a href="#" data-bs-toggle="modal" data-bs-target="#modalPet${nome}">
-                    <img src="${imagemUrl}" class="img-thumbnail" style="width: 100%;">
+                    <img src="${imagemPetUrl}" class="img-thumbnail" style="width: 100%; min-height: 200px;">
                 </a>
                 <h5 class="card-title">${nome}</h5>
                 <p class="card-text">${descricao}</p>
@@ -25,6 +29,7 @@ function salvarNovoPet() {
 
     document.querySelector(".row").appendChild(newCard);
 
+    //Novo DIV Modal
     var modalPet = document.createElement("div");
     modalPet.className = "modal fade mx-auto";
     modalPet.id = `modalPet${nome}`;
@@ -39,20 +44,69 @@ function salvarNovoPet() {
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p><strong style="color: #55038C;">Nome:</strong> ${nome}</p>
+                    <p style=" text-align: center; "><strong style="color: #55038C;">Nome:</strong> ${nome}</p>
                     <div class="d-flex justify-content-center">
-                        <img src="${imagemUrl}" class="img-thumbnail" style="width: 70%;">
+                        <img src="${imagemPetUrl}" class="img-thumbnail" style="width: 60%; height: 60%;">
                     </div>
                     <p><strong style="color: #55038C;">Espécie:</strong> ${especie}</p>
                     <p><strong style="color: #55038C;">Idade:</strong> ${idade}</p>
                     <p><strong style="color: #55038C;">Descrição:</strong> ${descricao}</p>
                 </div>
                 <div class="modal-footer" style="background-color: #F2AA52;">
-                    <a href="adocao_detalhes_pet.html" class="btn btn-success mx-auto">Mais Detalhes</a>
+
+                    <button type="button" class="btn mx-auto"  style="background-color: #55038C; color: white; data-bs-toggle="modal" data-bs-target="#DonoModal"">
+                        Quero adotar!
+                    </button>
+                    
                 </div>
             </div>
         </div>
     `;
-    document.body.appendChild(modalPet);
-    imagemInput.value = "";
+
+    /*
+     //Novo DIV Modal pro dono
+     var modalPet = document.createElement("div");
+     modalPet.className = "modal fade mx-auto";
+     modalPet.id = `modalPet${nome}`;
+     modalPet.tabIndex = -1;
+     modalPet.setAttribute("aria-labelledby", `modalPet${nome}Label`);
+     modalPet.setAttribute("aria-hidden", "true");
+     modalPet.innerHTML = `
+         <div class="modal-dialog">
+             <div class="modal-content">
+                 <div class="modal-header" style="background-color: #F2AA52;">
+                     <h5 class="modal-title" id="modalDono${emailDono}Label">Detalhes do Dono</h5>
+                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                 </div>
+                 <div class="modal-body">
+                     <p style=" text-align: center; "><strong style="color: #55038C;">Nome:</strong> ${nome}</p>
+                     <div class="d-flex justify-content-center">
+                         <img src="${imagemPetUrl}" class="img-thumbnail" style="width: 60%; height: 60%;">
+                     </div>
+                     <p><strong style="color: #55038C;">Espécie:</strong> ${especie}</p>
+                     <p><strong style="color: #55038C;">Idade:</strong> ${idade}</p>
+                     <p><strong style="color: #55038C;">Descrição:</strong> ${descricao}</p>
+                 </div>
+                 <div class="modal-footer" style="background-color: #F2AA52;">
+ 
+                     <button type="button" class="btn mx-auto" data-bs-dismiss="modalDono" style="background-color: #55038C; color: white;">
+                        Voltar
+                     </button>
+                     
+                 </div>
+             </div>
+         </div>
+     `;
+*/
+     
+    document.body.appendChild(modalPet);;
+
+
+
+    document.getElementById("petNome").value = "";
+    document.getElementById("petEspecie").value = "";
+    document.getElementById("petIdade").value = "";
+    document.getElementById("petDescricao").value = "";
+    imagemPet.value = "";
 }
+
