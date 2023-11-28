@@ -4,7 +4,8 @@ $(document).ready(function () {
         const documento = $('input[name="documento"]').val();
         const senha = $('input[name="password"]').val();
         const url = `${baseUrl}?documento=${documento}&senha=${senha}`;
-
+        const baseUrl = "http://localhost:3333/usuario";
+        
         $.ajax({
             type: "GET",
             url: url,

@@ -1,4 +1,19 @@
 {
   "usuario": [
+    {
+      "nome": "jefferson santos",
+      "email": "jeffsantosc@gmail.com",
+      "senha": "123456",
+      "documento": "71321535115",
+      "cep": "32668038",
+      "estado": "MG",
+      "cidade": "Betim",
+      "bairro": "Petrovale",
+      "logradouro": "Rua Cuba",
+      "numero": "319",
+      "telefone": "51351",
+      "tipo": "PF",
+      "id": 1
+    }
   ]
 }
