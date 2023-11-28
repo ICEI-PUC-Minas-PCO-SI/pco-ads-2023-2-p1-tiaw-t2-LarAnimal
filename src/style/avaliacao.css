@@ -89,12 +89,41 @@ button {
 
 }
 
-/* #comment{
-    
-} */
-
 input[type=text]:hover,
 textarea:hover {
     border: 1px solid rgba(242, 170, 82);
 }
 
+#botao-avaliacao { 
+
+    background-color: #55038C; 
+
+    border: 1px solid #ffffff;  
+
+    color: #ffffff;  
+
+    padding: 10px 25px; 
+
+    text-align: center; 
+
+    display: inline-block; 
+
+    margin: 8px 4px;  
+
+    cursor: pointer; 
+
+    text-decoration: none; 
+
+    font-size: 15px; 
+
+} 
+
+ 
+ 
+ 
+
+#botao-avaliacao:hover { 
+
+    background-color: #d8a76c; 
+
+} 
