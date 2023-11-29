@@ -35,21 +35,26 @@ function initMap() {
     });
   }
 
+  
+
   var places = [
     {
       position: { lat: -19.9337286, lng: -44.0691473 },
       title: 'Clinica',
-      content: 'Climev - Veterinário 24h - Clínica Veterinária'
+      content: 'Climev - Veterinário 24h - Clínica Veterinária',
+      type: 'clinica' // Adicione um identificador de tipo para clínicas veterinárias
     },
     {
       position: { lat: -19.935337, lng: -44.0534132 },
       title: 'Clínica',
-      content: 'Clínica Veterinária Terra dos Bichos'
+      content: 'Clínica Veterinária Terra dos Bichos',
+      type: 'clinica'
     },
     {
       position: { lat: -19.9660055, lng: -44.0617235 },
       title: 'Clínica',
-      content: 'Hospital Veterinário Pet Cente'
+      content: 'Hospital Veterinário Pet Cente',
+      type: 'hospital' // Identificador para hospitais veterinários
     }
     // Adicione mais lugares conforme necessário
   ];
