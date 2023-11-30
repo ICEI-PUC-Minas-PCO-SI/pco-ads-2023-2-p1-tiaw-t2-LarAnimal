@@ -27,8 +27,19 @@ As tabelas que se seguem apresentam os requisitos funcionais e não-funcionais q
 
 |ID    | Descrição do Requisito | Prioridade | Artefato Criado |
 |------|------------------------|------------|-----------------|
-|RF-001| O sistema deve exibir as notícias mais populares. | ALTA | index.html |
-|RF-002| Usuários autenticados podem registrar novas notícias. | ALTA | cadastro-noticia.html |
+|RF-001| Usuários comuns não cadastrados podem criar seus perfis. | ALTA | cadastroPF.html e PF_PJ.html|
+|RF-002| Clínicas veterinárias e Ongs não cadastradas podem criar seus perfis. | ALTA | cadastroPJ.html e PF_PJ.html |
+|RF-003| Usuários logados podem acessar e visualizar modulo de doações e adoção de pets. | ALTA | adoca.html e adocao_detalhes.html / doacoes.html |
+|RF-004| Usuários logados podem ver o mapa interativo e visualizar parceiros e serviços por perto. | ALTA | usuario.html / perfil_instituicao.html |
+|RF-005| Usuários podem pesquisar por parceiros ou serviços. | ALTA |  |
+|RF-006| Usuários logados podem avaliar os parceiros e a aplicação. | ALTA | avaliacao.html |
+|RF-007| Usuários logaos podem entrar em contato com os parceiros para suporte. | ALTA | contato.html |
+|RF-008| Usuários podem visualizar parceiros pela região. | ALTA | usuario.html / perfil_instituicao.html |
+|RF-009| Usuários logados podem agendar consultas ou serviços com parceiros disponíveis. | ALTA | agendamentos.html |
+|RF-010| Usuários logados podem participar de discussões e criar posts. | ALTA | forum_1.html |
+|RF-011| Usuários podem acessar e visualizar artigos e mídias educacionais. | ALTA | educacional.html e artigo.html |
+|RF-012| Usuários podem visualizar conteúdo básico sobre a natureza da aplicação. | ALTA | home.html |
+
 
 ## Descrição das estruturas:
 

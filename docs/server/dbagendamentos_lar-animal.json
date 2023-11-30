@@ -1,0 +1,10 @@
+{
+    "agendamentos" : [
+        {
+            "clinicName": "",
+            "clinicAdress": "",
+            "appointmentDate": "",
+            "appointmentTime": ""
+        }
+    ]
+}

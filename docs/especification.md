@@ -91,17 +91,18 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade | Responsável |
 |------|-----------------------------------------|----| ----|
-|RF-001| Registro De Usuário | ALTA | Jefferson |
-|RF-002| Perfil De Usuário Comum ou Administrador   | ALTA | Jefferson |
-|RF-003| Modulo de doações | ALTA | Kauan |
-|RF-004| Gerenciamento de parceiros   | MÉDIA | Elder|
-|RF-005| Busca de serviços e detalhes | ALTA | Kauan |
-|RF-006| Avaliações e Comentários dos Serviços | BAIXA | Manuela |
-|RF-007| Suporte ao usuário   | MÉDIA | Manuela |
-|RF-008| Mapeamento de lojistas | BAIXA | Itallo |
-|RF-009| Agendamentos online   | MÉDIA | Elder |
-|RF-010| Fóruns de discussão | BAIXA | Rhillary |
-|RF-011| Aba educacional com suporte em texto e vídeo   | BAIXA | Rhillary |
+|RF-001| A aplicação deverá permitir a criação de perfil de usuário comum | ALTA | Jefferson |
+|RF-002| A aplicação deverá permitir a criação de perfil de usuári para clínicas veterinárias e ONGs   | ALTA | Jefferson |
+|RF-003| A aplicação deverá conter um moódulo de doações/adoção de pets| ALTA | Kauan |
+|RF-004| A aplicação deverá permitir que o usuário veja quais são os parceiros cadastrados e quais serviçoes eles oferecem   | MÉDIA | Elder|
+|RF-005| A aplicação deverá permitie que o usuário faça busca de parceiros e/ou serviçs oferecidos | ALTA | Kauan |
+|RF-006| A aplicação deverá permitir que o usuário faça avaliação dos parceiros e da própria aplicação | BAIXA | Manuela |
+|RF-007| A aplicação deverá oferecer suporte ao usuário   | MÉDIA | Manuela |
+|RF-008| A aplicação deverá permitir o mapeamento de parceiros por perto | BAIXA | Itallo |
+|RF-009| A aplicação deverá permitir que o usuário faça agendamentos de serviços em clínicas parceiras   | MÉDIA | Elder |
+|RF-010| A aplicação deverá conter um fórum de discussão para os usuários | BAIXA | Rhillary |
+|RF-011| A aplicação deverá conter uma aba com artigos educacionais com artigos e mídias   | BAIXA | Rhillary |
+|RF-012| A aplicação deverá conter uma página inicial contendo conteúdo básico sobre a natureza da aplicação   | BAIXA | Rhillary |
 
 
 ### Requisitos não Funcionais
@@ -110,15 +111,14 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |-------|-------------------------|----|
 |RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | ALTA | 
 |RNF-002| Deve processar requisições do usuário em no máximo 5s |  MÉDIA |
-|RNF-003| Acessibilidade | MÉDIA | 
-|RNF-004| Segurança de dados |  ALTA | 
-|RNF-005| O sistema deve deve realizar backups regulares | MÉDIA | 
-|RNF-006| Deve permitir que o usuário faça a customização de seu perfil |  BAIXA | 
-|RNF-007| O sistema deve permitir que usuarios possam compartilhar informações nas redes sociais | BAIXA | 
-|RNF-008| Deve permitir que usuario escolha sua localização |  ALTA | 
-|RNF-009| O sistema deve ter suporte a incrementos | ALTA | 
-|RNF-010| O sistema deve ter robustez | MÉDIA | 
-|RNF-011| O sistema deve ter a possibilidade de trabalhar integradamente a outro sistema |  ALTA | 
+|RNF-003| O sistema deve ser acessível | MÉDIA | 
+|RNF-004| Deve ter segurança de dados |  ALTA | 
+|RNF-005| Deve permitir que o usuário faça a alteração/edição do seu perfil |  BAIXA | 
+|RNF-006| O sistema deve permitir que usuarios possam compartilhar informações nas redes sociais | BAIXA | 
+|RNF-007| Deve permitir que usuario escolha sua localização |  ALTA | 
+|RNF-008| O sistema deve ter suporte a incrementos | ALTA | 
+|RNF-009| O sistema deve ter robustez | MÉDIA | 
+|RNF-010| O sistema deve ter a possibilidade de trabalhar integradamente a outro sistema |  ALTA | 
 
 
 
@@ -131,6 +131,8 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 |--|-------------------------------------------------------|
 |01| O projeto deverá ser entregue até o final do semestre |
 |02| Não pode ser desenvolvido um módulo de backend        |
+|03| O projeto não pode ser desenvolvido por uma empresa profissional        |
+
 
 
 

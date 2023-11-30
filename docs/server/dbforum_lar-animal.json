@@ -1,0 +1,39 @@
+{
+  
+    "novo-post":[
+      {
+        "post-content": ""
+  
+      }
+  
+    ],
+  
+    "threads": [
+      {
+        "post-title": "Qual a melhor alternativa: adotar ou comprar um pet?",
+        "posts": [
+          {
+            "comment-content": "Adotar! É muito melhor adotar um pet pois assim você vai dar a um animalzinho abandonado um lar e  também não colabora com criadouros ilegais"
+          },
+          {
+            "comment-content": "Acho que depende, se você quiser um animal específico pode ser muito difícil encontrar um para adoção então comprar seria melhor."
+          }
+        ]
+      },
+  
+      {
+        "post-title": "Gatos domesticos deveriam ter acesso fácil as ruas?",
+        "posts": [
+          {
+            "comment-content": "Não! Gatos domesticos, como o próprio nome já diz devem ficar em casa para se manterem saudáveis e seguros"
+          },
+          {
+            "comment-content": "Gatos são caçadores e sobreviiventes natos eles podem se manter seguros pois são muito independentes!"
+          }
+        ]
+      }
+      
+    ]
+  }
+  
+  
