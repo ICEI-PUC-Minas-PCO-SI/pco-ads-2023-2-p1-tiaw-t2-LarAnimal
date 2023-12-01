@@ -4,6 +4,7 @@ body {
     font-size: 1rem;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     width: 100%;
+
 }
 
 ul {
@@ -14,7 +15,10 @@ ul {
 
 a {
     text-decoration: none;
+    
 }
+
+
 
 #cabecalho {
     background-color: black;
@@ -95,11 +99,63 @@ a {
 }
 
 .carrousel img {
-    max-width: 1200px;
+    max-width: 97%;
     margin: 23px auto;
     border: 1px solid #F2AA52;
     border-radius: 7px;
 }
+
+.button-container {
+    display: flex;
+    justify-content: space-around;
+    
+  }
+
+ 
+  .button {
+    background-color: #55038C;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 47%;
+    
+  }
+
+ 
+
+
+.about {
+    
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(242, 170, 82, 0.3);
+    padding: 20px;
+    margin: 20px;
+    
+    
+  }
+  
+  .card-title {
+    color: #55038C;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+
+  .about h5{
+    text-align: center;
+    margin-bottom: 10px;
+
+  }
+  
+  .about p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+  }
+  
 
 
 .card {
