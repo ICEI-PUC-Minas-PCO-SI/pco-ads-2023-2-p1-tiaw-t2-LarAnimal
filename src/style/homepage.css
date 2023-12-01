@@ -108,28 +108,38 @@ a {
 .button-container {
     display: flex;
     justify-content: space-around;
-    
   }
 
- 
   .button {
-    background-color: #55038C;
-    color: #fff;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+  }
+
+  .adopt-button {
+    background-color: #55038C;
+    color: white;
+    border: 2px solid #55038C;
     width: 47%;
     
   }
 
- 
+  .register-button {
+    background-color: #fff;
+    color: #55038C;
+    border: 2px solid #55038C;
+    width: 47%;
+  }
+
+
+
 
 
 .about {
     
-    border: 1px solid #ddd;
+    border: 1px solid white;
     border-radius: 12px;
     box-shadow: 0 4px 16px rgba(242, 170, 82, 0.3);
     padding: 20px;
