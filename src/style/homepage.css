@@ -95,8 +95,10 @@ a {
 }
 
 .carrousel img {
-    width: 100%;
+    max-width: 1200px;
+    margin: 23px auto;
     border: 1px solid #F2AA52;
+    border-radius: 7px;
 }
 
 
