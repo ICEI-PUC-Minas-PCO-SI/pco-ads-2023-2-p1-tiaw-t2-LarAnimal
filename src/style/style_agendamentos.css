@@ -165,7 +165,9 @@ nav {
 
  
  
- 
+ footer{
+    display: flex;
+ }
 
 #botao-avaliacao:hover { 
 
