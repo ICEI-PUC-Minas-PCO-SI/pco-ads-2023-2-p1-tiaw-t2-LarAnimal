@@ -5,10 +5,15 @@ function salvarNovoPet() {
     var idade = document.getElementById("petIdade").value;
     var descricao = document.getElementById("petDescricao").value;
     var imagemPet = document.getElementById("petImagem");
-    var imagemPetUrl = URL.createObjectURL(imagemPet.files[0]); // Obter URL da imagem carregada
+    var imagemPetUrl = URL.createObjectURL(imagemPet.files[0]);
     var emailDono = document.getElementById("donoEmail").value;
     var telefoneDono = document.getElementById("donoTelefone").value;
-   
+    document.getElementById("modalDonoEmail").innerText = emailDono;
+    document.getElementById("modalDonoTelefone").innerText = telefoneDono;
+    if (!nome || !especie || !idade || !descricao || !imagemPet.files[0] || !emailDono || !telefoneDono) {
+        alert("Por favor, preencha todos os campos antes de salvar o novo pet.");
+        return;
+    }
 
     var newCard = document.createElement("div");
     newCard.className = "col";
@@ -35,7 +40,7 @@ function salvarNovoPet() {
     modalPet.tabIndex = -1;
     modalPet.setAttribute("aria-labelledby", `modalPet${nome}Label`);
     modalPet.setAttribute("aria-hidden", "true");
-    modalPet.setAttribute("data-bs-backdrop", "false"); // Add this line
+    modalPet.setAttribute("data-bs-backdrop", "false");
     modalPet.innerHTML = `
         <div class="modal-dialog">
             <div class="modal-content">
@@ -48,7 +53,7 @@ function salvarNovoPet() {
                     <div class="d-flex justify-content-center">
                         <img src="${imagemPetUrl}" class="img-thumbnail" style="width: 60%; height: 60%;">
                     </div>
-                    <p><strong style="color: #55038C;">Espécie:</strong> ${especie}</p>
+                    <p><strong style="color: #55038C;">Espécie/Raça:</strong> ${especie}</p>
                     <p><strong style="color: #55038C;">Idade:</strong> ${idade}</p>
                     <p><strong style="color: #55038C;">Descrição:</strong> ${descricao}</p>
                 </div>
@@ -71,6 +76,8 @@ function salvarNovoPet() {
     document.getElementById("petEspecie").value = "";
     document.getElementById("petIdade").value = "";
     document.getElementById("petDescricao").value = "";
+    document.getElementById("donoEmail").value = "";
+    document.getElementById("donoTelefone").value = "";
     imagemPet.value = "";
 }
 
