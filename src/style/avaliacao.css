@@ -1,4 +1,4 @@
-
+/* 
 
 .navbar {
     background-color: #dad6d6; 
@@ -93,6 +93,34 @@ input[type=text]:hover,
 textarea:hover {
     border: 1px solid rgba(242, 170, 82);
 }
+ */
+
+ .navbar {
+    background-color: #dad6d6; 
+    
+}
+.navbar-nav .nav-link {
+    color: black; 
+}
+
+.navbar-nav .nav-link:hover {
+    color: #BC69F0; 
+}
+
+a {
+    color: #000;
+    text-decoration: none; 
+}   
+a:hover {
+    color: #BC69F0;
+}
+.btn-custom {
+    background-color: rgb(131, 134, 237); 
+}
+
+.btn-custom:hover {
+    background-color: rgb(188, 105, 240); /
+}
 
 #botao-avaliacao { 
 
@@ -127,3 +155,88 @@ textarea:hover {
     background-color: #d8a76c; 
 
 } 
+
+.center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.avaliacao {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd; 
+    border-radius: 8px;
+    background-color: #fff; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+}
+
+h1 {
+    color: #333; 
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    color: #555; 
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.rating {
+    margin: 10px 10px;
+}
+
+.star {
+    font-size: 45px;
+    cursor: pointer;
+    color: #ccc;
+    transition: color 0.2s;
+}
+
+
+.star:hover {
+    color: gold;
+}
+
+.rated {
+    color: gold;
+}
+
+#comment {
+    resize: vertical;
+}
+
+button {
+    background-color: #F2AA52; 
+    color: #ffffff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #55038C; 
+}
+
+#comments {
+    margin-top: 20px;
+}
+
+h2 {
+    color: #333; 
+}
+
+
