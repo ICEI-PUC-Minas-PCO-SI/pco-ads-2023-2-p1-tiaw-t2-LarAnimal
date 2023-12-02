@@ -138,9 +138,6 @@ a {
 
 
   .about {
-    /* display: grid;
-    grid-template-columns: "imagem titulo"
-    "imagem texto"; */
     display: flex;
     border: 1px solid white;
     border-radius: 12px;
@@ -186,6 +183,7 @@ a {
     text-align: justify;
     margin: 0 auto;
     border: 1px solid #F2AA52;
+    
 
 }
 
@@ -205,6 +203,7 @@ a {
 .item {
     font-size: 1.3rem;
     color: black;
+    
 }
 
 #botao-avaliacao { 
@@ -241,11 +240,16 @@ a {
 
 } 
 
-
+/* .historia{
+    background-color: rgba(242, 170, 82, 0.8);
+    border-radius: 7px;
+ 
+} */
 
 
 .historia .texto {
-    background-color: rgba(242, 170, 82, 0.1);
+    background-color: rgba(242, 170, 82, 0.4); 
+    /* background-color:  rgba(255, 255, 255, 0.4);  */
     border-radius: 7px;
     margin: 2px;
     max-width: 275px;
@@ -267,12 +271,23 @@ a {
 
 .servicos{
     margin: 0 auto;
+    margin-bottom: 20px;
     
 }
 
 .about{
     text-align: justify;
     
+}
+
+.texto h5{
+    margin-bottom: 5px;
+}
+
+.texto:hover{
+    transform: scale(0.95);
+    transition: opacity 0.3s;
+
 }
 
 
