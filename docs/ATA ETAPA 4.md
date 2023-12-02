@@ -5,7 +5,7 @@
 • **Jefferson**
 Responsável pela responsividade, mudanças da nav bar, footer, criação / modificação das paginas de cadastro e login, criaçao do mapa interativo, implementação de API de cep, finalização das paginas de agendamento,
 
-• **Elder Luis**
+**Itallo Otavio**
 
 
 • **Kauan Maia**
@@ -16,5 +16,5 @@ Responsável por realizar a padronização das Atas, algumas mudanças de estilo
 
 
 • **Rhillary Carvalho**
-
+Responsável por modificações na página do fórum, criação do db json para forum e agendamentos e CRUD (carregar elementos da página, fazer novo post e comentar) para o fórum, auxilio na criação do CRUD para funcionalidade de agendamentos, linkar conteúdos relacionados nas páginas da Aba Educacional e modificações na documentação
 
