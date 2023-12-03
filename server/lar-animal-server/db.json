@@ -62,5 +62,6 @@
     "telefone": "(31) 99222-7777" ,
     "motivo": "Gostaria de contatar sobre como faço para adotar um pet" 
   }
-  ]
+  ],
+  "cors": true
 }
