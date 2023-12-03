@@ -45,5 +45,22 @@
       "tipo": "PF",
       "id": 3
     }
+    
+  ],
+  "contato": [
+  {
+    "id": 1,
+    "nome":"Manuela de Souza "  ,
+    "email": "manueladesouza@gmail.com"  ,
+    "telefone": "(31) 99222-7777" ,
+    "motivo": "Gostaria de contatar sobre como faço para doar" 
+  },
+  {
+    "id": 2,
+    "nome":"Andrea Paula "  ,
+    "email": "andrea@gmail.com"  ,
+    "telefone": "(31) 99222-7777" ,
+    "motivo": "Gostaria de contatar sobre como faço para adotar um pet" 
+  }
   ]
 }

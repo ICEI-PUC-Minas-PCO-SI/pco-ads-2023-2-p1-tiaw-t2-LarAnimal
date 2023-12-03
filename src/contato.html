@@ -9,6 +9,8 @@
     
 </head>
 <body>
+
+    <script src="./js/contato.js"></script>
     <div id="cabecalho">
         <nav class="navbar navbar-expand-md px-4" style="background-color: #F2AA52;" data-bs-theme="dark">
             <div class="container-fluid">
@@ -30,32 +32,30 @@
     </div>
 
     <div id="cartao">
+        <img src="" alt="">
 
-    <div id="contato">
-        <h1>Contate-nos</h1>
-    </div>
+        <form id="formulario-contato">
+            <div class="info">
+                <label for="nome"><strong>Nome completo:</strong></label>
+                <input id="nome" type="text" placeholder="Digite seu nome aqui" >
+                <br>
+                
+                <label for="email"><strong>E-mail:</strong></label>
+                <input id="email" type="text" placeholder="Digite seu e-mail aqui">
+                <br>
+                <label for="telefone"><strong>Telefone:</strong></label>
+                <input id="telefone" type="tel" placeholder="Digite seu telefone aqui no formato (DDD) 9 ####-####">
+                <br>
+                <label for="motivo"><strong>Motivo do Contato:</strong></label>
+                <textarea name="Motivo" id="motivo" cols="100" rows="10"></textarea>
+                <br>
+            </div>
 
-    <div class="info">
-        <label for="nome"><strong>Nome completo:</strong></label>
-        <input id="nome" type="text" placeholder="Digite seu nome aqui" >
-        <br>
-        
-        <label for="email"><strong>E-mail:</strong></label>
-        <input id="email" type="text" placeholder="Digite seu e-mail aqui">
-        <br>
-        <label for="telefone"><strong>Telefone:</strong></label>
-        <input id="telefone" type="tel" placeholder="Digite seu telefone aqui no formato (DDD) 9 ####-####">
-        <br>
-        <label for="motivo"><strong>Motivo do Contato:</strong></label>
-        <textarea name="Motivo" id="motivo" cols="100" rows="10"></textarea>
-        <br>
-        
-    
-        
-
-    </div>
-    <div class="botao">
-        <input type="submit" value="Enviar">
+            <div class="botao">
+              
+                <input type="submit" value="Enviar">
+            </div>
+        </form>
     </div>
 
 
