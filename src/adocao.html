@@ -125,6 +125,18 @@
                     </div>
                 </div>
             </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    var modalToOpen = localStorage.getItem('openModal');
+                    if (modalToOpen) {
+                        var modal = new bootstrap.Modal(document.getElementById(modalToOpen), {
+                            backdrop: 'static'
+                        });
+                        modal.show();
+                        localStorage.removeItem('openModal'); // Remove o item do localStorage após abrir o modal
+                    }
+                });
+            </script>
 
             <!-- Modal do Dono -->
             <div class="modal fade mx-auto" id="DonoModal" tabindex="-1" aria-labelledby="DonoModalLabel"

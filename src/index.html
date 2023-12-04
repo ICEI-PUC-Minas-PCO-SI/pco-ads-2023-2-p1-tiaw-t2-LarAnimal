@@ -20,7 +20,7 @@
 <div id="cabecalho">
     <nav class="navbar navbar-expand-md px-4" style="background-color: #F2AA52;" data-bs-theme="dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html" style="color: #55038C; font-size: 35px; font-weight: 600;">
+            <a class="navbar-brand" href="home.html" style="color: #55038C; font-size: 35px; font-weight: 600;">
                 <img src="./img/logo.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
                 Lar Animal
             </a>
@@ -78,10 +78,22 @@
             });
         </script>
 
-<div class="button-container">
-    <button class="button adopt-button"><a href="./adocao.html" style="color: white;text-decoration: none;">Quero Adotar</a></button>
-    <button class="button register-button"><a href="./adocao.html" style="color: #55038C; text-decoration: none;">Quero Cadastrar um Animal</a></button>
-  </div>
+<div class="button-container" style="text-align: center;">
+    <a href="adocao.html" class="button adopt-button" style="text-decoration: none; display: block; margin-bottom: 10px;">
+        Quero Adotar
+    </a>
+    <a href="./adocao.html" class="button register-button" style="color: #55038C; text-decoration: none; display: block;">
+        Quero Cadastrar um Animal
+    </a>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.querySelector('.register-button').addEventListener('click', function () {
+            localStorage.setItem('openModal', 'novoPetModal');
+        });
+    });
+</script>
+
 
     </body>
     
@@ -92,23 +104,23 @@
                 
             
             
-                <div><iframe width="500" height="320" src="https://www.youtube.com/embed/m-Gtu7C93_Y?controls=0&autoplay=1" frameborder="0";allowfullscreen></iframe></div>
+                <div>
+                    <iframe width="400" height="400" src="https://www.youtube.com/embed/m-Gtu7C93_Y?controls=0&autoplay=1&mute=1" frameborder="0" allowfullscreen></iframe>
+                </div>
                 <div>
                     <h5 class="card-title" style="color: #55038C;"><br><strong>QUEM SOMOS?</strong> </h5>
-            
-                <p>
-                    Nosso projeto LAR ANIMAL tem como objetivo criar uma aplicação web onde ONGs e grupos
-                    protetores possam se cadastrar para servirem como ponto de resgate para animais e
-                    tutores em situação de vulnerablidade e onde possíveis tutores possam entrar para dar um
-                    novo lar a esses animais. 
-                    Além de criar uma ponte de ajuda mútua entre ONGs, grupos
-                    solidários e voluntários que queiram auxiliar tanto animais quanto tutores carentes,
-                    disponibilizando desde informações sobre como fazer a abordagem certa a animais
-                    abandonados para resgate até locais que oferecem atendimento veterinário gratuito e/ou a
-                    preço social.
-                </p>
-
-            </div>
+                    <p>
+                        Nosso projeto LAR ANIMAL tem como objetivo criar uma aplicação web onde ONGs e grupos
+                        protetores possam se cadastrar para servirem como ponto de resgate para animais e
+                        tutores em situação de vulnerabilidade e onde possíveis tutores possam entrar para dar um
+                        novo lar a esses animais. 
+                        Além de criar uma ponte de ajuda mútua entre ONGs, grupos
+                        solidários e voluntários que queiram auxiliar tanto animais quanto tutores carentes,
+                        disponibilizando desde informações sobre como fazer a abordagem certa a animais
+                        abandonados para resgate até locais que oferecem atendimento veterinário gratuito e/ou a
+                        preço social.
+                    </p>
+                </div>
             
             </article>
         </article>
