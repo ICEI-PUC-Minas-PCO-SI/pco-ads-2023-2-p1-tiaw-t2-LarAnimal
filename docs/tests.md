@@ -293,7 +293,7 @@ Resultado: O sistema pode trabalhar de forma integrada com o sistema especificad
 **Caso de Teste** | **CT01 - Login**
  :--------------: | ------------
 **Procedimento**  | 1) Usuário informa CPF ou CNPJ e senha  e clica no botão "Entrar".<br>2) A aplicação verifica se os dados são válidos e informa ao usuário caso não sejam.
-**Requisitos associados** | RF-001
+**Requisitos associados** | RF-004
 **Resultado esperado** | Entrar na conta
 **Dados de entrada** | Inserção de dados válidos no formulário de login.
 **Resultado obtido** | Sucesso.
