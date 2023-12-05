@@ -11,7 +11,7 @@ $(document).ready(function () {
             success: function (response) {
                 if (response && response.length > 0) {
                     console.log("Login bem-sucedido:", response);
-                    window.location.href = "home.html";
+                    window.location.href = "perfil.html";
                 } else {
                     window.alert("Login falhou. Usuário não encontrado ou senha incorreta.");
                 }
