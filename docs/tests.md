@@ -323,9 +323,10 @@ Sofia levou um tempo razoável para concluir as tarefas, similar ao tempo de um 
 
 | Nº do Cenário | Descrição do cenário |
 |---------------|----------------------|
-| 1             | Você é uma pessoa que deseja comprar um iphone. Encontre no site um iphone e veja detalhes de localização e contato da loja que anunciando. |
-| 2             | Você é uma pessoa que deseja comprar um smartphone até R$ 2.000,00. Encontre no site smartphone's nessa faixa de preço. |
-
+| 1             | Você é um usuário que deseja divulgar seus serviços de veterinária. Acesse a aplicação, encontre a seção de "Fóruns", crie um anúncio para seus serviços e compartilhe as informações relevantes. Avalie a facilidade de uso e a eficácia do processo de divulgação. |
+| 2             | Você é um usuário com orçamento limitado que precisa encontrar serviços médicos acessíveis para seu animal de estimação. Utilize o mapa na aplicação para encontrar clínicas e serviços veterinários com preços acessíveis. Avalie a clareza das informações e a facilidade de navegação. |
+| 3             | Você é um voluntário. Acesse a seção de "Voluntariado", se cadastre e faça suas doações. |
+| 4             | Você é um empresário comprometido com a responsabilidade social que procura estabelecer parcerias com ONGs. Acesse a seção de "Parcerias com ONGs", encontre informações sobre organizações disponíveis para parcerias e inicie o processo de estabelecer uma parceria. Avalie a facilidade de encontrar informações relevantes. |
 
 
 ## Registro de Testes de Usabilidade
