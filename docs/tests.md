@@ -332,7 +332,7 @@ Resultado: O sistema pode trabalhar de forma integrada com o sistema especificad
 
 **Caso de Teste** | **CT06 - Suporte ao usuário**
  :--------------: | ------------
-**Procedimento**  | 1)Usuario acessa "Suporte ao usuario e informa nome, email, telefone e o motivo do contato<br>2)A aplicação salva as informações e <br> 3) 
+**Procedimento**  | 1)Usuario acessa "Suporte ao usuario e informa nome, email, telefone e o motivo do contato<br>2)A aplicação salva as informações e <br> 
 **Requisitos associados** | RF-007
 **Resultado esperado** | Recebimento bem-sucedido do formulário de contato.
 **Dados de entrada** | Preenchimento do formulário de contato com dúvidas.
