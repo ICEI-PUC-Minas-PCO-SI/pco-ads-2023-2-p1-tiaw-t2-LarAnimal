@@ -290,10 +290,6 @@ Verifique se as operações integradas são bem-sucedidas.
 Resultado: O sistema pode trabalhar de forma integrada com o sistema especificado.
 
 ## Plano de Testes de Software
-
-Preencha a tabela com o plano dos testes. Para cada Caso de Teste (CT), associe qual o Requisito  Funcional ou não funcional que ele está verificando. Associe também a página (ou artefato) onde o teste será realizado e descreva o cenário do teste. Veja a tabela de exemplo.
-
-
 **Caso de Teste** | **CT01 - Registro de Usuario**
  :--------------: | ------------
 **Procedimento**  | 1) Usuário informa nome, sobrenome, email, senha, Estado e Cidade e clica no botão "Continuar".<br>2) A aplicação verifica se os dados são válidos e informa ao usuário caso não sejam.
@@ -304,7 +300,7 @@ Preencha a tabela com o plano dos testes. Para cada Caso de Teste (CT), associe 
 
 **Caso de Teste** | **CT02 - Perfil De Usuário Comum ou Administrador**
  :--------------: | ------------
-**Procedimento**  | 1) <br>2) <br> 3)
+**Procedimento**  | 1)Pessoa Fisica informa  <br>2)Usuario Juridico informa <br> 3)A aplicação verifica se os dados são válidos e informa ao usuario caso não sejam.
 **Requisitos associados** | RF-002
 **Resultado esperado** | Criação de cadastro de Pessoa Fisica ou Juridica 
 **Dados de entrada** | Seleção de tipo de cadastro (PF ou PJ) e preenchimento de campos obrigatórios.
@@ -312,10 +308,10 @@ Preencha a tabela com o plano dos testes. Para cada Caso de Teste (CT), associe 
 
 **Caso de Teste** | **CT03 - Modulo de doações**
  :--------------: | ------------
-**Procedimento**  | 1) <br>2) <br> 3) 
+**Procedimento**  | 1)Usuario informa nome, email, valor de doação <br>2) 
 **Requisitos associados** | RF-003
-**Resultado esperado** | 
-**Dados de entrada** |
+**Resultado esperado** | Doação realizada referente ao valor que o usuario definiu.
+**Dados de entrada** | 	Seleção de valor e envio de pagamento.
 **Resultado obtido** | Sucesso.
 
 **Caso de Teste** | **CT04 - Gerenciamento de parceiros**
@@ -326,60 +322,52 @@ Preencha a tabela com o plano dos testes. Para cada Caso de Teste (CT), associe 
 **Dados de entrada** | 
 **Resultado obtido** | Sucesso.
 
-**Caso de Teste** | **CT05 - Busca de serviços e detalhes**
+**Caso de Teste** | **CT05 - Avaliações e Comentários dos Serviços**
  :--------------: | ------------
-**Procedimento**  | 1) <br>2)<br> 3)
-**Requisitos associados** | RF-005
-**Resultado esperado** | 
-**Dados de entrada** |
-**Resultado obtido** | Sucesso.
-
-**Caso de Teste** | **CT06 - Avaliações e Comentários dos Serviços**
- :--------------: | ------------
-**Procedimento**  | 1) <br>2)<br> 3)
+**Procedimento**  | 1)Usuario informa o nome, seleciona a quantidade de estrelas, deixa um comentario e envia.<br>2)A aplicação salva sua resposta e deixa disponivel para visão de outros usuarios.
 **Requisitos associados** | RF-006
-**Resultado esperado** | 
-**Dados de entrada** | 
+**Resultado esperado** | Usuario consegue avaliar os serviços através de comentarios e notas dadas através de estrelas.
+**Dados de entrada** | Inserção de comentario e nota em Avaliações.
 **Resultado obtido** | Sucesso.
 
-**Caso de Teste** | **CT07 - Suporte ao usuário**
+**Caso de Teste** | **CT06 - Suporte ao usuário**
  :--------------: | ------------
-**Procedimento**  | 1)<br>2) <br> 3) 
+**Procedimento**  | 1)Usuario acessa "Suporte ao usuario e informa nome, email, telefone e o motivo do contato<br>2)A aplicação salva as informações e <br> 3) 
 **Requisitos associados** | RF-007
-**Resultado esperado** | 
-**Dados de entrada** | 
+**Resultado esperado** | Recebimento bem-sucedido do formulário de contato.
+**Dados de entrada** | Preenchimento do formulário de contato com dúvidas.
 **Resultado obtido** | Sucesso.
 
-**Caso de Teste** | **CT08 - Mapeamento de lojistas**
+**Caso de Teste** | **CT07 - Mapa de Parceiros**
  :--------------: | ------------
-**Procedimento**  | 1) <br>2)<br> 3) 
+**Procedimento**  | 1)Usuario acessa Banner de Mapa de Parceiros, seleciona um de nossos parceiros, e clique em traçar rota.<br>2)A aplicação traça a rota até o destino selecionado pelo usuario. 
 **Requisitos associados** | RF-008
-**Resultado esperado** | 
-**Dados de entrada** | 
+**Resultado esperado** | Rota traçada até o destino selecionado pelo usuario.
+**Dados de entrada** | Seleção de Parceiros.
 **Resultado obtido** | Sucesso.
 
-**Caso de Teste** | **CT09 - Agendamentos online**
+**Caso de Teste** | **CT08 - Agendamentos online**
  :--------------: | ------------
-**Procedimento**  | 1) <br>2)<br> 3) 
+**Procedimento**  | 1)Usuario acessa "Agendamento de Consulta" seleciona clinica desejada, informa data e horario, clica no botão de agendamento.<br>2)A aplicação informa ao usuario que sua consulta foi agendada e salva as informações, como local da consulta data e horario. 
 **Requisitos associados** | RF-009
-**Resultado esperado** | 
-**Dados de entrada** | Seleção do serviço e escolha da disponibilidade para agendamento.
+**Resultado esperado** | Consulta agendada com suceso, com data e horario definido pelo usuario. 
+**Dados de entrada** | Seleção do serviço, e escolha da disponibilidade para agendamento.
 **Resultado obtido** | Sucesso.
 
-**Caso de Teste** | **CT10 - Fóruns de discussão**
+**Caso de Teste** | **CT09 - Fóruns de discussão**
  :--------------: | ------------
-**Procedimento**  | 1) <br>2) <br> 3)
+**Procedimento**  | 1)Usuário acessa a seção de fóruns, insere seu nome e o seu conteudo do post. <br>2)A aplicação publica seu comentario e deixa disponivel para interação de outros usuarios.
 **Requisitos associados** | RF-010
-**Resultado esperado** | 
+**Resultado esperado** | Interação entre os usuarios.
 **Dados de entrada** | Postagem de um comentário em um tópico de interesse. 
 **Resultado obtido** | Sucesso.
 
-**Caso de Teste** | **CT11 - Aba educacional com suporte em texto e vídeo**
+**Caso de Teste** | **CT10 - Aba educacional com suporte em texto e vídeo**
  :--------------: | ------------
-**Procedimento**  | 1) <br>2) <br> 3) 
+**Procedimento**  | 1)Usuário acessa a aba educacional <br>2)Navega pelos recursos educacionais, lendo textos e assistindo vídeos. 
 **Requisitos associados** | RF-011
-**Resultado esperado** | 
-**Dados de entrada** | 
+**Resultado esperado** | Utilização bem-sucedida dos recursos educacionais
+**Dados de entrada** | Navegação e interação com os recursos educacionais
 **Resultado obtido** | Sucesso.
 
 ## Registro dos Testes de Software
