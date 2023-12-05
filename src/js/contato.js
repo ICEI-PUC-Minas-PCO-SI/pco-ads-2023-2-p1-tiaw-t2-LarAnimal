@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
             motivo
         };
 
-        fetch('http://localhost:3333/contatos', {
+        fetch('http://localhost:3333/contato', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
