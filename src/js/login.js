@@ -18,7 +18,7 @@ $(document).ready(function () {
             },
             error: function (error) {
                 console.error("Erro na solicitação de login", error);
-                // Tratar erros na solicitação
+                
             }
         });
     });
