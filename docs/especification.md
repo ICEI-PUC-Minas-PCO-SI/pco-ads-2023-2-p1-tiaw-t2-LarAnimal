@@ -95,13 +95,12 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-002| Perfil De Usuário Comum ou Administrador   | ALTA | Jefferson |
 |RF-003| Modulo de doações | ALTA | Kauan |
 |RF-004| Gerenciamento de parceiros   | MÉDIA | Elder|
-|RF-005| Busca de serviços e detalhes | ALTA | Kauan |
-|RF-006| Avaliações e Comentários dos Serviços | BAIXA | Manuela |
-|RF-007| Suporte ao usuário   | MÉDIA | Manuela |
-|RF-008| Mapa de Parceiros | BAIXA | Itallo |
-|RF-009| Agendamentos online   | MÉDIA | Elder |
-|RF-010| Fóruns de discussão | BAIXA | Rhillary |
-|RF-011| Aba educacional com suporte em texto e vídeo   | BAIXA | Rhillary |
+|RF-005| Avaliações e Comentários dos Serviços | BAIXA | Manuela |
+|RF-006| Suporte ao usuário   | MÉDIA | Manuela |
+|RF-007| Mapa de Parceiros | BAIXA | Itallo |
+|RF-008| Agendamentos online   | MÉDIA | Elder |
+|RF-009| Fóruns de discussão | BAIXA | Rhillary |
+|RF-010| Aba educacional com suporte em texto e vídeo   | BAIXA | Rhillary |
 
 
 ### Requisitos não Funcionais
