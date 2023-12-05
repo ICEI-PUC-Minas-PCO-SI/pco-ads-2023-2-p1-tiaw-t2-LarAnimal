@@ -1,10 +1,10 @@
 $(document).ready(function () {
     $('#btn-login').on('click', function (e) {
         e.preventDefault();
-        const documento = $('input[name="documento"]').val();
+        const documento = $('input[name="username"]').val();
         const senha = $('input[name="password"]').val();
-        const url = `${baseUrl}?documento=${documento}&senha=${senha}`;
         const baseUrl = "http://localhost:3333/usuario";
+        const url = `${baseUrl}?documento=${documento}&senha=${senha}`;
         $.ajax({
             type: "GET",
             url: url,
