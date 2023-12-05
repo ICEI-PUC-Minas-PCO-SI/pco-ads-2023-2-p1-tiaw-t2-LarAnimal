@@ -91,13 +91,13 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade | Responsável |
 |------|-----------------------------------------|----| ----|
-|RF-001| Registro De Usuário | ALTA | Jefferson |
+|RF-001| Login De Usuário | ALTA | Jefferson |
 |RF-002| Perfil De Usuário Comum ou Administrador   | ALTA | Jefferson |
 |RF-003| Modulo de doações | ALTA | Kauan |
 |RF-004| Busca de serviços e detalhes | ALTA | Kauan |
 |RF-005| Avaliações e Comentários dos Serviços | BAIXA | Manuela |
 |RF-006| Suporte ao usuário   | MÉDIA | Manuela |
-|RF-007| Mapeamento de lojistas | BAIXA | Itallo |
+|RF-007| Mape de Parceiros | BAIXA | Itallo |
 |RF-008| Agendamentos online   | MÉDIA | Elder |
 |RF-009| Fóruns de discussão | BAIXA | Rhillary |
 |RF-010| Aba educacional com suporte em texto e vídeo   | BAIXA | Rhillary |
