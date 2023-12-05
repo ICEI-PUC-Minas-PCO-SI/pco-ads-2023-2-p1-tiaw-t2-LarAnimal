@@ -293,15 +293,14 @@ Resultado: O sistema pode trabalhar de forma integrada com o sistema especificad
 **Caso de Teste** | **CT01 - Login**
  :--------------: | ------------
 **Procedimento**  | 1) Usuário informa CPF ou CNPJ e senha  e clica no botão "Entrar".<br>2) A aplicação verifica se os dados são válidos e informa ao usuário caso não sejam.
-**Requisitos associados** | RF-001
+**Requisitos associados** | RF-004
 **Resultado esperado** | Entrar na conta
 **Dados de entrada** | Inserção de dados válidos no formulário de login.
 **Resultado obtido** | Sucesso.
 
 **Caso de Teste** | **CT02 - Cadastro Perfil De Usuário Comum ou Administrador**
  :--------------: | ------------
-**Procedimento**  | 1)Pessoa Fisica informa Nome, email,Senha,CPF,CEP,Estado,Cidade,Bairro,Logradouro,Numero,Telefone.
- <br>2)Usuario Juridico informa <br> 3)A aplicação verifica se os dados são válidos e informa ao usuario caso não sejam.
+**Procedimento**  | 1)Pessoa Fisica informa Nome, email,Senha,CPF,CEP,Estado,Cidade,Bairro,Logradouro,Numero,Telefone.<br>2)Usuario Juridico Seleciona o tipo de estabelicimento,Razão Social,Email,Senha,CNPJ,CEP,Estado,Cidade,Bairro,Logradouro,Numero,Telefone.<br>3)A aplicação verifica se os dados são válidos e informa ao usuario caso não sejam.
 **Requisitos associados** | RF-002
 **Resultado esperado** | Criação de cadastro de Pessoa Fisica ou Juridica 
 **Dados de entrada** | Seleção de tipo de cadastro (PF ou PJ) e preenchimento de campos obrigatórios.
