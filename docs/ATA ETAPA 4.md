@@ -3,7 +3,7 @@
 
 
 • **Jefferson**
-Responsável pela responsividade, mudanças da nav bar, footer, criação / modificação das paginas de cadastro e login, criaçao do mapa interativo, implementação de API de cep, finalização das paginas de agendamento,
+Responsável pela responsividade, mudanças da nav bar, footer, criação / modificação das paginas de cadastro e login, criaçao do mapa interativo, implementação de API de cep, implementação dos bancos de dados de login, pagina de doações,
 
 • **Itallo Otavio**
 Responsável pelo conteudo das páginas, criação de páginas novas para Aba educacional ( Páginas dentro de Midias ).
