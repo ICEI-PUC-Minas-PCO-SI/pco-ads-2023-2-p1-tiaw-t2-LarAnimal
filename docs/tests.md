@@ -17,8 +17,6 @@ A documentação dos testes é dividida nas seguintes seções:
  - [Avaliação dos Testes de Usabilidade](#avaliação-dos-testes-de-usabilidade)
 
 # Teste de Software
-
-# Teste de Software
 **REQUISITOS FUNCIONAIS**
 RF-001: Registro de Usuário
 Objetivo do Teste: Verificar se o sistema permite que os usuários se registrem com sucesso e se eles conseguem fazer login após o registro.
