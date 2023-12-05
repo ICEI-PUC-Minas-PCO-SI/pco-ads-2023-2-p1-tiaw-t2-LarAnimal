@@ -376,17 +376,17 @@ Esta seção deve apresentar o relatório com as evidências dos testes de softw
 
 |*Caso de Teste*                                 |*TC-01 - Registro de Usuario*                                         |
 |---|---|
-|Requisito Associado | RF-001 - Usuários não autenticados podem se cadastrar para criar uma conta e serem autenticados.|
+|Requisito Associado | RF-001 -  Testa o processo de registro de usuários não autenticados, onde são inseridos dados válidos no formulário de cadastro. O resultado esperado é a criação bem-sucedida do cadastro.|
 |Link do vídeo do teste realizado: | https://1drv.ms/u/s!AhD2JqpOUvJChapRtRSQ9vPzbNLwGA?e=mxZs6t| 
 
 |*Caso de Teste*                                 |*TC-02 - Perfil de usuario comum ou administrador*                                         |
 |---|---|
-|Requisito Associado | RF-002 - Usuários não autenticados podem se cadastrar para criar uma conta e serem autenticados.|
+|Requisito Associado | RF-002 - Testa a criação de perfis de usuários, permitindo que escolham entre Pessoa Física ou Jurídica durante o cadastro. O objetivo é criar perfis bem-sucedidos de ambos os tipos.|
 |Link do vídeo do teste realizado: | https://1drv.ms/v/s!AhD2JqpOUvJChapQ8CPXL-TI_A7iVg?e=spD3Ar | 
 
 |*Caso de Teste*                                 |*TC-03 - Modulo de doações*                                         |
 |---|---|
-|Requisito Associado | RF-003 - Usuários não autenticados podem se cadastrar para criar uma conta e serem autenticados.|
+|Requisito Associado | RF-003 - Avalia o processo de realização de doações, onde o usuário escolhe o valor e envia o pagamento. O teste visa confirmar que as doações são concluídas com sucesso.|
 |Link do vídeo do teste realizado: | https://1drv.ms/u/s!AhD2JqpOUvJChapRtRSQ9vPzbNLwGA?e=mxZs6t|
 
 |*Caso de Teste*                                 |*TC-04 - Gerenciamento de parceiros*                                         |
@@ -394,39 +394,36 @@ Esta seção deve apresentar o relatório com as evidências dos testes de softw
 |Requisito Associado | RF-004 - Usuários não autenticados podem se cadastrar para criar uma conta e serem autenticados.|
 |Link do vídeo do teste realizado: | https://1drv.ms/u/s!AhD2JqpOUvJChapRtRSQ9vPzbNLwGA?e=mxZs6t|
 
-|*Caso de Teste*                                 |*TC-05 - Busca de serviços e detalhes*                                         |
-|---|---|
-|Requisito Associado | RF-005 - Usuários não autenticados podem se cadastrar para criar uma conta e serem autenticados.|
-|Link do vídeo do teste realizado: | https://1drv.ms/u/s!AhD2JqpOUvJChapRtRSQ9vPzbNLwGA?e=mxZs6t|
-
 |*Caso de Teste*                                 |*TC-06 - Avaliações e comentarios do serviços*                                         |
 |---|---|
-|Requisito Associado | RF-006 - Usuários não autenticados podem se cadastrar para criar uma conta e serem autenticados.|
+|Requisito Associado | RF-006 - Testa a funcionalidade de avaliação e comentário de serviços, garantindo que a interação do usuário seja registrada com sucesso.|
 |Link do vídeo do teste realizado: | https://1drv.ms/u/s!AhD2JqpOUvJChapRtRSQ9vPzbNLwGA?e=mxZs6t|
 
 |*Caso de Teste*                                 |*TC-07 - Suporte ao usuario*                                         |
 |---|---|
-|Requisito Associado | RF-007 - Usuários não autenticados podem se cadastrar para criar uma conta e serem autenticados.|
+|Requisito Associado | RF-007 - Testa a funcionalidade de suporte ao usuário, onde este preenche um formulário de contato com dúvidas. O teste visa garantir o recebimento bem-sucedido do formulário.
+|
 |Link do vídeo do teste realizado: | https://1drv.ms/u/s!AhD2JqpOUvJChapRtRSQ9vPzbNLwGA?e=mxZs6t|
 
-|*Caso de Teste*                                 |*TC-08 - Mapeamento de lojistas*                                         |
+|*Caso de Teste*                                 |*TC-08 - Mapeamento de Parceiros*                                         |
 |---|---|
-|Requisito Associado | RF-008 - Usuários não autenticados podem se cadastrar para criar uma conta e serem autenticados.|
+|Requisito Associado | RF-008 - Avalia a funcionalidade de mapeamento de parceiros, onde o usuário seleciona um parceiro e visualiza no mapa a localização e rota.
+|
 |Link do vídeo do teste realizado: | https://1drv.ms/u/s!AhD2JqpOUvJChapRtRSQ9vPzbNLwGA?e=mxZs6t|
 
 |*Caso de Teste*                                 |*TC-09 - Agendamento Online*                                         |
 |---|---|
-|Requisito Associado | RF-009 - Usuários não autenticados podem se cadastrar para criar uma conta e serem autenticados.|
+|Requisito Associado | RF-009 - Testa a funcionalidade de agendamento online, onde o usuário escolhe um serviço e a disponibilidade desejada. O teste visa confirmar o agendamento bem-sucedido do serviço escolhido.|
 |Link do vídeo do teste realizado: | https://1drv.ms/u/s!AhD2JqpOUvJChapRtRSQ9vPzbNLwGA?e=mxZs6t|
 
 |*Caso de Teste*                                 |*TC-10 - Forúns de discussão *                                         |
 |---|---|
-|Requisito Associado | RF-010 - Usuários não autenticados podem se cadastrar para criar uma conta e serem autenticados.|
+|Requisito Associado | RF-010 - Avalia a participação do usuário em fóruns de discussão, onde este posta um comentário. O teste visa confirmar a participação bem-sucedida na discussão do fórum.|
 |Link do vídeo do teste realizado: | https://1drv.ms/u/s!AhD2JqpOUvJChapRtRSQ9vPzbNLwGA?e=mxZs6t|
 
 |*Caso de Teste*                                 |*TC-11 - Aba educacional*                                         |
 |---|---|
-|Requisito Associado | RF-011 - Usuários não autenticados podem se cadastrar para criar uma conta e serem autenticados.|
+|Requisito Associado | RF-011 - Avalia a utilização da aba educacional, onde o usuário navega pelos recursos educacionais, lê textos e assiste a vídeos. O teste inclui o compartilhamento de um recurso educacional.|
 |Link do vídeo do teste realizado: | https://1drv.ms/u/s!AhD2JqpOUvJChapRtRSQ9vPzbNLwGA?e=mxZs6t|
 ## Avaliação dos Testes de Software
 
