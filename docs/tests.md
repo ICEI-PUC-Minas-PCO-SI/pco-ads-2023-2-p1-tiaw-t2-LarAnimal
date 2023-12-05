@@ -342,8 +342,6 @@ Se o grupo tiver interesse em se aprofundar no desenvolvimento de testes de soft
 Funcionalidades Avaliadas:
 
 °Divulgação de Serviços
-°Campanhas para Adoções Responsáveis
-°Bem-Estar Animal
 
 1-Taxa de Sucesso:Aline conseguiu executar as tarefas propostas com sucesso.
 2-Satisfação Subjetiva: Aline considerou que a aplicação atendeu satisfatoriamente às suas necessidades, mas acredita que algumas melhorias podem ser feitas. 
@@ -396,13 +394,13 @@ Sofia levou um tempo razoável para concluir as tarefas, similar ao tempo de um 
 
 ## Registro de Testes de Usabilidade
 
-Cenário 1: Você é uma pessoa que deseja comprar um iphone. Encontre no site um iphone e veja detalhes de localização e contato da loja que anunciando.
+Cenário 1: Você é um usuário que deseja divulgar seus serviços de veterinária. Acesse a aplicação, encontre a seção de "Fóruns", crie um anúncio para seus serviços e compartilhe as informações relevantes. Avalie a facilidade de uso e a eficácia do processo de divulgação.
 
 | Usuário | Taxa de sucesso | Satisfação subjetiva | Tempo para conclusão do cenário |
 |---------|-----------------|----------------------|---------------------------------|
-| 1       | SIM             | 5                    | 27.87 segundos                  |
-| 2       | SIM             | 5                    | 17.11 segundos                  |
-| 3       | SIM             | 5                    | 39.09 segundos                  |
+| Aline      | SIM             | 5                    | 27.87 segundos                  |
+| Camila        | SIM             | 5                    | 17.11 segundos                  |
+| Sofia       | SIM             | 5                    | 39.09 segundos                  |
 |  |  |  |  |
 | **Média**     | 0%           | 0                | 0 segundos                           |
 | **Tempo para conclusão pelo especialista** | SIM | 5 | 8.66 segundos |
@@ -414,13 +412,13 @@ Cenário 1: Você é uma pessoa que deseja comprar um iphone. Encontre no site u
 
 
 
-Cenário 2: Você é uma pessoa que deseja comprar um smartphone até R$ 2.000,00. Encontre no site smartphone's nessa faixa de preço.
+Cenário 2: Você é um usuário com orçamento limitado que precisa encontrar serviços médicos acessíveis para seu animal de estimação. Utilize o mapa na aplicação para encontrar clínicas e serviços veterinários com preços acessíveis. Avalie a clareza das informações e a facilidade de navegação.
 
 | Usuário | Taxa de sucesso | Satisfação subjetiva | Tempo para conclusão do cenário |
 |---------|-----------------|----------------------|---------------------------------|
-| 1       | SIM             | 5                    | 22.54 segundos                          |
-| 2       | SIM             | 5                    | 31.42 segundos                          |
-| 3       | SIM             | 5                    | 36.21 segundos                          |
+| Gustavo       | SIM             | 5                    | 22.54 segundos                          |
+| Maria da Silva       | SIM             | 5                    | 31.42 segundos                          |
+| Laura Soares       | SIM             | 5                    | 36.21 segundos                          |
 |  |  |  |  |
 | **Média**     | 0%           | 0                | 0 segundos                           |
 | **Tempo para conclusão pelo especialista** | SIM | 5 | 13.57 segundos |
@@ -430,8 +428,37 @@ Cenário 2: Você é uma pessoa que deseja comprar um smartphone até R$ 2.000,0
     redirecionar a gente automaticamente para outras. Senti a falta de mais opções de filtros, 
     tanto na hora da pesquisa, quanto depois dela, nos resultados.
 
+Cenário 3: Você é um voluntário. Acesse a seção de "Voluntariado", se cadastre e faça suas doações.
+
+| Usuário | Taxa de sucesso | Satisfação subjetiva | Tempo para conclusão do cenário |
+|---------|-----------------|----------------------|---------------------------------|
+| Robson       | SIM             | 5                    | 22.54 segundos                          |
+| Silvania       | SIM             | 5                    | 31.42 segundos                          |
+| Aline       | SIM             | 5                    | 36.21 segundos                          |
+|  |  |  |  |
+| **Média**     | 0%           | 0                | 0 segundos                           |
+| **Tempo para conclusão pelo especialista** | SIM | 5 | 13.57 segundos |
 
 
+    Comentários dos usuários: O site é fácil de acessar, mas algumas páginas poderiam 
+    redirecionar a gente automaticamente para outras. Senti a falta de mais opções de filtros, 
+    tanto na hora da pesquisa, quanto depois dela, nos resultados.
+
+Cenário 4: Você é um empresário comprometido com a responsabilidade social que procura estabelecer parcerias com ONGs. Acesse a seção de " ", encontre informações sobre organizações disponíveis para parcerias e inicie o processo de estabelecer uma parceria. Avalie a facilidade de encontrar informações relevantes.
+
+| Usuário | Taxa de sucesso | Satisfação subjetiva | Tempo para conclusão do cenário |
+|---------|-----------------|----------------------|---------------------------------|
+| Maria da Silva          | SIM             | 5                    | 22.54 segundos                          |
+| Laura Soares       | SIM             | 5                    | 31.42 segundos                          |
+| Camila       | SIM             | 5                    | 36.21 segundos                          |
+|  |  |  |  |
+| **Média**     | 0%           | 0                | 0 segundos                           |
+| **Tempo para conclusão pelo especialista** | SIM | 5 | 13.57 segundos |
+
+
+    Comentários dos usuários: O site é fácil de acessar, mas algumas páginas poderiam 
+    redirecionar a gente automaticamente para outras. Senti a falta de mais opções de filtros, 
+    tanto na hora da pesquisa, quanto depois dela, nos resultados.
 
 ## Avaliação dos Testes de Usabilidade
 
