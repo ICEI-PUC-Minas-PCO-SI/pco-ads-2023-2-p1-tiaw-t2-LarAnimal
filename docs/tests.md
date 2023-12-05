@@ -294,37 +294,152 @@ Resultado: O sistema pode trabalhar de forma integrada com o sistema especificad
 Preencha a tabela com o plano dos testes. Para cada Caso de Teste (CT), associe qual o Requisito  Funcional ou não funcional que ele está verificando. Associe também a página (ou artefato) onde o teste será realizado e descreva o cenário do teste. Veja a tabela de exemplo.
 
 
-**Caso de Teste** | **CT01 - Criar conta parte 1**
+**Caso de Teste** | **CT01 - Registro de Usuario**
  :--------------: | ------------
 **Procedimento**  | 1) Usuário informa nome, sobrenome, email, senha, Estado e Cidade e clica no botão "Continuar".<br>2) A aplicação verifica se os dados são válidos e informa ao usuário caso não sejam.
 **Requisitos associados** | RF-001
-**Resultado esperado** | Prosseguir para a parte 2 do cadastro.
+**Resultado esperado** | Criação de cadastro
 **Dados de entrada** | Inserção de dados válidos no formulário de cadastro.
 **Resultado obtido** | Sucesso.
 
-**Caso de Teste** | **CT02 - Criar conta parte 2**
+**Caso de Teste** | **CT02 - Perfil De Usuário Comum ou Administrador**
  :--------------: | ------------
-**Procedimento**  | 1) Usuário informa gênero, seu tipo de usuário (cuidador ou comum), data de nascimento e clica em criar.<br>2) A aplicação verifica se os dados são válidos e informa ao usuário caso não sejam.<br> 3) A aplicação armazena os dados e direciona o usuário para a tela de login.
-**Requisitos associados** | RF-001
-**Resultado esperado** | Criação de cadastro
-**Dados de entrada** | Inserção de dados válidos no formulário de cadastro.
+**Procedimento**  | 1) <br>2) <br> 3)
+**Requisitos associados** | RF-002
+**Resultado esperado** | Criação de cadastro de Pessoa Fisica ou Juridica 
+**Dados de entrada** | Seleção de tipo de cadastro (PF ou PJ) e preenchimento de campos obrigatórios.
+**Resultado obtido** | Sucesso.
+
+**Caso de Teste** | **CT03 - Modulo de doações**
+ :--------------: | ------------
+**Procedimento**  | 1) <br>2) <br> 3) 
+**Requisitos associados** | RF-003
+**Resultado esperado** | 
+**Dados de entrada** |
+**Resultado obtido** | Sucesso.
+
+**Caso de Teste** | **CT04 - Gerenciamento de parceiros**
+ :--------------: | ------------
+**Procedimento**  | 1)<br>2)<br> 3)
+**Requisitos associados** | RF-004
+**Resultado esperado** | 
+**Dados de entrada** | 
+**Resultado obtido** | Sucesso.
+
+**Caso de Teste** | **CT05 - Busca de serviços e detalhes**
+ :--------------: | ------------
+**Procedimento**  | 1) <br>2)<br> 3)
+**Requisitos associados** | RF-005
+**Resultado esperado** | 
+**Dados de entrada** |
+**Resultado obtido** | Sucesso.
+
+**Caso de Teste** | **CT06 - Avaliações e Comentários dos Serviços**
+ :--------------: | ------------
+**Procedimento**  | 1) <br>2)<br> 3)
+**Requisitos associados** | RF-006
+**Resultado esperado** | 
+**Dados de entrada** | 
+**Resultado obtido** | Sucesso.
+
+**Caso de Teste** | **CT07 - Suporte ao usuário**
+ :--------------: | ------------
+**Procedimento**  | 1)<br>2) <br> 3) 
+**Requisitos associados** | RF-007
+**Resultado esperado** | 
+**Dados de entrada** | 
+**Resultado obtido** | Sucesso.
+
+**Caso de Teste** | **CT08 - Mapeamento de lojistas**
+ :--------------: | ------------
+**Procedimento**  | 1) <br>2)<br> 3) 
+**Requisitos associados** | RF-008
+**Resultado esperado** | 
+**Dados de entrada** | 
+**Resultado obtido** | Sucesso.
+
+**Caso de Teste** | **CT09 - Agendamentos online**
+ :--------------: | ------------
+**Procedimento**  | 1) <br>2)<br> 3) 
+**Requisitos associados** | RF-009
+**Resultado esperado** | 
+**Dados de entrada** | Seleção do serviço e escolha da disponibilidade para agendamento.
+**Resultado obtido** | Sucesso.
+
+**Caso de Teste** | **CT10 - Fóruns de discussão**
+ :--------------: | ------------
+**Procedimento**  | 1) <br>2) <br> 3)
+**Requisitos associados** | RF-010
+**Resultado esperado** | 
+**Dados de entrada** | Postagem de um comentário em um tópico de interesse. 
+**Resultado obtido** | Sucesso.
+
+**Caso de Teste** | **CT11 - Aba educacional com suporte em texto e vídeo**
+ :--------------: | ------------
+**Procedimento**  | 1) <br>2) <br> 3) 
+**Requisitos associados** | RF-011
+**Resultado esperado** | 
+**Dados de entrada** | 
 **Resultado obtido** | Sucesso.
 
 ## Registro dos Testes de Software
 
 Esta seção deve apresentar o relatório com as evidências dos testes de software realizados no sistema pela equipe, baseado no plano de testes pré-definido. Documente cada caso de teste apresentando um vídeo ou animação que comprove o funcionamento da funcionalidade. Veja os exemplos a seguir.
 
-|*Caso de Teste*                                 |*TC-01 - Criar uma conta*                                         |
+|*Caso de Teste*                                 |*TC-01 - Registro de Usuario*                                         |
 |---|---|
-|Requisito Associado | RF-004 - Usuários não autenticados podem se cadastrar para criar uma conta e serem autenticados.|
+|Requisito Associado | RF-001 - Usuários não autenticados podem se cadastrar para criar uma conta e serem autenticados.|
 |Link do vídeo do teste realizado: | https://1drv.ms/u/s!AhD2JqpOUvJChapRtRSQ9vPzbNLwGA?e=mxZs6t| 
 
-|*Caso de Teste*                                 |*TC-02 - Efetuar Login (usuário autenticado)*                                         |
+|*Caso de Teste*                                 |*TC-02 - Perfil de usuario comum ou administrador*                                         |
 |---|---|
-|Requisito Associado | RF-004 - Usuários não autenticados podem se cadastrar para criar uma conta e serem autenticados.|
+|Requisito Associado | RF-002 - Usuários não autenticados podem se cadastrar para criar uma conta e serem autenticados.|
 |Link do vídeo do teste realizado: | https://1drv.ms/v/s!AhD2JqpOUvJChapQ8CPXL-TI_A7iVg?e=spD3Ar | 
 
+|*Caso de Teste*                                 |*TC-03 - Modulo de doações*                                         |
+|---|---|
+|Requisito Associado | RF-003 - Usuários não autenticados podem se cadastrar para criar uma conta e serem autenticados.|
+|Link do vídeo do teste realizado: | https://1drv.ms/u/s!AhD2JqpOUvJChapRtRSQ9vPzbNLwGA?e=mxZs6t|
 
+|*Caso de Teste*                                 |*TC-04 - Gerenciamento de parceiros*                                         |
+|---|---|
+|Requisito Associado | RF-004 - Usuários não autenticados podem se cadastrar para criar uma conta e serem autenticados.|
+|Link do vídeo do teste realizado: | https://1drv.ms/u/s!AhD2JqpOUvJChapRtRSQ9vPzbNLwGA?e=mxZs6t|
+
+|*Caso de Teste*                                 |*TC-05 - Busca de serviços e detalhes*                                         |
+|---|---|
+|Requisito Associado | RF-005 - Usuários não autenticados podem se cadastrar para criar uma conta e serem autenticados.|
+|Link do vídeo do teste realizado: | https://1drv.ms/u/s!AhD2JqpOUvJChapRtRSQ9vPzbNLwGA?e=mxZs6t|
+
+|*Caso de Teste*                                 |*TC-06 - Avaliações e comentarios do serviços*                                         |
+|---|---|
+|Requisito Associado | RF-006 - Usuários não autenticados podem se cadastrar para criar uma conta e serem autenticados.|
+|Link do vídeo do teste realizado: | https://1drv.ms/u/s!AhD2JqpOUvJChapRtRSQ9vPzbNLwGA?e=mxZs6t|
+
+|*Caso de Teste*                                 |*TC-07 - Suporte ao usuario*                                         |
+|---|---|
+|Requisito Associado | RF-007 - Usuários não autenticados podem se cadastrar para criar uma conta e serem autenticados.|
+|Link do vídeo do teste realizado: | https://1drv.ms/u/s!AhD2JqpOUvJChapRtRSQ9vPzbNLwGA?e=mxZs6t|
+
+|*Caso de Teste*                                 |*TC-08 - Mapeamento de lojistas*                                         |
+|---|---|
+|Requisito Associado | RF-008 - Usuários não autenticados podem se cadastrar para criar uma conta e serem autenticados.|
+|Link do vídeo do teste realizado: | https://1drv.ms/u/s!AhD2JqpOUvJChapRtRSQ9vPzbNLwGA?e=mxZs6t|
+
+|*Caso de Teste*                                 |*TC-09 - Agendamento Online*                                         |
+|---|---|
+|Requisito Associado | RF-009 - Usuários não autenticados podem se cadastrar para criar uma conta e serem autenticados.|
+|Link do vídeo do teste realizado: | https://1drv.ms/u/s!AhD2JqpOUvJChapRtRSQ9vPzbNLwGA?e=mxZs6t|
+
+|*Caso de Teste*                                 |*TC-10 - Forúns de discussão *                                         |
+|---|---|
+|Requisito Associado | RF-010 - Usuários não autenticados podem se cadastrar para criar uma conta e serem autenticados.|
+|Link do vídeo do teste realizado: | https://1drv.ms/u/s!AhD2JqpOUvJChapRtRSQ9vPzbNLwGA?e=mxZs6t|
+
+|*Caso de Teste*                                 |*TC-11 - Aba educacional*                                         |
+|---|---|
+|Requisito Associado | RF-011 - Usuários não autenticados podem se cadastrar para criar uma conta e serem autenticados.|
+|Link do vídeo do teste realizado: | https://1drv.ms/u/s!AhD2JqpOUvJChapRtRSQ9vPzbNLwGA?e=mxZs6t|
 ## Avaliação dos Testes de Software
 
 Discorra sobre os resultados do teste. Ressaltando pontos fortes e fracos identificados na solução. Comente como o grupo pretende atacar esses pontos nas próximas iterações. Apresente as falhas detectadas e as melhorias geradas a partir dos resultados obtidos nos testes.
