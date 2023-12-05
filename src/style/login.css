@@ -8,8 +8,20 @@ body {
     font-family: Arial, sans-serif;
 }
 
+/* 
+ .pag-login{
+    display: flex;
+ }
+
+ .pag-login img{
+max-width: 50%;
+border-radius: 5px;
+ } */
+
+
+
 .login-container {
-    max-width: 400px;
+    max-width: 30%;
     padding: 20px;
     background-color: white;
     border-radius: 8px;
