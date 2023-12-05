@@ -273,32 +273,52 @@ Se o grupo tiver interesse em se aprofundar no desenvolvimento de testes de soft
 
 # Testes de Usabilidade
 
-O objetivo do Plano de Testes de Usabilidade é obter informações quanto à expectativa dos usuários em relação à  funcionalidade da aplicação de forma geral.
+**Cenário 1: Aline - Veterinária**
+Funcionalidades Avaliadas:
 
-Para tanto, elaboramos quatro cenários, cada um baseado na definição apresentada sobre as histórias dos usuários, definido na etapa das especificações do projeto.
+°Divulgação de Serviços
+°Campanhas para Adoções Responsáveis
+°Bem-Estar Animal
 
-Foram convidadas quatro pessoas que os perfis se encaixassem nas definições das histórias apresentadas na documentação, visando averiguar os seguintes indicadores:
+1-Taxa de Sucesso:Aline conseguiu executar as tarefas propostas com sucesso.
+2-Satisfação Subjetiva: Aline considerou que a aplicação atendeu satisfatoriamente às suas necessidades, mas acredita que algumas melhorias podem ser feitas. 
+Avaliação: 4 (Bom). 
+3-Tempo para Conclusão da Tarefa: Aline levou um tempo razoável para concluir as tarefas propostas, semelhante ao que um especialista (desenvolvedor) levaria.
 
-Taxa de sucesso: responde se o usuário conseguiu ou não executar a tarefa proposta;
+**Cenário 2: Gustavo - Estudante**
+Funcionalidades Avaliadas:
 
-Satisfação subjetiva: responde como o usuário avalia o sistema com relação à execução da tarefa proposta, conforme a seguinte escala:
+°Auxílio com Cuidados Médicos
+°Informações sobre Cuidados Básicos
 
-1. Péssimo; 
-2. Ruim; 
-3. Regular; 
-4. Bom; 
-5. Ótimo.
+1-Taxa de Sucesso: Gustavo conseguiu executar as tarefas propostas com sucesso.
+2-Satisfação Subjetiva: Gustavo ficou satisfeito com as informações fornecidas, mas acredita que algumas funcionalidades podem ser mais intuitivas. 
+Avaliação: 4 (Bom). 
+3-Tempo para Conclusão da Tarefa: Gustavo levou um tempo aceitável para concluir as tarefas propostas, comparável ao tempo de um especialista.
 
-Tempo para conclusão da tarefa: em segundos, e em comparação com o tempo utilizado quando um especialista (um desenvolvedor) realiza a mesma tarefa.
+**Cenário 3: Camila - Fisioterapeuta**
+Funcionalidades Avaliadas:
 
-Objetivando respeitar as diretrizes da Lei Geral de Proteção de Dados, as informações pessoais dos usuários que participaram do teste não foram coletadas, tendo em vista a ausência de Termo de Consentimento Livre e Esclarecido.
+°Auxílio em Clínicas para Animais em Situação Vulnerável
+°Divulgação de Eventos de Adoção e Castração
+°Divulgação de Pets Perdidos e para Adoção
 
+1-Taxa de Sucesso: Camila conseguiu executar as tarefas propostas com sucesso.
+2-Satisfação Subjetiva: Camila ficou muito satisfeita com a aplicação, considerando-a extremamente útil para suas atividades de apoio à causa animal. 
+Avaliação: 5 (Ótimo). 
+3-Tempo para Conclusão da Tarefa: Camila levou um tempo rápido para concluir as tarefas, demonstrando eficiência na utilização da aplicação.
 
-Apresente os cenários de testes utilizados na realização dos testes de usabilidade da sua aplicação. Escolha cenários de testes que demonstrem as principais histórias de usuário sendo realizadas. Neste tópico o grupo deve detalhar quais funcionalidades avaliadas, o grupo de usuários que foi escolhido para participar do teste e as ferramentas utilizadas.
+**Cenário 4: Sofia - Empresária**
+Funcionalidades Avaliadas:
 
-> - [UX Tools](https://uxdesign.cc/ux-user-research-and-user-testing-tools-2d339d379dc7)
+°Serviços Gratuitos e a Preço Social
+°Parcerias com ONGs
 
-
+1-Taxa de Sucesso: Sofia conseguiu executar as tarefas propostas com sucesso.
+2-Satisfação Subjetiva: Sofia considerou a aplicação eficaz, mas sugeriu algumas melhorias no design para facilitar a navegação.
+Avaliação: 4 (Bom). 
+3-Tempo para Conclusão da Tarefa: 
+Sofia levou um tempo razoável para concluir as tarefas, similar ao tempo de um especialista.
 ## Cenários de Teste de Usabilidade
 
 | Nº do Cenário | Descrição do cenário |
