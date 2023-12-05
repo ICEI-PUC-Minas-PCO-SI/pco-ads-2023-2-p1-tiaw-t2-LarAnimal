@@ -18,15 +18,15 @@ A documentação dos testes é dividida nas seguintes seções:
 
 # Teste de Software
 **REQUISITOS FUNCIONAIS**
-RF-001: Registro de Usuário
-Objetivo do Teste: Verificar se o sistema permite que os usuários se registrem com sucesso e se eles conseguem fazer login após o registro.
+RF-001: Registro de Usuário<b>
+Objetivo do Teste: Verificar se o sistema permite que os usuários se registrem com sucesso e se eles conseguem fazer login após o registro.<br>
 Passos do Teste:
 Acesse a página de registro.
 Preencha todos os campos obrigatórios.
 Submeta o formulário de registro.
 Faça login com as credenciais recém-registradas.
 Verifique se o login é bem-sucedido.
-
+<br>
 Resultado: O registro e o login são concluídos com sucesso.
 
 RF-002: Perfil de Usuário Comum ou Administrador
