@@ -240,16 +240,15 @@ a {
 
 } 
 
-/* .historia{
+.historia{
     background-color: rgba(242, 170, 82, 0.8);
     border-radius: 7px;
  
-} */
+}
 
 
 .historia .texto {
-    background-color: rgba(242, 170, 82, 0.4); 
-    /* background-color:  rgba(255, 255, 255, 0.4);  */
+    background-color:  rgba(255, 255, 255, 0.4); 
     border-radius: 7px;
     margin: 2px;
     max-width: 275px;
