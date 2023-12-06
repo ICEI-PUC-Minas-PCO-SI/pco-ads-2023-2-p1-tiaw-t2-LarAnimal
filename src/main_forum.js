@@ -1,84 +1,131 @@
-//URL DA APLICAÇÃO
-URL = 'http;//localhost:3000'
-    //=============================================================================================================================
-
-    // Funções CRUD utilizando Fetch API
-    constapiUrl = 'https://jsonplaceholder.typicode.com/posts';
-
-async function createPost(content) {
-    const response = await fetch(apiUrl, {
-        method: 'POST',
+//URL DA API DE DADOS
+URL = 'http://localhost:3000/posts'
+let ULL = "http://localhost:3000/comentarios"
+//============================================================================================================
+//POST - Criar um novo post ou comentário
+let enviarConte = document.getElementById("enviar-content")
+let comentario = document.getElementById("enviar-newComente")
+comentario.addEventListener("click", novoComent)
+enviarConte.addEventListener("click", novodado)
+function novoComent() {
+    let newcComent = document.getElementById("post-content").value;
+    let num = Math.random(40)
+    let coment = {
+        id: num,
+        content: newcComent
+    }
+    fetch(ULL, {
+        method: "POST",
         headers: {
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json"
         },
-        body: JSON.stringify({ title: 'Novo Post', body: content, userId: 1 }),
-    });
-
-    const data = await response.json();
-    fetch('/seu-endpoint-no-servidor', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: postDataJSON,
+        body: JSON.stringify(coment)
     })
         .then(response => response.json())
-        .then(data => {
-            // Lógica para lidar com a resposta do servidor, se necessário
-            console.log('Resposta do servidor:', data);
-        })
-        .catch(error => {
-            console.error('Erro ao enviar dados para o servidor:', error);
-        });
+        .then(data => console.log(data))
 
-    // Atualizar a exibição após criar um post
-    renderPosts();
+
+
 }
+function novodado() {
+    let comennte = document.getElementById("comment-content").value;
+    alert("Entrou função " + comennte)
+    let num = Math.random(40)
+    alert(num)
+    let newComent = {
+        id: num,
+        title: comennte,
+        comments: "Entrei pela primeira vez"
+    }
+    alert(newComent)
+    fetch(URL, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(newComent)
+    })
+        .then(response => response.json())
+        .then(data => console.log(data))
 
-async function getPosts() {
-    const response = await fetch(apiUrl);
-    const data = await response.json();
-    return data;
 }
+//===========================================================================================================
+//DELETE - excluir um post ou comentário
+const comennteDelete = document.getElementById('btn-deletar');
+comennteDelete.addEventListener('click', (e) => {
+    let id = $('id');
+    fetch(`${ULL}/${id}`, {
+        method: 'DELETE',
+    })
+        .then(RES => resizeBy.json())
+        .then(() => location.reload());
+})
+//====================================================================================================================================
+// PUT - Editar um comentário ou post
+let editConte = document.getElementById("edit-comentario")
+let comenta = document.getElementById("enviar-editComente")
+comentario.addEventListener("click", novoComent)
+enviarConte.addEventListener("click", novodado)
+function novoComent() {
+    let newcComent = document.getElementById("post-content").value;
+    let num = Math.random(40)
+    let coment = {
+        id: num,
+        content: newcComent
+    }
+    fetch(ULL, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(coment)
+    })
+        .then(response => response.json())
+        .then(data => console.log(data))
 
-async function renderPosts() {
-    const postsContainer = document.getElementById('posts');
-    const posts = await getPosts();
 
-    postsContainer.innerHTML = '';
 
-    posts.forEach((post) => {
-        const postElement = document.createElement('div');
-        postElement.classList.add('thread');
-        postElement.innerHTML = `
-            <h3>${post.title}</h3>
-            <div class="respostas">
-                <p>${post.body}</p>
-            </div>
-        `;
-
-        postsContainer.appendChild(postElement);
-    });
 }
+function novodado() {
+    let comennte = document.getElementById("comment-content").value;
+    alert("Entrou função " + comennte)
+    let num = Math.random(40)
+    alert(num)
+    let newComent = {
+        id: num,
+        title: comennte,
+        comments: "Entrei pela primeira vez"
+    }
+    alert(newComent)
+    fetch(URL, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(newComent)
+    })
+        .then(response => response.json())
+        .then(data => console.log(data))
 
-document.getElementById('post-form').addEventListener('submit', function (event) {
-    event.preventDefault();
-
-    // Obter dados do formulário
-    const postData = {
-        content: document.getElementById('post-content').value,
-    };
-
-    // Converter dados para JSON
-    const postDataJSON = JSON.stringify(postData);
-
-
-    console.log('Dados do post em JSON:', postDataJSON);
-
-    // Limpar o campo de conteúdo do post
-    document.getElementById('post-content').value = '';
-
-    // Renderizar os posts ao carregar a página
-    window.onload = renderPosts;
-
-});
+}
+//=================================================================================
+//GET - recupera os dados 
+fetch(URL)
+    .then(res => res.json())
+    .then(threads => {
+        let posts_respostas = '';
+        for (let i = 0; i < threads.length; i++) {
+            posts_respostas += `
+             <div class="thread">
+                <h3>${threads[i].post - title}</h3>
+                  <div class="respostas">
+                       <p>${posts[i].comment - content}</p>
+                         <hr>
+                  </div>
+              </div>
+              `;
+            postsList.innerHTML = posts_respostas;
+        }
+    }
+    );
+    //========================================================================
