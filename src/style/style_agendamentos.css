@@ -1,12 +1,14 @@
 body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: #fffefe; 
+    margin: 0;
+    padding: 0;
+    background-color: #fffefe;
     font-size: 1rem;
-    width: 100%;
 }
 
 header {
-    background-color: #ca4f0d; 
+    background-color: #ca4f0d;
+    /* Marrom escuro */
     color: #fff;
     text-align: center;
     padding: 20px;
@@ -20,35 +22,35 @@ h1 {
     width: 80%;
     margin: 0 auto;
     padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
 }
 
 .clinic-card {
-    border: 1px solid #55038C; 
+    border: 1px solid #55038C;
+    /* Marrom SaddleBrown */
     border-radius: 5px;
     padding: 10px;
-    width: 30%;
     background-color: #fff;
+    margin-top: 20px;
 }
 
 .clinic-img {
     max-width: 100%;
     height: auto;
-    margin: 0 auto; 
-    margin-top: 38px;
+    border-radius: 5px;
 }
 
 .clinic-button {
-    background-color: #55038C; 
+    background-color: #55038C;
+    /* Marrom SaddleBrown */
     color: #fff;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
 }
 
-
+/* Estilos para o popup */
 .popup {
     display: none;
     position: fixed;
@@ -58,44 +60,42 @@ h1 {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 1;
-    font-size: 25px;
 }
 
 .popup-content {
     background-color: #fff;
     width: 60%;
-    height: 40%;
     margin: 100px auto;
     padding: 20px;
-    text-align: center;
-    
+    border-radius: 5px;
 }
 
 .close {
-    color: #55038C; 
+    color: #55038C;
     float: right;
-    font-size: 40px;
+    font-size: 20px;
     cursor: pointer;
 }
 
+/* Estilos para os campos de data e hora */
 input[type="date"],
 input[type="time"],
 button.agendar-button {
     display: block;
-    margin: 10px auto;  
-    width: 200px; 
-    height: 50px;
+    margin: 10px 0;
 }
 
+/* Estilos da Navbar */
 nav {
     background-color: #F2AA52;
     color: #55038C;
-    padding: 0px;
-    margin: 0px;
+    padding: 10px 0;
 }
 
 .navbar-brand {
     color: #55038C;
+    font-size: 24px;
+    font-weight: 600;
 }
 
 .navbar-toggler-icon {
@@ -104,39 +104,52 @@ nav {
 
 .navbar-nav a {
     color: #55038C;
+    font-size: 18px;
+    font-weight: 600;
 }
 
 .navbar-nav a:hover {
     color: rgb(213, 229, 242);
 }
 
-.clinic-card {
+/* Estilos do Footer */
+footer {
+    clear: both;
+    text-align: center;
+    background-color: #F2AA52;
+    color: #55038C;
+    padding: 10px;
+    font-size: small;
+}
+
+/* Estilos para a seção de agendamentos */
+#appointmentsSection {
+    margin-top: 30px;
+}
+
+#appointmentsSection h2 {
+    color: #55038C;
+}
+
+.appointment-box {
     border: 1px solid #55038C;
     border-radius: 5px;
     padding: 10px;
-    width: 30%;
+    margin: 10px 0;
     background-color: #fff;
-    text-align: center; 
-    
 }
 
-.clinic-img {
-    width: 100%; 
-    height: 500px;
-    margin: 0 auto; 
+.appointment-box strong {
+    color: #55038C;
 }
 
-.clinic-card h3 {
-    margin-top: 10px; 
-}
-
-.clinic-button {
+.appointment-buttons button {
     background-color: #55038C;
     color: #fff;
     border: none;
-    padding: 10px 20px;
+    padding: 5px 10px;
     cursor: pointer;
-    margin-top: 10px; 
+    margin-right: 5px;
 }
 
 #botao-avaliacao { 
@@ -165,12 +178,17 @@ nav {
 
  
  
- footer{
-    display: flex;
- }
+ 
 
 #botao-avaliacao:hover { 
 
     background-color: #d8a76c; 
 
 } 
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .clinic-card {
+        width: 100%;
+    }
+}

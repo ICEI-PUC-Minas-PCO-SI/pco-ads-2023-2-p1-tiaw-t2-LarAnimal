@@ -182,5 +182,20 @@
       "id": 2,
       "content": "Acho que depende, se você quiser um animal específico pode ser muito difícil encontrar um para adoção então comprar seria melhor."
     }
-  ]
+  ],
+  
+    "clinics": [
+        {
+            "clinicName": "",
+            "clinicAdress": ""
+        }
+    ],
+    "appointments": [
+        {
+         "appointmentDate": "",
+          "appointmentTime": ""
+        }
+    ]
+
 }
+
