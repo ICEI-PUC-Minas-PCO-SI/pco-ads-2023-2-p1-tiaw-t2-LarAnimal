@@ -184,16 +184,16 @@
     }
   ],
   
-    "clinics": [
+    "agendamentos": [
         {
-            "clinicName": "",
-            "clinicAdress": ""
+            "clinicName": "lorem",
+            "clinicAdress": "lorem"
         }
     ],
     "appointments": [
         {
-         "appointmentDate": "",
-          "appointmentTime": ""
+         "appointmentDate": "lorem",
+          "appointmentTime": "lorem"
         }
     ]
 
