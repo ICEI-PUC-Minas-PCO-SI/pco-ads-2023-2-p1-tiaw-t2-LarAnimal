@@ -16,10 +16,5 @@ Responsável por realizar a padronização das Atas, algumas mudanças de estilo
 
 
 • **Rhillary Carvalho**
-<<<<<<< HEAD
-Responsável por modificações na página do fórum, criação do servidor json para forum e agendamentos e CRUD (carregar elementos da página, fazer novo post e comentar) para o fórum, linkar conteúdos relacionados nas páginas da Aba Educacional e pequenas modificações na documentação
-
-=======
 Responsável por modificações na página do fórum, criação do db json para forum e agendamentos e CRUD (carregar elementos da página, fazer novo post e comentar) para o fórum, auxilio na criação do CRUD para funcionalidade de agendamentos, linkar conteúdos relacionados nas páginas da Aba Educacional e modificações na documentação
->>>>>>> f_forum
 
