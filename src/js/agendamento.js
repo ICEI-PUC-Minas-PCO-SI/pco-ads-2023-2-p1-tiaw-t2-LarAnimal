@@ -17,9 +17,9 @@ function closePopup() {
     document.getElementById('clinicPopup').style.display = 'none';
 }
 document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('formulario-agendamento'); // Alterando o ID para o formulário de agendamento
+    const form = document.getElementById('btn-agendar'); // Alterando o ID para o formulário de agendamento
 
-    form.addEventListener('submit', function (event) {
+    form.addEventListener('click', function (event) {
         event.preventDefault();
 
         const clinicName = document.getElementById('clinicName').textContent;
