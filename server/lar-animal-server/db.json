@@ -183,6 +183,21 @@
       "content": "Acho que depende, se você quiser um animal específico pode ser muito difícil encontrar um para adoção então comprar seria melhor."
     }
   ],
+
+  "avaliacoes": [
+    {
+      "id": 1,
+      "username": "Nome do usuário",
+      "rating": 5,
+      "comment": "Comentário sobre a avaliação"
+    },
+    {
+      "id": 2,
+      "username": "Outro usuário",
+      "rating": 4,
+      "comment": "Outro comentário sobre a avaliação"
+    }
+  ],
   
   "agendamentos": [
     {
@@ -198,6 +213,7 @@
       "clinicAddress": "Alameda dos Bichos, 789"
     }
   ],
+
   "appointments": [
     {
       "appointmentDate": "2023-12-20",

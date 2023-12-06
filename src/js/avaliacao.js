@@ -38,6 +38,46 @@ submitBtn.addEventListener('click', () => {
         alert('Por favor, preencha todos os campos: avaliação, comentário e nome do usuário.');
     }
 });
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('formulario-doacao'); // Alterando o ID do formulário para o de avaliações
+
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const username = document.getElementById('username').value;
+        const rating = document.querySelectorAll('.star.rated').length; // Obtendo a quantidade de estrelas avaliadas
+        const comment = document.getElementById('comment').value;
+
+        const novaAvaliacao = {
+            username,
+            rating,
+            comment
+        };
+
+        fetch('http://localhost:3333/avaliacoes', { // Rota para a criação de novas avaliações
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(novaAvaliacao)
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Avaliação realizada com sucesso:', data);
+
+            // Limpar os campos do formulário após a avaliação
+            document.getElementById('username').value = '';
+            document.querySelectorAll('.star').forEach(star => star.classList.remove('rated'));
+            document.getElementById('comment').value = '';
+
+            alert('Avaliação realizada com sucesso!');
+        })
+        .catch(error => {
+            console.error('Erro ao fazer a avaliação:', error);
+            alert('Erro ao fazer a avaliação. Tente novamente mais tarde.');
+        });
+    });
+});
 
 
 
