@@ -184,18 +184,32 @@
     }
   ],
   
-    "agendamentos": [
-        {
-            "clinicName": "lorem",
-            "clinicAdress": "lorem"
-        }
-    ],
-    "appointments": [
-        {
-         "appointmentDate": "lorem",
-          "appointmentTime": "lorem"
-        }
-    ]
-
+  "agendamentos": [
+    {
+      "clinicName": "Hospital Veterinário",
+      "clinicAddress": "Av. Principal, 123"
+    },
+    {
+      "clinicName": "Clínica de Animais Felizes",
+      "clinicAddress": "Rua dos Animais, 456"
+    },
+    {
+      "clinicName": "Pets Health Center",
+      "clinicAddress": "Alameda dos Bichos, 789"
+    }
+  ],
+  "appointments": [
+    {
+      "appointmentDate": "2023-12-20",
+      "appointmentTime": "10:00"
+    },
+    {
+      "appointmentDate": "2023-12-22",
+      "appointmentTime": "15:30"
+    },
+    {
+      "appointmentDate": "2023-12-25",
+      "appointmentTime": "14:00"
+    }
+  ]
 }
-
