@@ -1,15 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Fórum de Discussão</title>
+<<<<<<< HEAD
     <link rel="stylesheet" href="style/forum_style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     
 </head>
 <body>
   
+=======
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        footer {
+            clear: both;
+            text-align: right;
+            background-color: #F2AA52;
+            color: #55038C;
+            padding: 10px;
+            font-size: small;
+        }
+        .thread {
+            padding: 10px;
+            border: 1px dashed #55038C;
+        }
+        .respostas {
+            margin: 0 10px;
+        }
+        textarea {
+            width: 100%;
+            height: 40px;
+            border: 1px solid #F2AA52;
+        }
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        .user-avatar-sidebar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            cursor: pointer;
+            border: 5px solid #212121;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+>>>>>>> f_forum
     <div id="cabecalho">
         <nav class="navbar navbar-expand-md px-4" style="background-color: #F2AA52;" data-bs-theme="dark">
             <div class="container-fluid">
@@ -17,18 +62,31 @@
                     <img src="./img/logo.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
                     Lar Animal
                 </a>
+<<<<<<< HEAD
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+=======
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavbar">
+>>>>>>> f_forum
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-md-end" id="collapsibleNavbar">
                     <div class="navbar-nav">
+<<<<<<< HEAD
                         <a class="nav-link active" aria-current="page" href="sobre.html" style="color: #55038C; font-size: 20px; font-weight: 600;">Sobre nós</a>
                         <a class="nav-link active" aria-current="page" href="#" style="color: #55038C; font-size: 20px; font-weight: 600;">Login</a>
+=======
+                        <a class="nav-link active" aria-current="page" href="sobre.html"
+                            style="color: #55038C; font-size: 20px; font-weight: 600;">Sobre nós</a>
+                        <a class="nav-link active" aria-current="page" href="#"
+                            style="color: #55038C; font-size: 20px; font-weight: 600;">Login</a>
+>>>>>>> f_forum
                     </div>
                 </div>
             </div>
         </nav>
     </div>
+<<<<<<< HEAD
 
    
     <div id="forum-container" class="container">
@@ -37,12 +95,20 @@
             <div class="col-md-3">
                 <div class="user-sidebar mt-4 mb-4">
                    
+=======
+    <!-- Conteúdo do fórum -->
+    <div id="forum-container" class="container pb-3">
+        <div class="row">
+            <!-- Barra lateral esquerda com nome de usuário e avatar -->
+            <div class="col-md-3">
+                <div class="user-avatar-sidebar mt-4 mb-4">
+>>>>>>> f_forum
                     <img src="https://i.pravatar.cc/150" alt="User Avatar" class="user-avatar-sidebar">
                     <div class="user-info">
-                        <p>Nome do Usuário</p>
-                        <p>Email@example.com</p>
+                        <h4 style="color: #F2AA52;">Nome do usuário</h4>
                     </div>
                 </div>
+<<<<<<< HEAD
 
                 
                 <div class="main-comments mt-4">
@@ -62,16 +128,60 @@
                 <div id="comment-carousel" class="carousel slide mb-4" data-ride="carousel">
                     <div class="carousel-inner">
                         
+=======
+            </div>
+            <!-- Área Principal do Fórum -->
+            <div class="col-md-9">
+                <div class="container">
+                    <!-- Título do Fórum e Formulário para Novo Post -->
+                    <form id="post-form" class="mt-4 mb-4">
+                        <h2>Novo Post</h2>
+                        <div class="form-group">
+                            <label for="post-content">Conteúdo do Post:</label>
+                            <textarea id="post-content" class="form-control" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Postar</button>
+                    </form>
+                    <!-- Lista de Posts -->
+                    <div id="post-list">
+                        <!-- Os posts serão inseridos aqui dinamicamente -->
                     </div>
-                    <a class="carousel-control-prev" href="#comment-carousel" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Anterior</span>
-                    </a>
-                    <a class="carousel-control-next" href="#comment-carousel" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Próximo</span>
-                    </a>
+                    <!-- Threads de respostas -->
+                    <div id="posts">
+                        <div class="thread" id="post1">
+                            <h3 class="post-title">Qual a melhor alternativa: adotar ou comprar um pet?</h3>
+                            <div class="respostas">
+                                <p id="comment1-1">Adotar! É muito melhor adotar um pet pois assim você vai dar a um
+                                    animalzinho abandonado um lar e também não colabora com criadouros ilegais</p>
+                                <hr>
+                                <p id="comment1-2">Acho que depende, se você quiser um animal específico pode ser muito
+                                    difícil encontrar um para adoção então comprar seria melhor.</p>
+                                <hr>
+                                <form id="comment-form1">
+                                    <textarea id="comment-content1" class="comment-control" required></textarea>
+                                    <input type="submit" name="acao" value="Enviar!">
+                                </form>
+                            </div>
+                        </div>
+                        <div class="thread" id="post2">
+                            <h3 class="post-title">Gatos domesticos deveriam ter acesso fácil as ruas?</h3>
+                            <div class="respostas">
+                                <p id="comment2-1">Não! Gatos domesticos, como o próprio nome já diz devem ficar em casa
+                                    para se manterem saudáveis e seguros</p>
+                                <hr>
+                                <p id="comment2-2">Gatos são caçadores e sobreviiventes natos eles podem se manter
+                                    seguros pois são muito independentes!</p>
+                                <hr>
+                                <form id="comment-form2">
+                                    <textarea id="comment-content2" class="comment-control" required></textarea>
+                                    <input type="submit" name="acao" value="Enviar!">
+                                </form>
+                            </div>
+                        </div>
+>>>>>>> f_forum
+                    </div>
                 </div>
+<<<<<<< HEAD
                 <div id="post-list">         
                 </div>
                 <form id="post-form" class="mt-4">
@@ -126,5 +236,70 @@
     <script src="js/forum.js"></script>
 
 
+=======
+            </div>
+        </div>
+    </div>
+    <!-- Rodapé -->
+    <footer style="background-color: #F2AA52; color: #55038C; padding: 10px; font-size: small; text-align: center; bottom: 0; left: 0; right: 0;">
+        <div>
+            <h6 style="color: #55038C;">Redes sociais:</h6>
+            <p>
+                <span><a href="http://www.facebook.com" target="_blank" rel="noopener noreferrer"
+                        class="text-decoration-none" style="color: #55038C;">Facebook</a> |
+                </span>
+                <span><a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"
+                        class="text-decoration-none" style="color: #55038C;">Twitter</a> |
+                </span>
+                <span><a href="http://www.instagram.com" target="_blank" rel="noopener noreferrer"
+                        class="text-decoration-none" style="color: #55038C;">Instagram</a> | </span>
+    
+                <br>
+    
+                <a class="nav-link active" aria-current="page" href="avaliacao.html" style="color: #55038C; font-size: 15px; font-weight: 600;">Avalie-nos</a>
+    
+                Todos os Direitos Reservados.
+            </p>
+        </div>
+    </footer>
+    <!-- Link para arquivo CRUD JSON -->
+    <script src="main_forum.js"></script>
+    <!-- JavaScript para postar, responder, editar e excluir -->
+    <script>
+        let forms = document.querySelectorAll('form');
+        for (let i = 0; i < forms.length; i++) {
+            forms[i].addEventListener('submit', (e) => {
+                e.preventDefault();
+                let conteudo = document.querySelectorAll('textarea')[i];
+                forms[i].insertAdjacentHTML('beforebegin', '<div id="comment-' + i + '">' +
+                    '<p id="comment-text-' + i + '">' + conteudo.value + '</p>' +
+                    '<button class="edit-btn btn-primary" onclick="editComment(' + i + ')">Editar</button>' +
+                    '<button class="delete-btn btn-primary" id="btn-deletar" onclick="deleteComment(' + i + ')">Excluir</button>' +
+                    '</div>');
+                conteudo.value = "";
+            });
+        }
+        document.getElementById('post-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const message = document.getElementById('post-content').value;
+            renderPosts();
+            document.getElementById('post-content').value = '';
+        });
+        function editComment(postId) {
+            let commentText = document.getElementById('comment-text-' + postId);
+            let commentForm = document.getElementById('comment-form' + postId);
+            if (commentText && commentForm) {
+                commentForm.innerHTML = '<textarea id="comment-content' + postId + '" class="comment-control" required>' +
+                    commentText.textContent.trim() + '</textarea>' +
+                    '<input type="submit" id="edit-comentario" name="acao" value="Salvar">';
+                commentText.style.display = 'none';
+            }
+        }
+        function deleteComment(postId) {
+            let commentContainer = document.getElementById('comment-' + postId);
+            commentContainer.parentElement.removeChild(commentContainer);
+        }
+    </script>
+>>>>>>> f_forum
 </body>
 </html>
