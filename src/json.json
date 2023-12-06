@@ -1,0 +1,14 @@
+{
+    "clinics": [
+        {
+            "clinicName": "",
+            "clinicAdress": ""
+        }
+    ],
+    "appointments": [
+        {
+         "appointmentDate": "",
+          "appointmentTime": ""
+        }
+    ]
+}
