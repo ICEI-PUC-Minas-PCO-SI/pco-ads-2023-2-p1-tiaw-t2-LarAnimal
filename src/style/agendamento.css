@@ -112,15 +112,6 @@ nav {
     color: rgb(213, 229, 242);
 }
 
-/* Estilos do Footer */
-footer {
-    clear: both;
-    text-align: center;
-    background-color: #F2AA52;
-    color: #55038C;
-    padding: 10px;
-    font-size: small;
-}
 
 /* Estilos para a seção de agendamentos */
 #appointmentsSection {
@@ -151,38 +142,37 @@ footer {
     cursor: pointer;
     margin-right: 5px;
 }
-
 #botao-avaliacao { 
 
-    background-color: #55038C; 
+background-color: #55038C; 
 
-    border: 1px solid #ffffff;  
+border: 1px solid #ffffff;  
 
-    color: #ffffff;  
+color: #ffffff;  
 
-    padding: 10px 25px; 
+padding: 10px 25px; 
 
-    text-align: center; 
+text-align: center; 
 
-    display: inline-block; 
+display: inline-block; 
 
-    margin: 8px 4px;  
+margin: 8px 4px;  
 
-    cursor: pointer; 
+cursor: pointer; 
 
-    text-decoration: none; 
+text-decoration: none; 
 
-    font-size: 15px; 
+font-size: 15px; 
 
 } 
 
- 
- 
- 
+
+
+
 
 #botao-avaliacao:hover { 
 
-    background-color: #d8a76c; 
+background-color: #d8a76c; 
 
 } 
 
