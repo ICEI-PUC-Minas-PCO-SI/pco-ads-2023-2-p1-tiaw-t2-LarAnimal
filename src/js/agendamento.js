@@ -16,6 +16,49 @@ function showPopup(clinicName, clinicAddress) {
 function closePopup() {
     document.getElementById('clinicPopup').style.display = 'none';
 }
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('formulario-agendamento'); // Alterando o ID para o formulário de agendamento
+
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const clinicName = document.getElementById('clinicName').textContent;
+        const appointmentDate = document.getElementById('appointmentDate').value;
+        const appointmentTime = document.getElementById('appointmentTime').value;
+
+        const novoAgendamento = {
+            clinicName,
+            appointmentDate,
+            appointmentTime
+        };
+
+        fetch('http://localhost:3333/agendamentos', { 
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(novoAgendamento)
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Agendamento realizado com sucesso:', data);
+
+            // Limpar os campos do formulário após o agendamento
+            document.getElementById('appointmentDate').value = '';
+            document.getElementById('appointmentTime').value = '';
+
+            // Atualizar a lista de agendamentos após adicionar um novo
+            showAppointmentsList();
+
+            alert('Agendamento realizado com sucesso!');
+        })
+        .catch(error => {
+            console.error('Erro ao realizar o agendamento:', error);
+
+            alert('Erro ao realizar o agendamento. Tente novamente mais tarde.');
+        });
+    });
+});
 
 function agendarConsulta() {
     const clinicName = document.getElementById('clinicName').textContent;
