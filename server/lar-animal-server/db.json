@@ -195,6 +195,18 @@
       "username": "Outro usuário",
       "rating": 4,
       "comment": "Outro comentário sobre a avaliação"
+    },
+    {
+      "username": "dasdas",
+      "rating": 5,
+      "comment": "dasdas",
+      "id": 3
+    },
+    {
+      "username": "312",
+      "rating": 1,
+      "comment": "31123",
+      "id": 4
     }
   ],
   "agendamentos": [
