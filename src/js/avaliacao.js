@@ -18,7 +18,9 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    submitBtn.addEventListener('click', () => {
+    submitBtn.addEventListener('click', (event) => {
+        event.preventDefault(); // Impede o comportamento padrão do formulário
+
         const ratedStars = document.querySelectorAll('.star.rated');
         const comment = commentInput.value;
         const username = usernameInput.value;
@@ -34,30 +36,31 @@ document.addEventListener('DOMContentLoaded', function () {
                 comment
             };
 
-            // Substitua a URL e o método de envio pelo seu endpoint real
             fetch('http://localhost:3333/avaliacoes', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(novaAvaliacao)
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Avaliação realizada com sucesso:', data);
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(novaAvaliacao)
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Avaliação realizada com sucesso:', data);
 
-                    stars.forEach(star => star.classList.remove('rated'));
-                    commentInput.value = '';
-                    usernameInput.value = '';
+                stars.forEach(star => star.classList.remove('rated'));
+                commentInput.value = '';
+                usernameInput.value = '';
 
-                    alert('Avaliação realizada com sucesso!');
-                })
-                .catch(error => {
-                    console.error('Erro ao fazer a avaliação:', error);
-                    alert('Erro ao fazer a avaliação. Tente novamente mais tarde.');
-                });
+                alert('Avaliação realizada com sucesso!');
+            })
+            .catch(error => {
+                console.error('Erro ao fazer a avaliação:', error);
+                alert('Erro ao fazer a avaliação. Tente novamente mais tarde.');
+            });
         } else {
             alert('Por favor, preencha todos os campos: avaliação, comentário e nome do usuário.');
         }
     });
+
+    // Outras lógicas podem ser adicionadas aqui, se necessário
 });
