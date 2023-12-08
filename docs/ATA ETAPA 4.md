@@ -1,6 +1,6 @@
 # ATA ETAPA 4
 • **Elder Luis**
-
+Responsável pela criação da aba gerenciamento de parceiros, mapa de geolocalização(API), banco de dados dos agendamentos.
 
 • **Jefferson**
 Responsável pela responsividade, mudanças da nav bar, footer, criação / modificação das paginas de cadastro e login, criaçao do mapa interativo, implementação de API de cep, implementação dos bancos de dados de login, pagina de doações e voluntariado 
