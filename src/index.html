@@ -45,6 +45,11 @@
                 <img src="./img/logo.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
                 Lar Animal
             </a>
+            <label class="switch" title="Ativar Modo Escuro">
+                <input id="modeToggle" type="checkbox">
+                <span class="slider round"></span>
+                <span id="modeText">Modo Claro</span><br>
+            </label>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -120,15 +125,21 @@
         });
     });
 
-    function toggleContrast() {
-    var body = document.body;
-    if (body.classList.contains('high-contrast')) {
-        body.classList.remove('high-contrast');
-    } else {
-        body.classList.add('high-contrast');
-    }
+    const toggleSwitch = document.getElementById('modeToggle');
+const modeText = document.getElementById('modeText');
 
+toggleSwitch.addEventListener('change', switchTheme);
+
+function switchTheme() {
+    if (toggleSwitch.checked) {
+        document.body.classList.add('dark-mode');
+        modeText.innerText = 'Modo Escuro';
+    } else {
+        document.body.classList.remove('dark-mode');
+        modeText.innerText = 'Modo Claro';
+    }
 }
+
 </script>
 
 
@@ -138,9 +149,6 @@
 
             <article class="about">
                
-                
-            
-            
                 <div>
                     <iframe width="400" height="400" src="https://www.youtube.com/embed/m-Gtu7C93_Y?controls=0&autoplay=1&mute=1" frameborder="0" allowfullscreen></iframe>
                 </div>

@@ -80,4 +80,3 @@ function salvarNovoPet() {
     document.getElementById("donoTelefone").value = "";
     imagemPet.value = "";
 }
-
