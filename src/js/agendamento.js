@@ -1,15 +1,11 @@
 async function loadAppointments() {
-    let appointments = [];
-    await $.get({
-        url: "http://localhost:3333/agendamentos",
-        success: function (response) {
-            appointments = response;
-        },
-        error: function (error) {
-            window.alert("Erro ao cadastrar usuário");
-        }
-    })
-    return appointments;
+    try {
+        const response = await $.get("http://localhost:3333/agendamentos");
+        return response || [];
+    } catch (error) {
+        window.alert("Erro ao carregar os agendamentos");
+        return [];
+    }
 }
 
 function showPopup(clinicName, clinicAddress) {
@@ -23,34 +19,90 @@ function closePopup() {
 }
 
 $(document).ready(function () {
-        const btnAgendamento = document.getElementById('btn-agendar'); // Alterando o ID para o formulário de agendamento
-        
-        btnAgendamento.addEventListener('click', function (event) {
-            event.preventDefault();
-    
-            const clinicName = document.getElementById('clinicName').textContent;
-            const appointmentDate = document.getElementById('appointmentDate').value;
-            const appointmentTime = document.getElementById('appointmentTime').value;
-    
-            const novoAgendamento = {
-                clinicName,
-                appointmentDate,
-                appointmentTime
-            };
-    
-            $.post({
-                url: "http://localhost:3333/agendamentos",
-                data: novoAgendamento,
-                success: function (response) {
-                    console.log("POST request successful:", response);
-                },
-                error: function (error) {
-                    window.alert("Erro ao cadastrar usuário");
-                }
-            })
-        });
-});
+    const btnAgendamento = document.getElementById('btn-agendar');
 
+    btnAgendamento.addEventListener('click', async function (event) {
+        event.preventDefault();
+
+        const clinicName = document.getElementById('clinicName').textContent;
+        const appointmentDate = document.getElementById('appointmentDate').value;
+        const appointmentTime = document.getElementById('appointmentTime').value;
+
+        const novoAgendamento = {
+            clinicName,
+            appointmentDate,
+            appointmentTime
+        };async function loadAppointments() {
+    try {
+        const response = await fetch("http://localhost:3333/agendamentos");
+        if (response.ok) {
+            const data = await response.json();
+            return data || [];
+        } else {
+            throw new Error('Erro ao carregar os agendamentos');
+        }
+    } catch (error) {
+        window.alert(error.message);
+        return [];
+    }
+}
+
+async function saveAppointments(appointments) {
+    try {
+        const response = await fetch("http://localhost:3333/agendamentos", {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(appointments),
+        });
+        if (response.ok) {
+            const data = await response.json();
+            console.log('Agendamentos salvos:', data);
+        } else {
+            throw new Error('Erro ao salvar os agendamentos');
+        }
+    } catch (error) {
+        window.alert(error.message);
+    }
+}
+
+async function deleteAppointment(index) {
+    let existingAppointments = await loadAppointments();
+    existingAppointments.splice(index, 1);
+    await saveAppointments(existingAppointments);
+    await showAppointmentsList();
+}
+
+async function editAppointment(index) {
+    let existingAppointments = await loadAppointments();
+    const appointment = existingAppointments[index];
+
+    document.getElementById('clinicName').textContent = appointment.clinicName;
+    document.getElementById('clinicAddress').textContent = '';
+    document.getElementById('appointmentDate').value = appointment.appointmentDate;
+    document.getElementById('appointmentTime').value = appointment.appointmentTime;
+
+    // Exibir o popup
+    document.getElementById('clinicPopup').style.display = 'block';
+}
+
+// Restante do seu código...
+
+        // Restante do seu código...
+        
+
+        try {
+            const response = await $.post({
+                url: "http://localhost:3333/agendamentos",
+                data: novoAgendamento
+            });
+            console.log("POST request successful:", response);
+        } catch (error) {
+            window.alert("Erro ao cadastrar usuário");
+        }
+    });
+});
 
 async function agendarConsulta() {
     const clinicName = document.getElementById('clinicName').textContent;
@@ -63,9 +115,8 @@ async function agendarConsulta() {
         appointmentTime
     };
 
-    const existingAppointments = loadAppointments();
+    const existingAppointments = await loadAppointments();
     existingAppointments.push(appointmentData);
-    saveAppointmentsLocally(existingAppointments);
     alert(`Consulta agendada em ${clinicName} em ${appointmentDate} às ${appointmentTime}`);
     closePopup();
     await showAppointmentsList();
@@ -90,16 +141,15 @@ async function showAppointmentsList() {
         appointmentsList.appendChild(listItem);
     });
 }
-
 async function deleteAppointment(index) {
-    const existingAppointments = loadAppointments();
+    let existingAppointments = await loadAppointments();
     existingAppointments.splice(index, 1);
-    saveAppointmentsLocally(existingAppointments);
+     saveAppointments(existingAppointments);
     await showAppointmentsList();
 }
 
 async function editAppointment(index) {
-    const existingAppointments = loadAppointments();
+    let existingAppointments = await loadAppointments();
     const appointment = existingAppointments[index];
 
     document.getElementById('clinicName').textContent = appointment.clinicName;
@@ -107,19 +157,26 @@ async function editAppointment(index) {
     document.getElementById('appointmentDate').value = appointment.appointmentDate;
     document.getElementById('appointmentTime').value = appointment.appointmentTime;
 
-    // Excluir o agendamento antigo
-    existingAppointments.splice(index, 1);
-    saveAppointmentsLocally(existingAppointments);
-
-    // Atualizar a lista de agendamentos
-    await showAppointmentsList();
-
     // Exibir o popup
     document.getElementById('clinicPopup').style.display = 'block';
 }
 
-// Event listener quando o DOM estiver carregado
+async function showAppointmentsList() {
+    const appointmentsList = document.getElementById('appointmentsList');
+    appointmentsList.innerHTML = '';
+
+    const existingAppointments = await loadAppointments();
+
+    console.log('Agendamentos existentes:', existingAppointments)
+    existingAppointments.forEach((appointment, index) => {
+        const listItem = document.createElement('li');
+        listItem.innerHTML = `<div class="appointment-box"><strong>Clinica:</strong> ${appointment.clinicName} - <strong>Data:</strong> ${formatarDataBrasil(appointment.appointmentDate)} - <strong>Hora:</strong> ${appointment.appointmentTime}
+        <div class="appointment-buttons"><button onclick="editAppointment(${index})">Editar</button><button id="btn-delete" onclick="deleteAppointment(${index})">Excluir</button></div></div>`;
+        appointmentsList.appendChild(listItem);
+    });
+}
+
 document.addEventListener('DOMContentLoaded', async function () {
-    // Restante do seu código...
+
     await showAppointmentsList();
 });
