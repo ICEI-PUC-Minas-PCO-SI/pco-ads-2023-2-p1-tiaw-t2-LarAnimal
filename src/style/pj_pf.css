@@ -2,31 +2,29 @@ body {
     display: block;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+
     background-color: #f2f2f2;
     font-family: Arial, sans-serif;
 }
 
 .option-container {
-    display: flex;
     margin:  auto; 
     justify-content: center; 
     align-items: center;
-    gap: 20px;
     width: 50%; 
-    margin-top: 30px; 
+    margin-top: 300px; 
 }
 
 .option {
     width: 300px;
     height: 300px;
     position: relative;
-    margin-top: 210px;
+    margin-top: 2100px;
     
 }
 
 .option img {
+    margin-top: 150px;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -37,17 +35,15 @@ body {
 .text-beside-image {
     position: absolute;
     bottom: -45px;
-    left: 50%;
+    left: 160%;
+    top: 90%;
     transform: translateX(-50%);
     color: #55038C;
     text-align: center;
     width: 100%;
+    font-size: 40px
 }
 
-.img-pjpf{
-    width: 100px;
-    height: 100px;
-}
 
 #botao-avaliacao { 
 
@@ -73,9 +69,6 @@ body {
 
 } 
 
- 
- 
- 
 
 #botao-avaliacao:hover { 
 
