@@ -1,4 +1,3 @@
-
 function salvarNovoPet() {
     var nome = document.getElementById("petNome").value;
     var especie = document.getElementById("petEspecie").value;
@@ -33,7 +32,6 @@ function salvarNovoPet() {
 
     document.querySelector(".row").appendChild(newCard);
 
-    //Novo DIV Modal
     var modalPet = document.createElement("div");
     modalPet.className = "modal fade mx-auto";
     modalPet.id = `modalPet${nome}`;
@@ -58,19 +56,15 @@ function salvarNovoPet() {
                     <p><strong style="color: #55038C;">Descrição:</strong> ${descricao}</p>
                 </div>
                 <div class="modal-footer" style="background-color: #F2AA52;">
-
-                <button type="button" class="btn mx-auto" data-bs-toggle="modal" data-bs-target="#DonoModal"
-                style="background-color: #55038C; color: white;">
-                Quero adotar!
-                </button>
-                    
+                    <button type="button" class="btn mx-auto" data-bs-toggle="modal" data-bs-target="#DonoModal"
+                        style="background-color: #55038C; color: white;">
+                        Quero adotar!
+                    </button>
                 </div>
             </div>
         </div>
     `;
-    document.body.appendChild(modalPet);;
-
-
+    document.body.appendChild(modalPet);
 
     document.getElementById("petNome").value = "";
     document.getElementById("petEspecie").value = "";
@@ -79,53 +73,29 @@ function salvarNovoPet() {
     document.getElementById("donoEmail").value = "";
     document.getElementById("donoTelefone").value = "";
     imagemPet.value = "";
-}
 
-
-const form = document.getElementById('novoPetForm');
-const submitBtn = document.getElementById('submitBtn');
-
-submitBtn.addEventListener('click', (event) => {
-    event.preventDefault();
-
-    const petNome = document.getElementById('petNome').value;
-    const petEspecie = document.getElementById('petEspecie').value;
-    const petIdade = document.getElementById('petIdade').value;
-    const petImagem = document.getElementById('petImagem').value;
-    const petDescricao = document.getElementById('petDescricao').value;
-    const donoEmail = document.getElementById('donoEmail').value;
-    const donoTelefone = document.getElementById('donoTelefone').value;
-
-    const novoPet = {
-        nome: petNome,
-        especie: petEspecie,
-        idade: petIdade,
-        imagem: petImagem,
-        descricao: petDescricao,
-        dono: {
-            email: donoEmail,
-            telefone: donoTelefone
-        }
-    };
+    // Código de envio para o servidor
+    const formData = new FormData(); 
+    formData.append('nome', nome);
+    formData.append('especie', especie);
+    formData.append('idade', idade);
+    formData.append('descricao', descricao);
+    formData.append('donoEmail', emailDono);
+    formData.append('donoTelefone', telefoneDono);
 
     fetch('http://localhost:3333/pets', {
         method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(novoPet)
+        body: formData 
     })
     .then(response => response.json())
     .then(data => {
         console.log('Novo pet adicionado com sucesso:', data);
-
+        const form = document.getElementById('novoPetForm');
         form.reset();
-
         alert('Novo pet adicionado com sucesso!');
     })
     .catch(error => {
         console.error('Erro ao adicionar novo pet:', error);
-
         alert('Erro ao adicionar novo pet. Tente novamente mais tarde.');
     });
-});
+}
