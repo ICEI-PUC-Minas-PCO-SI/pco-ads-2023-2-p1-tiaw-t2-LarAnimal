@@ -60,47 +60,34 @@
     </header>
 
     <main>
-        <section class="donation-form mt-2">
-            <h2>Faça uma Doação</h2>
-            <form id="formulario-doacao" action="process_donation.php" method="POST">
-                <label for="name">Nome:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="amount">Valor da Doação:</label>
-                <input type="number" id="amount" name="amount" min="1" required>
-
-                <button type="submit">Doar Agora</button>
-            </form>
-        </section>
-
-        <section class="benefits">
-            <h2>Por que Doar?</h2>
-            <p>Faça a diferença na vida de quem precisa! Sua doação contruibui para qualiade de vida de muitos animais!</p>
-        </section>
+        <div id="container" style="display: flex; height: 100vh;">
+            <div id="left-section" style="flex: 1;">
+                <!-- Seu conteúdo atual -->
+                <img src="img/doacao22.webp" alt="" width="1000px" height="1100px">
+            </div>
+            <div id="right-section" style="flex: 1;">
+  
+                <!-- Seção de doação -->
+                <section class="donation-form mt-2">
+                    <h2>Faça uma Doação</h2>
+                    <form id="formulario-doacao" action="process_donation.php" method="POST">
+                        <label for="name">Nome:</label>
+                        <input type="text" id="name" name="name" required>
+    
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+    
+                        <label for="amount">Valor da Doação:</label>
+                        <input type="number" id="amount" name="amount" min="1" required>
+    
+                        <button type="submit">Doar Agora</button>
+                    </form>
+                </section>
+            </div>
+        </div>
     </main>
     <script src="js/doação.js"></script>
-    <footer style="background-color: #F2AA52; color: #55038C; padding: 10px; font-size: small; text-align: center; position: fixed; bottom: 0; left: 0; right: 0;"> 
 
-        <div> 
-    
-            <p>Gostou do nosso serviço? Avalie-nos!</p> 
-    
-                <a href="avaliacao.html"><button id="botao-avaliacao">Avaliar</button></a> 
-    
-                </span> 
-    
-                <div class="rodape"> 
-    
-                <div class="container"> 
-    
-                <p>&copy; 2023 Lar animal - Todos os direitos reservados</p> 
-    
-        </div> 
-    
-    </footer> 
 
     <script>
         const toggleSwitch = document.getElementById('modeToggle');
