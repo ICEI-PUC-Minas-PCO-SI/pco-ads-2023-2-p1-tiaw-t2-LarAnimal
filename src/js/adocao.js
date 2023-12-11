@@ -82,51 +82,50 @@ function salvarNovoPet() {
 }
 
 
+const form = document.getElementById('novoPetForm');
+const submitBtn = document.getElementById('submitBtn');
+
 submitBtn.addEventListener('click', (event) => {
     event.preventDefault();
 
-    form.addEventListener('submit', function (event) {
-        event.preventDefault();
+    const petNome = document.getElementById('petNome').value;
+    const petEspecie = document.getElementById('petEspecie').value;
+    const petIdade = document.getElementById('petIdade').value;
+    const petImagem = document.getElementById('petImagem').value;
+    const petDescricao = document.getElementById('petDescricao').value;
+    const donoEmail = document.getElementById('donoEmail').value;
+    const donoTelefone = document.getElementById('donoTelefone').value;
 
-        const petNome = document.getElementById('petNome').value;
-        const petEspecie = document.getElementById('petEspecie').value;
-        const petIdade = document.getElementById('petIdade').value;
-        const petImagem = document.getElementById('petImagem').value;
-        const petDescricao = document.getElementById('petDescricao').value;
-        const donoEmail = document.getElementById('donoEmail').value;
-        const donoTelefone = document.getElementById('donoTelefone').value;
+    const novoPet = {
+        nome: petNome,
+        especie: petEspecie,
+        idade: petIdade,
+        imagem: petImagem,
+        descricao: petDescricao,
+        dono: {
+            email: donoEmail,
+            telefone: donoTelefone
+        }
+    };
 
-        const novoPet = {
-            nome: petNome,
-            especie: petEspecie,
-            idade: petIdade,
-            imagem: petImagem,
-            descricao: petDescricao,
-            dono: {
-                email: donoEmail,
-                telefone: donoTelefone
-            }
-        };
+    fetch('http://localhost:3333/pets', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(novoPet)
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Novo pet adicionado com sucesso:', data);
 
-        fetch('http://localhost:3333/pets', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(novoPet)
-        })
-        .then(response => response.json())
-        .then(data => {
-            console.log('Novo pet adicionado com sucesso:', data);
+        form.reset();
 
-            form.reset();
+        alert('Novo pet adicionado com sucesso!');
+    })
+    .catch(error => {
+        console.error('Erro ao adicionar novo pet:', error);
 
-            alert('Novo pet adicionado com sucesso!');
-        })
-        .catch(error => {
-            console.error('Erro ao adicionar novo pet:', error);
-
-            alert('Erro ao adicionar novo pet. Tente novamente mais tarde.');
-        });
+        alert('Erro ao adicionar novo pet. Tente novamente mais tarde.');
     });
 });
