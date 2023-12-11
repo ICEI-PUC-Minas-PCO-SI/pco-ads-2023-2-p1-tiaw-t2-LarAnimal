@@ -272,5 +272,18 @@
       "id": 12
     }
   ],
-  "agendamentos": []
+  "agendamentos": [
+    {
+      "clinicName": "2286 Saraiva Marginal - Lagoa da Canoa, SC ",
+      "appointmentDate": "2023-11-29",
+      "appointmentTime": "23:47",
+      "id": 1
+    },
+    {
+      "clinicName": "2286 Saraiva Marginal - Lagoa da Canoa, SC ",
+      "appointmentDate": "2023-12-12",
+      "appointmentTime": "20:49",
+      "id": 2
+    }
+  ]
 }

@@ -75,16 +75,36 @@
                 <div class="card">
                     <div class="card-body text-center" style="background-color: #F2AA52;">
                         <a href="#" data-bs-toggle="modal" data-bs-target="#novoPetModal">
-                            <img src="img/placeholder.png" class="img-thumbnail" style="width: 200px; height: 200px;">
+                            <img src="https://static.wixstatic.com/media/e2e4ef_0b360155ffdd45858ac4204bdf67d053~mv2.jpeg/v1/fill/w_1200,h_1600,al_c,q_85/Zeus-cachorro_10.jpeg" class="img-thumbnail" style="width: 200px; height: 200px;">
                         </a>
                         <h5 class="card-title">Pet Exemplo</h5>
                         <p class="card-text">Descrição do pet 1.</p>
-                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#novoPetModal"
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModalLabel"
                             style="color: white; background-color:#55038C;">Mostrar
                             mais</button>
                     </div>
                 </div>
             </div>
+
+            <div class="modal fade" id="exampleModalLabel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Título do Modal</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <p> Espécie/Raça: SRD</p>
+                      <p>  Idade: 5 Meses </p>
+                      <p>  Descrição: Achado na chuva, vacina e vermifugado </p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                      <button type="button" class="btn btn-primary">Salvar mudanças</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
             <!-- Modal para adicionar novo Pet -->
             <div class="modal fade" id="novoPetModal" tabindex="-1" aria-labelledby="novoPetModalLabel"
