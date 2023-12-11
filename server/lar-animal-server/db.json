@@ -1,11 +1,34 @@
 {
-  "usuario": [],
+  "usuario": [
+    {
+      "nome": "igor",
+      "email": "123",
+      "senha": "123",
+      "documento": "123",
+      "cep": "32668038",
+      "estado": "MG",
+      "cidade": "Betim",
+      "bairro": "Petrovale",
+      "logradouro": "Rua Cuba",
+      "numero": "319",
+      "telefone": "132132132132",
+      "tipo": "PF",
+      "id": 1
+    }
+  ],
   "contato": [],
   "doacoes": [],
   "voluntarios": [],
   "posts": [],
   "comentarios": [],
-  "avaliacoes": [],
+  "avaliacoes": [
+    {
+      "username": "3123",
+      "rating": 4,
+      "comment": "1323",
+      "id": 1
+    }
+  ],
   "agendamentos": [],
-  "pets":[]
+  "pets": []
 }

@@ -81,8 +81,9 @@ function salvarNovoPet() {
     imagemPet.value = "";
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('novoPetForm');
+
+submitBtn.addEventListener('click', (event) => {
+    event.preventDefault();
 
     form.addEventListener('submit', function (event) {
         event.preventDefault();
