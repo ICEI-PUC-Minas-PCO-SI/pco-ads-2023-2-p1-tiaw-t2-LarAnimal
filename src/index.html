@@ -114,15 +114,20 @@
     <a href="adocao.html" class="button adopt-button" style="text-decoration: none; display: block; margin-bottom: 10px;">
         Quero Adotar
     </a>
-    <a href="./adocao.html" class="button register-button" style="color: #55038C; text-decoration: none; display: block;">
+    <a href="./adocao.html" id="cadastrarAnimalBtn" class="button register-button" style="color: #55038C; text-decoration: none; display: block;">
         Quero Cadastrar um Animal
     </a>
 </div>
+
+
+
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        document.querySelector('.register-button').addEventListener('click', function () {
-            localStorage.setItem('openModal', 'novoPetModal');
+    document.getElementById('cadastrarAnimalBtn').addEventListener('click', function() {
+        // Abra o modal correspondente
+        var modal = new bootstrap.Modal(document.getElementById('novoPetModal'), {
+            backdrop: 'static'
         });
+        modal.show();
     });
 
     const toggleSwitch = document.getElementById('modeToggle');
