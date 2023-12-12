@@ -70,10 +70,6 @@ body {
 } 
 
  
-.dark-mode .modal-content {
-    background-color: #333; /* Cor de fundo do modal em modo escuro */
-    color: #fff; /* Cor do texto no modal em modo escuro */
-}
  
 /* Estilos para o modal em modo escuro */
 .dark-mode .popup-content {
@@ -163,8 +159,7 @@ body {
 }
 
 header {
-    background-color: #ca4f0d;
-    /* Marrom escuro */
+    background-color:  #55038C;
     color: #fff;
     text-align: center;
     padding: 20px;
@@ -182,9 +177,8 @@ h1 {
 
 .clinic-card {
     border: 1px solid #55038C;
-    /* Marrom SaddleBrown */
-    border-radius: 5px;
-    padding: 10px;
+    border-radius: 10px;
+    padding: 20px;
     background-color: #fff;
     margin-top: 20px;
 }
@@ -197,7 +191,6 @@ h1 {
 
 .clinic-button {
     background-color: #55038C;
-    /* Marrom SaddleBrown */
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -220,52 +213,35 @@ h1 {
 
 .popup-content {
     background-color: #fff;
-    width: 60%;
+    width: 30%;
     margin: 100px auto;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 10px;
+    text-align: center;
 }
 
 .close {
     color: #55038C;
     float: right;
-    font-size: 20px;
+    font-size: 30px;
     cursor: pointer;
 }
 
 /* Estilos para os campos de data e hora */
 input[type="date"],
-input[type="time"],
+input[type="time"] {
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+    margin: 10px;
+    margin-left: 230px;
+}
+
 button.agendar-button {
     display: block;
     margin: 10px 0;
-}
-
-/* Estilos da Navbar */
-nav {
-    background-color: #F2AA52;
-    color: #55038C;
-    padding: 10px 0;
-}
-
-.navbar-brand {
-    color: #55038C;
-    font-size: 24px;
-    font-weight: 600;
-}
-
-.navbar-toggler-icon {
-    background-color: #55038C;
-}
-
-.navbar-nav a {
-    color: #55038C;
-    font-size: 18px;
-    font-weight: 600;
-}
-
-.navbar-nav a:hover {
-    color: rgb(213, 229, 242);
+    text-align: center;
+    margin-left: 230px;
 }
 
 
