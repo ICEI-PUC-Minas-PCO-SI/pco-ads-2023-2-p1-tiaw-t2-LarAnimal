@@ -394,34 +394,34 @@ Esta seção deve apresentar o relatório com as evidências dos testes de softw
 |Requisito Associado | RF-004 - Usuários não autenticados podem se cadastrar para criar uma conta e serem autenticados.|
 |Link do vídeo do teste realizado: | https://1drv.ms/u/s!AhD2JqpOUvJChapRtRSQ9vPzbNLwGA?e=mxZs6t|
 
-|*Caso de Teste*                                 |*TC-06 - Avaliações e comentarios do serviços*                                         |
+|*Caso de Teste*                                 |*TC-05 - Avaliações e comentarios do serviços*                                         |
 |---|---|
 |Requisito Associado | RF-006 - Testa a funcionalidade de avaliação e comentário de serviços, garantindo que a interação do usuário seja registrada com sucesso.|
 |Link do vídeo do teste realizado: | https://1drv.ms/u/s!AhD2JqpOUvJChapRtRSQ9vPzbNLwGA?e=mxZs6t|
 
-|*Caso de Teste*                                 |*TC-07 - Suporte ao usuario*                                         |
+|*Caso de Teste*                                 |*TC-06 - Suporte ao usuario*                                         |
 |---|---|
 |Requisito Associado | RF-007 - Testa a funcionalidade de suporte ao usuário, onde este preenche um formulário de contato com dúvidas. O teste visa garantir o recebimento bem-sucedido do formulário.
 |
 |Link do vídeo do teste realizado: | https://1drv.ms/u/s!AhD2JqpOUvJChapRtRSQ9vPzbNLwGA?e=mxZs6t|
 
-|*Caso de Teste*                                 |*TC-08 - Mapeamento de Parceiros*                                         |
+|*Caso de Teste*                                 |*TC-07 - Mapeamento de Parceiros*                                         |
 |---|---|
 |Requisito Associado | RF-008 - Avalia a funcionalidade de mapeamento de parceiros, onde o usuário seleciona um parceiro e visualiza no mapa a localização e rota.
 |
 |Link do vídeo do teste realizado: | https://1drv.ms/u/s!AhD2JqpOUvJChapRtRSQ9vPzbNLwGA?e=mxZs6t|
 
-|*Caso de Teste*                                 |*TC-09 - Agendamento Online*                                         |
+|*Caso de Teste*                                 |*TC-08 - Agendamento Online*                                         |
 |---|---|
 |Requisito Associado | RF-009 - Testa a funcionalidade de agendamento online, onde o usuário escolhe um serviço e a disponibilidade desejada. O teste visa confirmar o agendamento bem-sucedido do serviço escolhido.|
 |Link do vídeo do teste realizado: | https://1drv.ms/u/s!AhD2JqpOUvJChapRtRSQ9vPzbNLwGA?e=mxZs6t|
 
-|*Caso de Teste*                                 |*TC-10 - Forúns de discussão *                                         |
+|*Caso de Teste*                                 |*TC-09 - Forúns de discussão *                                         |
 |---|---|
 |Requisito Associado | RF-010 - Avalia a participação do usuário em fóruns de discussão, onde este posta um comentário. O teste visa confirmar a participação bem-sucedida na discussão do fórum.|
 |Link do vídeo do teste realizado: | https://1drv.ms/u/s!AhD2JqpOUvJChapRtRSQ9vPzbNLwGA?e=mxZs6t|
 
-|*Caso de Teste*                                 |*TC-11 - Aba educacional*                                         |
+|*Caso de Teste*                                 |*TC-10 - Aba educacional*                                         |
 |---|---|
 |Requisito Associado | RF-011 - Avalia a utilização da aba educacional, onde o usuário navega pelos recursos educacionais, lê textos e assiste a vídeos. O teste inclui o compartilhamento de um recurso educacional.|
 |Link do vídeo do teste realizado: | https://1drv.ms/u/s!AhD2JqpOUvJChapRtRSQ9vPzbNLwGA?e=mxZs6t|
