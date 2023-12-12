@@ -14,9 +14,6 @@ body {
     color: #ffffff;
 }
 
-.dark-mode .container {
-    border: 1px solid #ffffff;
-}
 
 /* Estilos para o botão de alternância */
 .switch {
@@ -25,6 +22,7 @@ body {
     width: 50px;
     height: 25px;
 }
+
 
 .switch input {
     opacity: 0;
@@ -42,6 +40,9 @@ body {
     background-color: #ccc;
     transition: .4s;
     border-radius: 35px;
+}
+.dark-mode .card-text {
+    color: white; 
 }
 
 .slider:before {

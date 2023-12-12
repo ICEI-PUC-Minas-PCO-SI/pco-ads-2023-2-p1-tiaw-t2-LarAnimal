@@ -148,22 +148,32 @@ input:checked+.slider:before {
 /* dark mode */ 
 
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
 }
-
 header {
-    background-color: #f2aa52;
-    color: #fff;
     text-align: center;
-    padding: 20px 0;
+    margin-top: 20px; 
+    margin-bottom: 20px;
+    color: #55038C; 
 }
 
-main {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 0 20px;
+
+
+#container {
+    display: flex;
+    height: 1500vh;
+}
+
+#left-section {
+    flex: 1;
+}
+
+#left-section img {
+    width: 110%;
+    height: 105%;
+    object-fit: cover;
 }
 
 .form-container {
@@ -177,6 +187,7 @@ main {
 
 .form-container h2 {
     margin-top: 0;
+    color: #55038C;
 }
 
 .form-container label,
@@ -191,7 +202,7 @@ main {
 
 .form-container button {
     padding: 10px;
-    background-color: #f2aa52;
+    background-color: #55038C;
     color: #fff;
     border: none;
     border-radius: 5px;

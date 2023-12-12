@@ -160,7 +160,7 @@ header {
 
 #container {
     display: flex;
-    height: 150vh;
+    height: 1500vh;
 }
 
 #left-section {
@@ -219,7 +219,7 @@ header {
 
 .donation-form button {
     padding: 10px;
-    background-color: #f2aa52;
+    background-color: #55038C;
     color: #fff;
     border: none;
     border-radius: 5px;
