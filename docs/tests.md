@@ -316,10 +316,10 @@ Resultado: O sistema pode trabalhar de forma integrada com o sistema especificad
 
 **Caso de Teste** | **CT04 - Gerenciamento de parceiros**
  :--------------: | ------------
-**Procedimento**  | 1)<br>2)<br> 3)
+**Procedimento**  | 1)Usuario acessa "Mapa de Parceiros.<br>2) Visualiza nossos parceiros<br> 3)Clique em ver no mapa.
 **Requisitos associados** | RF-004
-**Resultado esperado** | 
-**Dados de entrada** | 
+**Resultado esperado** | Visualização bem-sucedida de parceiros no mapa.
+**Dados de entrada** | Seleção de parceiro.
 **Resultado obtido** | Sucesso.
 
 **Caso de Teste** | **CT05 - Avaliações e Comentários dos Serviços**
