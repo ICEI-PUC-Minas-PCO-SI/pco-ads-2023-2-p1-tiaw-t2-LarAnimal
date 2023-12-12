@@ -49,12 +49,72 @@ function novodado() {
         .then(data => console.log(data))
 
 }
+
+//===================================================================================================================
+
+let enviarConteudo = document.getElementById("enviar-content")
+let post = document.getElementById("enviar-newPost")
+post.addEventListener("click", novoComent)
+enviarConteudo.addEventListener("click", novodado)
+function novoComent() {
+    let newPost = document.getElementById("comment-content").value;
+    let num = Math.random(40)
+    let coment = {
+        id: num,
+        content: newPost
+    }
+    fetch(URL, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(coment)
+    })
+        .then(response => response.json())
+        .then(data => console.log(data))
+
+
+
+}
+function novodado() {
+    let posts = document.getElementById("post-content").value;
+    alert("Entrou função " + comennte)
+    let num = Math.random(40)
+    alert(num)
+    let newPost = {
+        id: num,
+        title: comennte,
+        comments: "Entrei pela primeira vez"
+    }
+    alert(newPost)
+    fetch(URL, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(newComent)
+    })
+        .then(response => response.json())
+        .then(data => console.log(data))
+
+}
 //===========================================================================================================
 //DELETE - excluir um post ou comentário
 const comennteDelete = document.getElementById('btn-deletar');
 comennteDelete.addEventListener('click', (e) => {
     let id = $('id');
-    fetch(`${ULL}/${id}`, {
+    fetch(${ULL}/${id}, {
+        method: 'DELETE',
+    })
+        .then(RES => resizeBy.json())
+        .then(() => location.reload());
+})
+
+//================================================================================================================
+const postDelete = document.getElementById('btn-deletar');
+postDelete.addEventListener('click', (e) => {
+    let id = $('id');
+    fetch(${URL}/${id}, {
         method: 'DELETE',
     })
         .then(RES => resizeBy.json())
@@ -108,7 +168,54 @@ function novodado() {
         .then(data => console.log(data))
 
 }
-//=================================================================================
+ //============================================================================================================
+let enviarConteudo = document.getElementById("enviar-content")
+let post = document.getElementById("enviar-newPost")
+post.addEventListener("click", novoComent)
+enviarConteudo.addEventListener("click", novodado)
+function novoComent() {
+    let newPost = document.getElementById("comment-content").value;
+    let num = Math.random(40)
+    let coment = {
+        id: num,
+        content: newPost
+    }
+    fetch(URL, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(coment)
+    })
+        .then(response => response.json())
+        .then(data => console.log(data))
+
+
+
+}
+function novodado() {
+    let posts = document.getElementById("post-content").value;
+    alert("Entrou função " + comennte)
+    let num = Math.random(40)
+    alert(num)
+    let newPost = {
+        id: num,
+        title: comennte,
+        comments: "Entrei pela primeira vez"
+    }
+    alert(newPost)
+    fetch(URL, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(newComent)
+    })
+        .then(response => response.json())
+        .then(data => console.log(data))
+
+}
+//===================================================================================================================
 //GET - recupera os dados 
 fetch(URL)
     .then(res => res.json())
@@ -128,4 +235,4 @@ fetch(URL)
         }
     }
     );
-    //========================================================================
+    //===================================================================================================================
