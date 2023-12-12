@@ -59,120 +59,204 @@
 </div>
 
     <!--Conteúdo do fórum-->
-    <div id="forum-container" class="container pb-3">
+    <div id="forum-container" class="container">
         <div class="row">
-            <!--Barra lateral esquerda nome de usuário e avatar-->
+            <!-- Barra lateral esquerda -->
             <div class="col-md-3">
-                <div class="user-avatar-sidebar mt-4 mb-4">
+                <div class="user-sidebar mt-4 mb-4">
+                    <!-- Adicione a foto do usuário logado aqui -->
                     <img src="https://i.pravatar.cc/150" alt="User Avatar" class="user-avatar-sidebar">
                     <div class="user-info">
-                        <h4 style="color: #F2AA52;">Nome do usuário</h4>
+                        <p>Nome do Usuário</p>
+                        <p>Email@example.com</p>
                     </div>
+                </div>
+
+                <!-- Principais comentários -->
+                <div class="main-comments mt-4">
+                    <h4>Principais Comentários</h4>
+                    <!-- Adicione os principais comentários dinamicamente aqui -->
+                    <ul id="main-comments-list">
+                        <!-- Exemplo de item de comentário -->
+                        <!-- <li>Comentário 1</li> -->
+                    </ul>
                 </div>
             </div>
 
-
-
-            <!--Área Principal do Fórum-->
+            <!-- Área principal do fórum -->
             <div class="col-md-9">
-                <div class="container">
-                    <h1 class="mt-5 mb-4" style="color: #55038C;">Fórum de Discussão</h1>
+                <h1 class="mt-5 mb-4">Fórum de Discussão</h1>
 
-                    <!--Fazer novo Post-->
-                    <form id="post-form" class="mt-4 mb-4">
-                        <h2>Novo Post</h2>
-
-                        <div class="form-group">
-                            <label for="post-content">Conteúdo do Post:</label>
-                            <textarea id="post-content" class="form-control" rows="4" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Postar</button>
-                    </form>
-
-                    <!--Lista de Posts-->
-                    <div id="post-list">
-                        <!-- Os posts serão inseridos aqui dinamicamente -->
+                <!-- Carrossel de Comentários -->
+                <div id="comment-carousel" class="carousel slide mb-4" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <!-- Os comentários serão inseridos aqui dinamicamente -->
                     </div>
-
-                    <div id="posts">
-                        <!--Thread de respostas-->
-                        <div class="thread">
-                            <h3 id="post-title">Qual a melhor alternativa: adotar ou comprar um pet?</h3>
-                            <div class="respostas">
-                                <p>Adotar! É muito melhor adotar um pet pois assim você vai dar a um animalzinho abandonado um lar e  também não colabora com criadouros ilegais</p>
-                                <hr>
-                                <p>Acho que depende, se você quiser um animal específico pode ser muito difícil encontrar um para adoção então comprar seria melhor.</p>
-                                <hr>
-                                <form id="comment-form">
-                                    <textarea id="comment-content" class="comment-control" required></textarea>
-                                    <input type="submit" name="acao" value="Enviar!">
-                                </form>
-                            </div>
-                        </div>
-                        <div class="thread">
-                            <h3 id="post-title">Gatos domesticos deveriam ter acesso fácil as ruas?</h3>
-                            <div class="respostas">
-                                <p>Não! Gatos domesticos, como o próprio nome já diz devem ficar em casa para se manterem saudáveis e seguros</p>
-                                <hr>
-                                <p>Gatos são caçadores e sobreviiventes natos eles podem se manter seguros pois são muito independentes!</p>
-                                <hr>
-                                <form id="comment-form">
-                                    <textarea id="comment-content" class="comment-control" required></textarea>
-                                    <input type="submit" name="acao" value="Enviar!">
-                                </form>
-                            </div>
-                        </div>
-                    </div>
+                    <a class="carousel-control-prev" href="#comment-carousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Anterior</span>
+                    </a>
+                    <a class="carousel-control-next" href="#comment-carousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Próximo</span>
+                    </a>
                 </div>
+
+                <!-- Lista de Posts -->
+                <div id="post-list">
+                    <!-- Os posts serão inseridos aqui dinamicamente -->
+                </div>
+
+                <!-- Formulário para Novo Post -->
+                <form id="post-form" class="mt-4">
+                    <h2>Novo Post</h2>
+                    <div class="form-group">
+                        <label for="username">Nome de Usuário:</label>
+                        <input type="text" id="username" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="post-content">Conteúdo do Post:</label>
+                        <textarea id="post-content" class="form-control" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Postar</button>
+                </form>
             </div>
         </div>
     </div>
 
-    <!--Footer-->
+    <!-- Popup para Foto do Usuário -->
+    <div id="user-popup" class="popup">
+        <div class="carousel">
+            <!-- Imagens do carrossel serão inseridas aqui dinamicamente -->
+        </div>
+    </div>
 
+    <!-- Footer -->
     <footer style="background-color: #F2AA52; color: #55038C; padding: 10px; font-size: small; text-align: center; position: relative; bottom: 0; left: 0; right: 0;"> 
 
-        <div> 
-    
-            <p>Gostou do nosso serviço? Avalie-nos!</p> 
-    
-                <a href="avaliacao.html"><button id="botao-avaliacao">Avaliar</button></a> 
-    
-                </span> 
-    
-                <div class="rodape"> 
-    
-                <div class="container"> 
-    
-                <p>&copy; 2023 Lar animal - Todos os direitos reservados</p> 
-             
-        </div> 
-    
-    </footer> 
- <!--Link Crud Json-->
- <script src="js/forum.js"></script>
+    <div> 
 
- <!-- JAVA SCRIPT POSTAR E COMENTAR-->
+        <p>Gostou do nosso serviço? Avalie-nos!</p> 
+
+            <a href="avaliacao.html"><button id="botao-avaliacao">Avaliar</button></a> 
+
+            </span> 
+
+            <div class="rodape"> 
+
+            <div class="container"> 
+
+            <p>&copy; 2023 Lar animal - Todos os direitos reservados</p> 
+         
+    </div> 
+
+</footer> 
+
+    <!-- Bootstrap JS e dependências -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Seu JavaScript personalizado aqui -->
+
     <script>
-        let forms = document.querySelectorAll('form');
+        // Função para gerar um número aleatório entre min e max
+        function getRandomNumber(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
 
-        for (let i = 0; i < forms.length; i++) {
-            forms[i].addEventListener('submit', (e) => {
-                e.preventDefault();
-                let conteudo = document.querySelectorAll('textarea')[i];
-                forms[i].insertAdjacentHTML('beforebegin', '<p>' + conteudo.value + '</p>')
-                conteudo.value = "";
+        const posts = [];
 
-            })
+        function renderPosts() {
+            const postList = document.getElementById('post-list');
+            postList.innerHTML = '';
+            posts.forEach(post => {
+                const postElement = document.createElement('div');
+                postElement.classList.add('post', 'p-3', 'bg-light');
+
+                const userAvatar = post.avatar ? `<img src="${post.avatar}" alt="Avatar" class="user-avatar" onclick="showPopup('${post.avatar}')">` : '';
+                
+                postElement.innerHTML = `
+                    ${userAvatar}
+                    <strong>${post.username}</strong>: ${post.message}
+                `;
+                postList.appendChild(postElement);
+            });
+        }
+
+        function showPopup(avatarUrl) {
+            const popup = document.getElementById('user-popup');
+            const carousel = popup.querySelector('.carousel');
+            carousel.innerHTML = ''; // Limpa qualquer imagem existente no carrossel
+
+            // Adiciona uma imagem ao carrossel para cada post com avatar
+            posts.forEach(post => {
+                if (post.avatar) {
+                    const carouselItem = document.createElement('div');
+                    carouselItem.classList.add('carousel-item');
+
+                    const img = document.createElement('img');
+                    img.src = post.avatar;
+                    img.alt = 'Avatar';
+                    img.classList.add('d-block', 'w-100');
+
+                    carouselItem.appendChild(img);
+                    carousel.appendChild(carouselItem);
+                }
+            });
+
+            popup.style.display = 'block';
+        }
+
+        function hidePopup() {
+            const popup = document.getElementById('user-popup');
+            popup.style.display = 'none';
+        }
+
+        function renderCommentsCarousel() {
+            const carouselInner = document.querySelector('#comment-carousel .carousel-inner');
+            carouselInner.innerHTML = '';
+
+            // Adiciona cada comentário como um item de carrossel
+            posts.forEach((post, index) => {
+                const commentElement = document.createElement('div');
+                commentElement.classList.add('carousel-item', index === 0 ? 'active' : '');
+                commentElement.innerHTML = `
+                    <h3>${post.username}</h3>
+                    <p>${post.message}</p>
+                `;
+                carouselInner.appendChild(commentElement);
+            });
+        }
+
+        function renderUserSidebar() {
+            const userSidebar = document.querySelector('.user-sidebar');
+            // Adicione o código para exibir a foto do usuário e outras informações relevantes aqui
+        }
+
+        function renderMainComments() {
+            const mainCommentsList = document.getElementById('main-comments-list');
+            // Adicione o código para exibir os principais comentários dinamicamente aqui
         }
 
         document.getElementById('post-form').addEventListener('submit', function (event) {
             event.preventDefault();
+            const username = document.getElementById('username').value;
             const message = document.getElementById('post-content').value;
+            const avatarNumber = getRandomNumber(1, 5); // Gera um número aleatório entre 1 e 5 para escolher a imagem do avatar
+            const avatar = `https://i.pravatar.cc/150?img=${avatarNumber}`; // Usa o serviço Pravatar para imagens de avatar aleatórias
+            posts.push({ username, message, avatar });
             renderPosts();
+            renderCommentsCarousel();
+            document.getElementById('username').value = '';
             document.getElementById('post-content').value = '';
         });
 
+        
+        renderPosts();
+        renderCommentsCarousel();
+        renderUserSidebar();
+        renderMainComments();
     </script>
 
 
