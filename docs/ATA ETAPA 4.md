@@ -13,7 +13,7 @@ Responsável pelo conteudo das páginas, criação de páginas novas para Aba ed
 
 
 • **Manuela de Souza**
-Responsável por realizar a padronização das Atas, algumas mudanças de estilo nas páginas, implementação das páginas de contato e avaliações, mudanças na home, inclusão de imagens e vídeo em algumas outras páginas.
+Responsável por realizar a padronização das Atas, algumas mudanças de estilo nas páginas, implementação das páginas de contato e avaliações, mudanças na home, inclusão de imagens e vídeo em algumas outras páginas, implementação do banco de dados nas páginas contato e avaliações.
 
 
 • **Rhillary Carvalho**
