@@ -2,8 +2,9 @@
 • **Elder Luis**
 Responsável pela criação da aba gerenciamento de parceiros, mapa de geolocalização(API), banco de dados dos agendamentos.
 
+
 • **Jefferson**
-Responsável pela responsividade, mudanças da nav bar, footer, criação / modificação das paginas de cadastro e login, criaçao do mapa interativo, implementação de API de cep, implementação dos bancos de dados de login, pagina de doações e voluntariado 
+Responsável pela responsividade, mudanças na barra de navegação, Footer, criação/modificação das páginas de cadastro e login, criação do mapa interativo de clínicas próximas, implementação de API de CEP, implementação dos bancos de dados de login, página de doações, página de adoção e voluntariado, implementação do modo escuro e VLibras.
 
 • **Itallo Otavio**
 Responsável pelo conteudo das páginas, criação de páginas novas para Aba educacional ( Páginas dentro de Midias ).
