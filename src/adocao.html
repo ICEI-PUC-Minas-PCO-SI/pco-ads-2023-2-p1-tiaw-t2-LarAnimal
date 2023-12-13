@@ -68,13 +68,13 @@
             style="color: white; background-color:#038c23;">Adicionar Pet</button>
     </div>
 
-    <div class="container" style="margin-bottom: 200px;">
+    <div class="container" style="margin-bottom: 58px;">
         <div id="Conteudo" class="row row-cols-1 row-cols-md-4 g-4 mb-1">
             <!------------------------CARD--EXEMPLO--------------------------->
             <div class="col">
                 <div class="card">
                     <div class="card-body text-center" style="background-color: #F2AA52;">
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#novoPetModal">
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModalLabel">
                             <img src="https://static.wixstatic.com/media/e2e4ef_0b360155ffdd45858ac4204bdf67d053~mv2.jpeg/v1/fill/w_1200,h_1600,al_c,q_85/Zeus-cachorro_10.jpeg" class="img-thumbnail" style="width: 200px; height: 200px;">
                         </a>
                         <h5 class="card-title">Pet Exemplo</h5>
@@ -85,22 +85,28 @@
                     </div>
                 </div>
             </div>
-
+               
+            <!---Modal Exemplo--->
             <div class="modal fade" id="exampleModalLabel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
                   <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel">Título do Modal</h5>
+                    <div class="modal-header" style="background-color: #F2AA52;">
+                      <h5 class="modal-title" id="exampleModalLabel">Detalhes do Pet exemplo</h5>
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                      <p> Espécie/Raça: SRD</p>
-                      <p>  Idade: 5 Meses </p>
-                      <p>  Descrição: Achado na chuva, vacinado e vermifugado </p>
+                      <p><strong style="color: #55038C;">Espécie/Raça: </strong>SRD</p>
+                      <div class="d-flex justify-content-center">
+                        <img src="https://static.wixstatic.com/media/e2e4ef_0b360155ffdd45858ac4204bdf67d053~mv2.jpeg/v1/fill/w_1200,h_1600,al_c,q_85/Zeus-cachorro_10.jpeg" class="img-thumbnail" style="width: 200px; height: 200px;">
                     </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                      <button type="button" class="btn btn-primary">Salvar mudanças</button>
+                      <p><strong style="color: #55038C;">Idade: </strong>5 Meses </p>
+                      <p><strong style="color: #55038C;">Descrição: </strong>Achado na chuva, vacinado e vermifugado </p>
+                    </div>
+                    <div class="modal-footer" style="background-color: #F2AA52;">
+                        <button type="button" class="btn mx-auto" data-bs-dismiss="modal"
+                            style="background-color: #55038C; color: white;">
+                            Voltar
+                        </button>
                     </div>
                   </div>
                 </div>
@@ -193,7 +199,7 @@
 
 
     <footer
-        style="background-color: #F2AA52; color: #55038C; padding: 10px; font-size: small; text-align: center; position: fixed; bottom: 0; left: 0; right: 0;">
+        style="background-color: #F2AA52; color: #55038C; padding: 10px; font-size: small; text-align: center; position: static; bottom: 0; left: 0; right: 0;">
 
         <div>
 
