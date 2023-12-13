@@ -256,9 +256,26 @@
         renderCommentsCarousel();
         renderUserSidebar();
         renderMainComments();
+
+        
     </script>
 
+<script>
+    const toggleSwitch = document.getElementById('modeToggle');
+    const modeText = document.getElementById('modeText');
 
+    toggleSwitch.addEventListener('change', switchTheme);
+
+    function switchTheme() {
+        if (toggleSwitch.checked) {
+            document.body.classList.add('dark-mode');
+            modeText.innerText = 'Modo Escuro';
+        } else {
+            document.body.classList.remove('dark-mode');
+            modeText.innerText = 'Modo Claro';
+        }
+    }
+</script>
 
 
 
