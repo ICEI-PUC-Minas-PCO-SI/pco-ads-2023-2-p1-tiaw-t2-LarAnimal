@@ -4,355 +4,291 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agendamento de Consulta</title>
-    <script src="agendamentos.js"></script>
+    <link rel="stylesheet" href="style/homepage.css">
+    <title>Lar Animal Homepage</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <style>
-        body {
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #fffefe;
-            font-size: 1rem;
+        .carousel-control-prev-icon {
+          background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
         }
 
-        header {
-            background-color: #ca4f0d;
-            /* Marrom escuro */
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-        }
-
-        h1 {
-            margin: 0;
-        }
-
-        .container {
-            width: 80%;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .clinic-card {
-            border: 1px solid #55038C;
-            /* Marrom SaddleBrown */
-            border-radius: 5px;
-            padding: 10px;
-            background-color: #fff;
-            margin-top: 20px;
-        }
-
-        .clinic-img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
-        }
-
-        .clinic-button {
-            background-color: #55038C;
-            /* Marrom SaddleBrown */
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            cursor: pointer;
-            width: 100%;
-            margin-top: 10px;
-        }
-
-        /* Estilos para o popup */
-        .popup {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            z-index: 1;
-        }
-
-        .popup-content {
-            background-color: #fff;
-            width: 60%;
-            margin: 100px auto;
-            padding: 20px;
-            border-radius: 5px;
-        }
-
-        .close {
-            color: #55038C;
-            float: right;
-            font-size: 20px;
-            cursor: pointer;
-        }
-
-        /* Estilos para os campos de data e hora */
-        input[type="date"],
-        input[type="time"],
-        button.agendar-button {
-            display: block;
-            margin: 10px 0;
-        }
-
-        /* Estilos da Navbar */
-        nav {
-            background-color: #F2AA52;
-            color: #55038C;
-            padding: 10px 0;
-        }
-
-        .navbar-brand {
-            color: #55038C;
-            font-size: 24px;
-            font-weight: 600;
-        }
-
-        .navbar-toggler-icon {
-            background-color: #55038C;
-        }
-
-        .navbar-nav a {
-            color: #55038C;
-            font-size: 18px;
-            font-weight: 600;
-        }
-
-        .navbar-nav a:hover {
-            color: rgb(213, 229, 242);
-        }
-
-        /* Estilos do Footer */
-        footer {
-            clear: both;
-            text-align: center;
-            background-color: #F2AA52;
-            color: #55038C;
-            padding: 10px;
-            font-size: small;
-        }
-
-        /* Estilos para a seção de agendamentos */
-        #appointmentsSection {
-            margin-top: 30px;
-        }
-
-        #appointmentsSection h2 {
-            color: #55038C;
-        }
-
-        .appointment-box {
-            border: 1px solid #55038C;
-            border-radius: 5px;
-            padding: 10px;
-            margin: 10px 0;
-            background-color: #fff;
-        }
-
-        .appointment-box strong {
-            color: #55038C;
-        }
-
-        .appointment-buttons button {
-            background-color: #55038C;
-            color: #fff;
-            border: none;
-            padding: 5px 10px;
-            cursor: pointer;
-            margin-right: 5px;
-        }
-
-        /* Estilos responsivos */
-        @media (max-width: 768px) {
-            .clinic-card {
-                width: 100%;
-            }
+        .carousel-control-next-icon {
+           background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
         }
     </style>
 </head>
-
 <body>
-    <!-- Navbar -->
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous">
+    </script>
+
+
+<div id="cabecalho">
     <nav class="navbar navbar-expand-md px-4" style="background-color: #F2AA52;" data-bs-theme="dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="home.html">
-                <img src="logo.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
+            <a class="navbar-brand" href="index.html" style="color: #55038C; font-size: 35px; font-weight: 600;">
+                <img src="./img/logo.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
                 Lar Animal
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapsibleNavbar">
+            <label class="switch" title="Ativar Modo Escuro">
+                <input id="modeToggle" type="checkbox">
+                <span class="slider round"></span>
+                <span id="modeText">Modo Claro</span><br>
+            </label>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-md-end" id="collapsibleNavbar">
                 <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="sobre.html">Sobre nós</a>
-                    <a class="nav-link active" aria-current="page" href="usuario.html">Perfil</a>
+                    <a class="nav-link active" aria-current="page" href="perguntas.html" style="color: #55038C; font-size: 20px; font-weight: 600;">Perguntas Frequentes</a>
+                    <a class="nav-link active" aria-current="page" href="contato.html" style="color: #55038C; font-size: 20px; font-weight: 600;">Suporte ao Usuario</a>
+                    <a class="nav-link active" aria-current="page" href="educacional.html" style="color: #55038C; font-size: 20px; font-weight: 600;">Area Educacional</a>
+                    <a class="nav-link active" aria-current="page" href="login.html" style="color: #55038C; font-size: 20px; font-weight: 600;">Login</a>
                 </div>
             </div>
-        </div>
+        </div>          
     </nav>
+</div>
 
+ 
+        <article class="carrousel">
+            <div id="carouselExampleIndicators" class="carousel slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <a href="sobre.html">
+                            <img src="img/Capa.jpg" class="d-block w-100" alt="Imagem 1">
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="parceiros.html">
+                            <img src="img/parceiros.jpg" class="d-block w-100" alt="Imagem 2">
+                        </a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="mapa.html">
+                            <img src="img/clinicasprox.jpg" class="d-block w-100" alt="Imagem 2">
+                        </a>
+                    </div>
 
-    <!-- Header -->
-    <header>
-        <h1>Agendamento de Consulta</h1>
-    </header>
-
-    <!-- Conteúdo Principal -->
-    <div class="container">
-    <div class="row">
+                 
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
         
-        <!-- Clínicas Cards -->
-        <div class="col-md-6 col-lg-4 clinic-card">
-            <img class="clinic-img" src="clinica3.png" alt="Clinica 1">
-            <h3>Climev</h3>
-            <button class="clinic-button" onclick="showPopup('Climev', 'R. São Mateus 271 - Água Branca')">Agendar</button>
-        </div>
-        <div class="col-md-6 col-lg-4 clinic-card">
-            <img class="clinic-img" src="clinica3.png" alt="Clinica 2">
-            <h3>Terra Dos Bichos</h3>
-            <button class="clinic-button" onclick="showPopup('Terra Dos Bichos', 'Av. Dr. João Augusto Fonseca e Silva 876 - Novo Eldorado')">Agendar</button>
-        </div>
-        <div class="col-md-6 col-lg-4 clinic-card">
-            <img class="clinic-img" src="clinica3.png" alt="Clinica 3">
-            <h3>Pet Center</h3>
-            <button class="clinic-button" onclick="showPopup('Pet Center', 'R. Marte 830 - Jardim Riacho das Pedras')">Agendar</button>
-        </div>
-        <div class="col-md-6 col-lg-4 clinic-card">
-            <img class="clinic-img" src="clinica3.png" alt="DOCTORPET">
-            <h3>DOCTORPET</h3>
-            <button class="clinic-button" onclick="showPopup('599 João Pedro Rodovia - Goianésia do Pará')">Agendar</button>
-        </div>
-        <div class="col-md-6 col-lg-4 clinic-card">
-            <img class="clinic-img" src="clinica3.png" alt="PETBULL">
-            <h3>PETBULL</h3>
-            <button class="clinic-button" onclick="showPopup('2286 Saraiva Marginal - Lagoa da Canoa, SC ')">Agendar</button>
-        </div>
-        <div class="col-md-6 col-lg-4 clinic-card">
-            <img class="clinic-img" src="clinica3.png" alt="PETCLI">
-            <h3>PETCLI</h3>
-            <button class="clinic-button" onclick="showPopup('7884 Albuquerque Travessa - Tubarão, ES')">Agendar</button>
-        </div>
-    </div>
-
-    <!-- Seção para Agendamentos já feitos -->
-    <div class="container" id="appointmentsSection">
-        <h2>Agendamentos</h2>
-        <ul id="appointmentsList"></ul>
-    </div>
-
-    <!-- Popup para agendamento de consulta -->
-    <div class="popup" id="clinicPopup">
-        <div class="popup-content">
-            <span class="close" onclick="closePopup()">&times;</span>
-            <h2 id="clinicName"></h2>
-            <p id="clinicAddress"></p>
-            <p>Selecione uma data e horário:</p>
-            <input type="date" id="appointmentDate">
-            <input type="time" id="appointmentTime">
-            <button class="agendar-button" id="btn-agendar" onclick="agendarConsulta()">Agendar</button>
-        </div>
-    </div>
-
-
-    <!-- JavaScript -->
-    <script>
-        function showPopup(clinicName, clinicAddress) {
-            document.getElementById('clinicName').textContent = clinicName;
-            document.getElementById('clinicAddress').textContent = 'Endereço: ' + clinicAddress;
-            document.getElementById('clinicPopup').style.display = 'block';
-        }
-
-        function closePopup() {
-            document.getElementById('clinicPopup').style.display = 'none';
-        }
-
-        function agendarConsulta() {
-            const clinicName = document.getElementById('clinicName').textContent;
-            const appointmentDate = document.getElementById('appointmentDate').value;
-            const appointmentTime = document.getElementById('appointmentTime').value;
-
-            const appointmentData = {
-                clinicName,
-                appointmentDate,
-                appointmentTime
-            };
-
-            const existingAppointments = JSON.parse(localStorage.getItem('appointments')) || [];
-            existingAppointments.push(appointmentData);
-            localStorage.setItem('appointments', JSON.stringify(existingAppointments));
-            alert( 'Consulta agendada em, ${clinicName} em, ${appointmentDate} às, ${appointmentTime}');
-            closePopup();
-            showAppointmentsList();
-        }
-
-        function formatarDataBrasil(data) {
-            const partes = data.split('-');
-            return `${partes[2]}/${partes[1]}/${partes[0]}`;
-
-        }
-        function showAppointmentsList() {
-            const appointmentsList = document.getElementById('appointmentsList');
-            appointmentsList.innerHTML = '';
-
-            const existingAppointments = JSON.parse(localStorage.getItem('appointments')) || [];
-
-            existingAppointments.forEach((appointment, index) => {
-                const listItem = document.createElement('li');
-                listItem.innerHTML = `<div class="appointment-box"><strong>Clinica:</strong> ${appointment.clinicName} - <strong>Data:</strong> ${formatarDataBrasil(appointment.appointmentDate)} - <strong>Hora:</strong> ${appointment.appointmentTime}
-                <div class="appointment-buttons"><button onclick="editAppointment(${index})">Editar</button><button id="btn-delete" onclick="deleteAppointment(${index})">Excluir</button></div></div>`;
-                appointmentsList.appendChild(listItem);
+    
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+        <script>
+            $(document).ready(function () {
+                $('.carousel').carousel();
             });
+        </script>
 
-        }
+<div class="button-container" style="text-align: center;">
+    <a href="adocao.html" class="button adopt-button" style="text-decoration: none; display: block; margin-bottom: 10px;">
+        Quero Adotar
+    </a>
+    <a href="doacoes.html" id="cadastrarAnimalBtn" class="button register-button" style="color: #55038C; text-decoration: none; display: block;">
+        Quero Contribuir
+    </a>
+</div>
 
-        function deleteAppointment(index) {
-            const existingAppointments = JSON.parse(localStorage.getItem('appointments')) || [];
-            existingAppointments.splice(index, 1);
-            localStorage.setItem('appointments', JSON.stringify(existingAppointments));
-            showAppointmentsList();
-        }
 
-        function editAppointment(index) {
-            const existingAppointments = JSON.parse(localStorage.getItem('appointments')) || [];
-            const appointment = existingAppointments[index];
 
-            document.getElementById('clinicName').textContent = appointment.clinicName;
-            document.getElementById('clinicAddress').textContent = '';
-            document.getElementById('appointmentDate').value = appointment.appointmentDate;
-            document.getElementById('appointmentTime').value = appointment.appointmentTime;
+<script>
+    document.getElementById('cadastrarAnimalBtn').addEventListener('click', function() {
+        // Abra o modal correspondente
+        var modal = new bootstrap.Modal(document.getElementById('novoPetModal'), {
+            backdrop: 'static'
+        });
+        modal.show();
+    });
 
-            // Excluir o agendamento antigo
-            existingAppointments.splice(index, 1);
-            localStorage.setItem('appointments', JSON.stringify(existingAppointments));
+    const toggleSwitch = document.getElementById('modeToggle');
+const modeText = document.getElementById('modeText');
 
-            // Atualizar a lista de agendamentos
-            showAppointmentsList();
+toggleSwitch.addEventListener('change', switchTheme);
 
-            // Exibir o popup
-            document.getElementById('clinicPopup').style.display = 'block';
-        }
-    </script>
-</body>
+function switchTheme() {
+    if (toggleSwitch.checked) {
+        document.body.classList.add('dark-mode');
+        modeText.innerText = 'Modo Escuro';
+    } else {
+        document.body.classList.remove('dark-mode');
+        modeText.innerText = 'Modo Claro';
+    }
+}
 
-<!-- Footer -->
-<footer>
-    <div>
-        <h6>Redes sociais:</h6>
-        <p>
-            <span><a href="http://www.facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a> |</span>
-            <span><a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">Twitter</a> |</span>
-            <span><a href="http://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a> | </span>
-            <br>
-            <a class="nav-link active" aria-current="page" href="avaliacao.html">Avalie-nos</a>
-            Todos os Direitos Reservados.
-        </p>
+</script>
+
+
+    </body>
+    
+    </html>
+
+            <article class="about">
+               
+                <div>
+                    <iframe width="400" height="400" src="https://www.youtube.com/embed/m-Gtu7C93_Y?controls=0&autoplay=1&mute=1" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div>
+                    <h5 class="card-title" style="color: #55038C;"><br><strong>QUEM SOMOS?</strong> </h5>
+                    <p class="card-text">
+                        Nosso projeto LAR ANIMAL tem como objetivo criar uma aplicação web onde ONGs e grupos
+                        protetores possam se cadastrar para servirem como ponto de resgate para animais e
+                        tutores em situação de vulnerabilidade e onde possíveis tutores possam entrar para dar um
+                        novo lar a esses animais. 
+                        Além de criar uma ponte de ajuda mútua entre ONGs, grupos
+                        solidários e voluntários que queiram auxiliar tanto animais quanto tutores carentes,
+                        disponibilizando desde informações sobre como fazer a abordagem certa a animais
+                        abandonados para resgate até locais que oferecem atendimento veterinário gratuito e/ou a
+                        preço social.
+                    </p>
+                </div>
+            
+            </article>
+        </article>
+
+    </section>
+
+    <div class="cardsection">
+
+        <div class="container">
+            <div class=" row">
+                <div class="col-12 pt-3 pb-3">
+                    <h2 style="color: #55038C;"><strong>Principais Serviços</strong></h2>
+                </div>
+        
+                <div class="servicos col-12 col-md-3 pt-3">
+                    <a href="forum.html" class="text-decoration-none text-dark card-link">
+                        <img src="img/conversa.png" alt="Imagem não encontrada" class="card_img">
+                        <h5 class="card-title" style="color: #F2AA52;"><br><strong>Fóruns</strong></h5>
+                    </a>
+                </div>
+        
+                <div class="servicos col-12 col-md-3 pt-3">
+                    <a href="adocao.html" class="text-decoration-none text-dark card-link">
+                        <img src="./img/adocao.png" alt="Imagem não encontrada" class="card_img">
+                        <h5 class="card-title" style="color: #F2AA52;"><br><strong>Adoção</strong></h5>
+                    </a>
+                </div>
+        
+                <div class="servicos col-12 col-md-3 pt-3">
+                    <a href="voluntario.html" class="text-decoration-none text-dark card-link">
+                        <img src="img/voluntario1-adoção.png" alt="Imagem não encontrada" class="card_img">
+                        <h5 class="card-title" style="color: #F2AA52;"><br><strong>Voluntariado</strong></h5>
+                    </a>
+                </div>
+                <div class="servicos col-12 col-md-3 pt-3">
+                    <a href="agendamentos.html" class="text-decoration-none text-dark card-link">
+                        <img src="img/clinica3.png" alt="Imagem não encontrada" class="card_img">
+                        <h5 class="card-title" style="color: #F2AA52;"><br><strong>Agendamento De Consulta</strong></h5>
+                    </a>
+                </div>
+        
+           
+            
+
+                <div class="historia row pt-5 pb-3">
+                    <h2 style="color: #55038C;"><strong>Histórias de Sucesso</strong></h2>
+
+                    <div class="texto col-12 col-md-3 pt-3">
+                        <img src="./img/filhote1.jpg" alt="Imagem não encontrada" class="card_img">
+                        <h5 class="card-title"><a href="#" class="text-decoration-none text-dark card-link"
+                                style="color: #F2AA52;"><br><strong>Corolino</strong></a></h5>
+                        <p class="card-text">
+                            Carolino foi resgatado de um lar abusivo em um sítio, onde ele e seus irmãos sofriam maus
+                            tratos e vivam em situação precarias. Após ser resgatado pela ONG Meu Pet Minha Vida, foi
+                            adotado por um lar responsável onde vive feliz e saudável com sua nova família.
+                        </p>
+                    </div>
+
+                    <div class="texto col-12 col-md-3 pt-3">
+                        <img src="./img/filhote2.jpg" alt="Imagem não encontrada" class="card_img">
+                        <h5 class="card-title"><a href="#" class="text-decoration-none text-dark card-link"
+                                style="color: #F2AA52;"><br><strong>Senhor Pipo</strong></a></h5>
+                        <p class="card-text">
+                            Senhor Pipo, foi abandonado em uma caixa de papelão junto de sua família próximo a
+                            uma igreja onde foi resgatado pelo grupo protetor Pata amiga. Eles foram postos
+                            para a adoção em uma feira da prefeitura de Contagem e hoje é mascote
+                            de uma clínica veterinária.
+                        </p>
+                    </div>
+                    <div class="texto col-12 col-md-3 pt-3">
+                        <img src="./img/filhote_crianca.jpg" alt="Imagem não encontrada" class="card_img">
+                        <h5 class="card-title"><a href="#" class="text-decoration-none text-dark card-link"
+                                style="color: #F2AA52;"><br><strong>Pudim</strong></a></h5>
+                        <p class="card-text">
+                            Pudim foi abandonado na rua, e ficou
+                            vagando pelas ruas da grande BH onde sofria maus tratos até ser resgatado e
+                            posteriormente adoatado por Frederico e sua família. Agora Pudim vive feliz com sua
+                            nova família fazendo compania para Lucas, o filho do casal.
+                        </p>
+                    </div>
+                    <div class="texto col-12 col-md-3 pt-3">
+                        <img src="./img/gato_crianca.jpg" alt="Imagem não encontrada" class="card_img">
+                        <h5 class="card-title"><a href="#" class="text-decoration-none text-dark card-link"
+                                style="color: #F2AA52;"><br><strong>Jujuba</strong></a></h5>
+                        <p class="card-text">
+                            Jujuba era uma gata de rua que após ser atropelada foi resgatada pela Ong Ampara Animal, foi
+                            trata e adotada por um dos voluntários mirins que participam em uma parceria da ONG com as
+                            escolas da região metropolitana de BH
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
     </div>
-</footer>
+<br>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-GLhlTQ8iKu16Z17tQhiNx6J3Nl3ZuodmeFVnL4u" crossorigin="anonymous"></script>
+
+
+<footer style="background-color: #F2AA52; color: #55038C; padding: 10px; font-size: small; text-align: center; position: relative; bottom: 0; left: 0; right: 0;"> 
+
+    <div> 
+
+        <p>Gostou do nosso serviço? Avalie-nos!</p> 
+
+            <a href="avaliacao.html"><button id="botao-avaliacao">Avaliar</button></a> 
+
+            </span> 
+
+            <div class="rodape"> 
+
+            <div class="container"> 
+
+            <p>&copy; 2023 Lar animal - Todos os direitos reservados</p> 
+         
+    </div> 
+
+</footer> 
+
 </body>
 
 </html>
