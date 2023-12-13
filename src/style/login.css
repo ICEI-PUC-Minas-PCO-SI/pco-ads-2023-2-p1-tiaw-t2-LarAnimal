@@ -238,3 +238,9 @@ body {
     background-color: #d8a76c; 
 
 } 
+
+@media (max-width: 768px) {
+    #left-section img {
+        display: none;
+    }
+}
