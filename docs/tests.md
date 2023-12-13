@@ -45,18 +45,18 @@ Verifique se as funcionalidades administrativas estão disponíveis apenas para 
 
 Resultado: Os perfis de usuário são atribuídos corretamente, e as permissões de acesso estão de acordo.
 
-RF-003: Módulo de Doações
+RF-003: Módulo de Adoção
 
-Objetivo do Teste: Confirmar que o módulo de doações permite aos usuários realizar doações para causas específicas ou organizações beneficentes.
+Objetivo do Teste: Confirmar que o módulo de adoção permite aos usuários o cadastro de seu pet para ser adotado, a visualização dos pets já cadastrados e os detalhes do dono que cadastrou o pet.
 
 Passos do Teste:
 
-Acesse o módulo de doações.
-Selecione uma causa ou organização.
-Complete o processo de doação.
-Verifique se a doação é registrada corretamente no sistema.
+Acesse o módulo de adoção.
+Selecione Adicionar pet.
+Complete o processo de cadastro do pet.
+Verifique se o cadastro do pet é registrada corretamente no sistema.
 
-Resultado: O módulo de doações permite doações bem-sucedidas.
+Resultado: O módulo de adoção atualiza e registra a adição de um card funcional com os detalhes do pet e de seu dono.
 
 RF-004: Gerenciamento de Parceiros
 
@@ -71,18 +71,7 @@ Verifique se as alterações são refletidas corretamente no sistema.
 
 Resultado: O sistema gerencia parceiros conforme especificado.
 
-RF-005: Busca de Serviços e Detalhes
-
-Objetivo do Teste: Verificar se os usuários podem realizar buscas por serviços e obter informações detalhadas sobre cada serviço.
-
-Passos do Teste:
-
-Utilize a função de busca para encontrar um serviço específico.
-Verifique se as informações detalhadas do serviço são exibidas corretamente.
-
-Resultado: A busca por serviços e a visualização de detalhes são bem-sucedidas.
-
-RF-006: Avaliações e Comentários dos Serviços
+RF-005: Avaliações e Comentários dos Serviços
 
 Objetivo do Teste: Testar a funcionalidade de avaliações e comentários dos serviços.
 
@@ -94,7 +83,7 @@ Verifique se a avaliação e o comentário são exibidos corretamente.
 
 Resultado: Avaliações e comentários são registrados e exibidos conforme esperado.
 
-RF-007: Suporte ao Usuário
+RF-006: Suporte ao Usuário
 
 Objetivo do Teste: Certificar-se de que os usuários conseguem entrar em contato com o suporte para obter assistência ou relatar problemas.
 
@@ -106,7 +95,7 @@ Verifique se a mensagem é recebida e registrada no sistema.
 
 Resultado: O suporte ao usuário funciona corretamente.
 
-RF-008: Mapeamento de Lojistas
+RF-007: Mapeamento de Lojistas
 
 Objetivo do Teste: Testar a funcionalidade de mapeamento de lojistas para localizar lojas físicas associadas ao serviço.
 
@@ -118,7 +107,7 @@ Verifique se o mapa exibe corretamente as lojas encontradas.
 
 Resultado: O mapeamento de lojistas funciona conforme esperado.
 
-RF-009: Agendamentos On-line
+RF-008: Agendamentos On-line
 
 Objetivo do Teste: Confirmar que os usuários conseguem agendar serviços on-line, escolhendo datas e horários disponíveis.
 
@@ -131,7 +120,7 @@ Verifique se o agendamento é refletido corretamente no sistema.
 
 Resultado: O agendamento on-line é bem-sucedido.
 
-RF-010: Fóruns de Discussão
+RF-009: Fóruns de Discussão
 
 Objetivo do Teste: Testar a funcionalidade dos fóruns de discussão para interação entre usuários.
 
@@ -144,7 +133,7 @@ Verifique se as interações são registradas corretamente.
 
 Resultado: Os fóruns de discussão suportam interações entre usuários.
 
-RF-011: Aba Educacional com Suporte em Texto e Vídeo
+RF-010: Aba Educacional com Suporte em Texto e Vídeo
 
 Objetivo do Teste: Confirmar que a aba educacional fornece suporte adequado em texto e vídeo para ajudar os usuários a compreender os serviços e recursos disponíveis.
 
