@@ -11,7 +11,7 @@ Responsável pelo conteudo das páginas, criação de páginas novas para Aba ed
 
 
 • **Kauan Maia**
-Responsável pela criação e funcionalidades da página de adoção, algumas correções de estilização.
+Responsável pela criação e funcionalidades da página de adoção, correções de estilização e posicionamento de elementos de algumas páginas.
 
 • **Manuela de Souza**
 Responsável por realizar a padronização das Atas, algumas mudanças de estilo nas páginas, implementação das páginas de contato e avaliações, mudanças na home, inclusão de imagens e vídeo em algumas outras páginas, implementação do banco de dados nas páginas contato e avaliações, merge para a main.
