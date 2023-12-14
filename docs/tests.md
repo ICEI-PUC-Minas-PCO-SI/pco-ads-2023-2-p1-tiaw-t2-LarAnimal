@@ -416,7 +416,86 @@ Esta seção deve apresentar o relatório com as evidências dos testes de softw
 |Link do vídeo do teste realizado: | https://1drv.ms/u/s!AhD2JqpOUvJChapRtRSQ9vPzbNLwGA?e=mxZs6t|
 ## Avaliação dos Testes de Software
 
-Discorra sobre os resultados do teste. Ressaltando pontos fortes e fracos identificados na solução. Comente como o grupo pretende atacar esses pontos nas próximas iterações. Apresente as falhas detectadas e as melhorias geradas a partir dos resultados obtidos nos testes.
+**Pontos Fortes Identificados:**
+
+**Registro de Usuário (RF-001):**
+
+O processo de registro de usuário foi suave e eficiente, sem problemas de usabilidade.
+A confirmação de e-mail e a recuperação de senha foram eficazes.
+
+**Perfil de Usuário (RF-002):**
+
+A diferenciação entre perfis de usuário comum e administrador foi clara.
+As permissões associadas a cada tipo de perfil foram implementadas corretamente.
+
+**Módulo de Doações (RF-003):**
+
+A funcionalidade de doações foi implementada de maneira intuitiva.
+As transações financeiras foram seguras e eficientes.
+
+**Gerenciamento de Parceiros (RF-004):**
+
+O sistema permitiu o cadastro e a edição de parceiros de forma eficiente.
+As informações dos parceiros foram exibidas corretamente na interface.
+
+**Busca de Serviços e Detalhes (RF-005):**
+
+A busca de serviços foi rápida e os resultados foram relevantes.
+A exibição dos detalhes dos serviços estava completa e fácil de entender.
+
+**Pontos Fracos Identificados:**
+
+**Avaliações e Comentários (RF-006):**
+
+Algumas avaliações não foram exibidas corretamente na interface.
+Houve relatos de dificuldades na submissão de comentários.
+
+**Suporte ao Usuário (RF-007):**
+
+O tempo de resposta do suporte por vezes foi mais longo do que o esperado.
+Algumas solicitações não foram tratadas de maneira satisfatória.
+
+**Agendamentos Online (RF-009):**
+
+Alguns usuários tiveram dificuldades técnicas ao tentar agendar serviços online.
+O sistema não enviou notificações de confirmação de agendamento para alguns usuários.
+
+**Fóruns de Discussão (RF-010):**
+
+A participação nos fóruns foi inferior ao esperado.
+A interface dos fóruns não era tão amigável, dificultando a interação.
+
+**Aba Educacional (RF-011):**
+
+A seção de suporte em texto e vídeo estava desorganizada.
+Alguns usuários relataram dificuldades na navegação e no acesso ao conteúdo educacional.
+
+**Estratégias para Próximas Iterações:**
+
+**Avaliações e Comentários (RF-006):**
+
+Será realizada uma revisão no módulo de avaliações para garantir a exibição correta dos comentários.
+Uma análise mais profunda dos problemas de submissão será conduzida para uma correção efetiva.
+
+**Suporte ao Usuário (RF-007):**
+
+Será implementada uma melhoria na eficiência do suporte, incluindo a otimização dos processos internos.
+Estratégias para lidar com solicitações críticas serão estabelecidas para reduzir o tempo de resposta.
+
+**Agendamentos Online (RF-009):**
+
+A interface de agendamento será refinada para melhorar a experiência do usuário.
+Um sistema de notificações mais robusto será implementado para garantir que os usuários recebam confirmações de agendamento.
+
+**Fóruns de Discussão (RF-010):**
+
+A usabilidade dos fóruns será aprimorada para incentivar a participação ativa dos usuários.
+Estratégias de engajamento serão implementadas para promover discussões mais significativas.
+
+**Aba Educacional (RF-011):**
+
+A organização do conteúdo educacional será revista para facilitar a navegação.
+Melhorias na interface serão implementadas para tornar a seção mais acessível e atraente.
 
 
 
