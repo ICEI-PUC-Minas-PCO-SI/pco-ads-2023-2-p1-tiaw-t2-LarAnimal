@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
     const baseUrl = "http://localhost:3333/usuario";
 
     function getDadosUsuario(tipo) {
@@ -32,22 +31,63 @@ $(document).ready(function () {
             error: function (error) {
                 window.alert("Erro ao cadastrar usuário");
             }
-        })
+        });
     }
 
-    $('#btn-cadastro-pf').on('click', function (e) {
-        e.preventDefault();
+    // Evento de submissão do formulário PF
+    $('#cadastro-form-pf').on('submit', function (e) {
+        e.preventDefault(); // Impede o envio padrão do formulário
+
+        const nome = $('input[name="nome"]').val();
+        const email = $('input[name="email"]').val();
+        const senha = $('input[name="senha"]').val();
+        const documento = $('input[name="documento"]').val();
+        const cep = $('input[name="cep"]').val();
+        const estado = $('input[name="estado"]').val();
+        const cidade = $('input[name="cidade"]').val();
+        const bairro = $('input[name="bairro"]').val();
+        const logradouro = $('input[name="logradouro"]').val();
+        const numero = $('input[name="numero"]').val();
+        const telefone = $('input[name="telefone"]').val();
+
+        // Verificação de campos em branco
+        if (nome === '' || email === '' || senha === '' || documento === '' ||
+            cep === '' || estado === '' || cidade === '' || bairro === '' ||
+            logradouro === '' || numero === '' || telefone === '') {
+            alert('Por favor, preencha todos os campos obrigatórios.');
+            return; // Impede o envio do formulário se algum campo estiver em branco
+        }
+
         const usuario = getDadosUsuario('PF');
-        salvarDadosUsuario(usuario)
+        salvarDadosUsuario(usuario);
     });
 
-    $('#btn-cadastro-pj').on('click', function (e) {
-        e.preventDefault();
-        
-        e.preventDefault();
+    // Evento de submissão do formulário PJ
+    $('#cadastro-form-pj').on('submit', function (e) {
+        e.preventDefault(); // Impede o envio padrão do formulário
+
+        const nome = $('input[name="nome"]').val();
+        const email = $('input[name="email"]').val();
+        const senha = $('input[name="senha"]').val();
+        const documento = $('input[name="documento"]').val();
+        const cep = $('input[name="cep"]').val();
+        const estado = $('input[name="estado"]').val();
+        const cidade = $('input[name="cidade"]').val();
+        const bairro = $('input[name="bairro"]').val();
+        const logradouro = $('input[name="logradouro"]').val();
+        const numero = $('input[name="numero"]').val();
+        const telefone = $('input[name="telefone"]').val();
+
+        // Verificação de campos em branco
+        if (nome === '' || email === '' || senha === '' || documento === '' ||
+            cep === '' || estado === '' || cidade === '' || bairro === '' ||
+            logradouro === '' || numero === '' || telefone === '') {
+            alert('Por favor, preencha todos os campos obrigatórios.');
+            return; // Impede o envio do formulário se algum campo estiver em branco
+        }
+
         const usuario = getDadosUsuario('PJ');
         usuario.tipoEstabelecimento = $('select[name="tipo"]').val();
-        console.log(usuario.tipoEstabelecimento)
-        salvarDadosUsuario(usuario)
+        salvarDadosUsuario(usuario);
     });
 });
