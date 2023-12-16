@@ -27,5 +27,22 @@
   "comentarios": [],
   "avaliacoes": [],
   "agendamentos": [],
-  "pets": []
+  "pets": [],
+  "usuario": [
+    {
+      "nome": "1",
+      "email": "",
+      "senha": "",
+      "documento": "",
+      "cep": "",
+      "estado": "",
+      "cidade": "",
+      "bairro": "",
+      "logradouro": "",
+      "numero": "",
+      "telefone": "",
+      "tipo": "PF",
+      "id": 1
+    }
+  ]
 }
