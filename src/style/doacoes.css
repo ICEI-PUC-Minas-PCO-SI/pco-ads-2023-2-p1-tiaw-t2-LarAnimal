@@ -157,6 +157,18 @@ header {
 }
 
 
+.lista-doacoes ul {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-doacoes li {
+    background-color: #55038C;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    color: rgb(255, 255, 255)
+}
 
 #container {
     display: flex;

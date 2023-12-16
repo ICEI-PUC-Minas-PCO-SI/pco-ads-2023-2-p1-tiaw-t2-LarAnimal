@@ -34,3 +34,39 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+
+const listaDoacoesElement = document.getElementById('lista-doacoes');
+const totalArrecadadoElement = document.getElementById('total-arrecadado');
+
+function listarDoacoes() {
+    fetch('http://localhost:3333/doacoes')
+        .then(response => response.json())
+        .then(doacoes => {
+            listaDoacoesElement.innerHTML = ''; // Limpa a lista para evitar duplicações
+
+            let totalArrecadado = 0;
+
+            doacoes.forEach(doacao => {
+                const valorNumerico = parseFloat(doacao.valor);
+                if (!isNaN(valorNumerico)) {
+                    totalArrecadado += valorNumerico;
+                    const formattedValor = `R$ ${valorNumerico.toFixed(2)}`;
+                    const listItem = document.createElement('li');
+                    listItem.className = 'lista-doacoes-item';
+                    listItem.textContent = `Nome: ${doacao.nome}, Email: ${doacao.email}, Valor: ${formattedValor}`;
+                    listaDoacoesElement.appendChild(listItem);
+                }
+            });
+
+            totalArrecadadoElement.textContent = `Total arrecadado: R$ ${totalArrecadado.toFixed(2)}`;
+        })
+        .catch(error => {
+            console.error('Erro ao buscar as doações:', error);
+            listaDoacoesElement.innerHTML = '<li>Erro ao buscar as doações. Tente novamente mais tarde.</li>';
+            totalArrecadadoElement.textContent = 'Erro ao calcular o total arrecadado.';
+        });
+}
+
+setInterval(listarDoacoes, 20000);
+listarDoacoes();
