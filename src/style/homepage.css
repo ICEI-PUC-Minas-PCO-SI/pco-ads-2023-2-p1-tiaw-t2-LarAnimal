@@ -312,6 +312,7 @@ a {
 .historia{
     background-color: rgba(242, 170, 82, 0.8);
     border-radius: 7px;
+    
  
 }
 
@@ -363,6 +364,7 @@ a {
 
 @media screen and (min-width: 320px) and (max-width: 1304px) {
 
+
     .carrousel,
     .cardsection {
         display: block;
@@ -406,12 +408,13 @@ a {
        display: flex;
        justify-content: center;
        flex-wrap: wrap;
-       max-width: 850px;
+       max-width: 860px;
        
     }
 
     .historia .texto{
         margin-top: 10px;
+        
     }
 
     article.about{
