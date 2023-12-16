@@ -64,3 +64,38 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Outras lógicas podem ser adicionadas aqui, se necessário
 });
+
+
+const listaAvaliacoesElement = document.getElementById('lista-avaliacoes');
+const totalAvaliacoesElement = document.getElementById('total-avaliacoes');
+
+function listarAvaliacoes() {
+    fetch('http://localhost:3333/avaliacoes')
+        .then(response => response.json())
+        .then(avaliacoes => {
+            listaAvaliacoesElement.innerHTML = ''; // Limpa a lista para evitar duplicações
+
+            let totalAvaliacoes = 0;
+
+            avaliacoes.forEach(avaliacao => {
+                const rating = parseInt(avaliacao.rating);
+                if (!isNaN(rating)) {
+                    totalAvaliacoes++;
+                    const commentElement = document.createElement('div');
+                    commentElement.className = 'lista-avaliacoes-item';
+                    commentElement.innerHTML = `<strong>Nome do usuário:</strong> ${avaliacao.username}<br><strong>Avaliação:</strong> ${rating} estrela(s)<br><strong>Comentário:</strong> ${avaliacao.comment}`;
+                    listaAvaliacoesElement.appendChild(commentElement);
+                }
+            });
+
+            totalAvaliacoesElement.textContent = `Total de Avaliações: ${totalAvaliacoes}`;
+        })
+        .catch(error => {
+            console.error('Erro ao buscar as avaliações:', error);
+            listaAvaliacoesElement.innerHTML = '<div>Erro ao buscar as avaliações. Tente novamente mais tarde.</div>';
+            totalAvaliacoesElement.textContent = 'Erro ao calcular o total de avaliações.';
+        });
+}
+
+setInterval(listarAvaliacoes, 20000);
+listarAvaliacoes();

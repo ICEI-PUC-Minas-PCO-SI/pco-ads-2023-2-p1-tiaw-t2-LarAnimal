@@ -286,4 +286,22 @@ h2 {
     color: #333; 
 }
 
+.avaliacoes-lista {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.lista-avaliacoes-item {
+    margin-bottom: 10px;
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Estilos para o total de avaliações */
+#total-avaliacoes {
+    font-weight: bold;
+    margin-top: 20px;
+}
+
 

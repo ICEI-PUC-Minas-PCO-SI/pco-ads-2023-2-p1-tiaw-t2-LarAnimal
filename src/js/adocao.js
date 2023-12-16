@@ -63,39 +63,6 @@ function salvarNovoPet() {
                 </div>
             </div>
         </div>
+        
     `;
-    document.body.appendChild(modalPet);
-
-    document.getElementById("petNome").value = "";
-    document.getElementById("petEspecie").value = "";
-    document.getElementById("petIdade").value = "";
-    document.getElementById("petDescricao").value = "";
-    document.getElementById("donoEmail").value = "";
-    document.getElementById("donoTelefone").value = "";
-    imagemPet.value = "";
-
-    // Código de envio para o servidor
-    const formData = new FormData(); 
-    formData.append('nome', nome);
-    formData.append('especie', especie);
-    formData.append('idade', idade);
-    formData.append('descricao', descricao);
-    formData.append('donoEmail', emailDono);
-    formData.append('donoTelefone', telefoneDono);
-
-    fetch('http://localhost:3333/pets', {
-        method: 'POST',
-        body: formData 
-    })
-    .then(response => response.json())
-    .then(data => {
-        console.log('Novo pet adicionado com sucesso:', data);
-        const form = document.getElementById('novoPetForm');
-        form.reset();
-        alert('Novo pet adicionado com sucesso!');
-    })
-    .catch(error => {
-        console.error('Erro ao adicionar novo pet:', error);
-        alert('Erro ao adicionar novo pet. Tente novamente mais tarde.');
-    });
 }

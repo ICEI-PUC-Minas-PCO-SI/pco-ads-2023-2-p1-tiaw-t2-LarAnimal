@@ -57,23 +57,25 @@
     </nav>
 </div>
 
+
 <body>
     <div id="container" style="display: flex; height: 100vh;">
         <div id="left-section" style="flex: 1;">
-
             <img src="img/pet.webp" alt="" width="1000px" height="1100px">
-        </div>
         </div>
         <div id="right-section" style="flex: 1;">
             <div class="login-container mt-4 mb-4">
-    <h2>Login</h2>
-    <form class="login-form" action="/login" method="post">
-        <input type="text" name="username" placeholder="CPF / CNPJ" required>
-        <input type="password" name="password" placeholder="Senha" required>
-        <input type="submit" id="btn-login" value="Entrar">
-    </form>
-    <a href="PF_PJ.html" class="signup-link">Não tem uma conta? Cadastre-se aqui</a>
-</div>
+                <h2>Login</h2>
+                <form class="login-form" action="/login" method="post" onsubmit="return validateForm()">
+                    <input type="text" name="username" id="username" placeholder="CPF / CNPJ" required maxlength="18">
+
+                    <input type="password" name="password" placeholder="Senha" required>
+                    <input type="submit" id="btn-login" value="Entrar">
+                </form>
+                <a href="PF_PJ.html" class="signup-link">Não tem uma conta? Cadastre-se aqui</a>
+            </div>
+        </div>
+    </div>
 
 
 <script src="js/login.js"></script>
@@ -91,7 +93,45 @@
             document.body.classList.remove('dark-mode');
             modeText.innerText = 'Modo Claro';
         }
+
+        function validateForm() {
+            const usernameField = document.getElementById('username');
+            const usernameValue = usernameField.value;
+
+            // Expressões regulares para validar CPF ou CNPJ
+            const cpfRegex = /^\d{3}\.\d{3}\.\d{3}-\d{2}$/;
+            const cnpjRegex = /^\d{2}\.\d{3}\.\d{3}\/\d{4}-\d{2}$/;
+
+            if (!cpfRegex.test(usernameValue) && !cnpjRegex.test(usernameValue)) {
+                alert('Digite um CPF ou CNPJ válido!');
+                return false; // Impede o envio do formulário se não estiver no formato correto
+            }
+
+            return true; // Permite o envio do formulário se estiver no formato correto
+        }
     }
+
+    function formatCPForCNPJ(value) {
+            value = value.replace(/\D/g, ''); // Remove tudo que não for número
+            if (value.length <= 11) { // CPF
+                value = value.replace(/(\d{3})(\d)/, '$1.$2');
+                value = value.replace(/(\d{3})(\d)/, '$1.$2');
+                value = value.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+            } else { // CNPJ
+                value = value.replace(/^(\d{2})(\d)/, '$1.$2');
+                value = value.replace(/^(\d{2})\.(\d{3})(\d)/, '$1.$2.$3');
+                value = value.replace(/\.(\d{3})(\d)/, '.$1/$2');
+                value = value.replace(/(\d{4})(\d)/, '$1-$2');
+            }
+            return value;
+        }
+
+        const usernameField = document.getElementById('username');
+
+        usernameField.addEventListener('input', function (event) {
+            const formattedValue = formatCPForCNPJ(event.target.value);
+            event.target.value = formattedValue;
+        });
 </script>
 
 </body>

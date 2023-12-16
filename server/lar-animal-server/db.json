@@ -1,75 +1,14 @@
 {
   "contato": [],
-  "doacoes": [
-    {
-      "nome": "karol",
-      "email": "3123@gmail.com",
-      "valor": "123",
-      "id": 1
-    },
-    {
-      "nome": "jefferson santos",
-      "email": "jeffsantosc@gmail.com",
-      "valor": "222",
-      "id": 2
-    },
-    {
-      "nome": "manu",
-      "email": "3123@gmail.com",
-      "valor": "555",
-      "id": 3
-    }
-  ],
+  "doacoes": [],
   "posts": [],
   "comentarios": [],
   "avaliacoes": [],
   "agendamentos": [],
-  "pets": [],
-  "usuario": [
+  "pets": [
     {
-      "nome": "1",
-      "email": "",
-      "senha": "",
-      "documento": "",
-      "cep": "",
-      "estado": "",
-      "cidade": "",
-      "bairro": "",
-      "logradouro": "",
-      "numero": "",
-      "telefone": "",
-      "tipo": "PF",
       "id": 1
-    },
-    {
-      "nome": "",
-      "email": "jeff22222222",
-      "senha": "112313132",
-      "documento": "",
-      "cep": "32668038",
-      "estado": "MG",
-      "cidade": "Betim",
-      "bairro": "Petrovale",
-      "logradouro": "Rua Cuba",
-      "numero": "",
-      "telefone": "",
-      "tipo": "PF",
-      "id": 2
-    },
-    {
-      "nome": "",
-      "email": "jeff22222222",
-      "senha": "112313132",
-      "documento": "",
-      "cep": "",
-      "estado": "",
-      "cidade": "",
-      "bairro": "",
-      "logradouro": "",
-      "numero": "",
-      "telefone": "",
-      "tipo": "PF",
-      "id": 3
     }
-  ]
+  ],
+  "usuario": []
 }
