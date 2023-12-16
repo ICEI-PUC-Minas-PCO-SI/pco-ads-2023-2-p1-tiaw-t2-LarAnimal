@@ -57,22 +57,26 @@
         <form id="formulario-contato">
             <div class="info">
                 <h1>CONTATE-NOS</h1>
-                <div class="nome-email">
+                <div class="nome">
                 <label for="nome"><strong>Nome:</strong></label>
                 <input id="nome" type="text" placeholder="Digite seu nome aqui">
+            </div>
 <br>
+<div class="nome">
 <label for="telefone"><strong>Telefone:</strong></label>
 <input id="telefone" type="tel" placeholder="Digite seu telefone aqui" oninput="validarTelefone(this)">
 <span id="telefoneError" style="color: red;"></span>
-
 </div>
+
 <br>
-<div class="email">
+
+<div class="nome">
 <label for="email"><strong>E-mail:</strong></label>
 <input id="email" type="mail" placeholder="Digite seu e-mail aqui" oninput="validarEmail(this)">
 <span id="emailError" style="color: red;"></span>
 
 </div>
+
 <label for="motivo"><strong>Motivo do Contato:</strong></label>
 <textarea name="Motivo" id="motivo" cols="40" rows="10"></textarea>
 
