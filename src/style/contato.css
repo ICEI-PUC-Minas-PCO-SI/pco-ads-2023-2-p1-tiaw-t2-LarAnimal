@@ -241,7 +241,7 @@ body {
   input[type="text"],
   input[type="tel"] {
     width: 300px; 
-    padding: 8px;
+    
     margin-bottom: 10px;
   }
 
@@ -251,18 +251,20 @@ body {
 
   input[type="mail"] {
     
-    width: 250px; 
+    width: 290px; 
+  }
+  input[type="assunt"] {
+    
+    width: 260px; 
   }
 
   .email{
     display: flex;
-    
+    justify-content: space-between;
 
 
   }
-  .email input{
-    margin-left: 10px;
-  }
+  
 
   .info h1{
     text-align: center;
