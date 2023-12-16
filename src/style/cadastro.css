@@ -33,7 +33,9 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
+    
 }
+
 
 .login-form input[type="submit"] {
     background-color: #F2AA52;
@@ -86,5 +88,7 @@ body {
     background-color: #d8a76c; 
 
 } 
+
+
 
  
