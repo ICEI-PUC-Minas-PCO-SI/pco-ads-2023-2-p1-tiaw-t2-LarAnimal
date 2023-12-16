@@ -74,6 +74,7 @@
 <textarea name="Motivo" id="motivo" cols="100" rows="10"></textarea>
 
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8/jquery.inputmask.min.js" integrity="sha512-efAcjYoYT0sXxQRtxGY37CKYmqsFVOIwMApaEbrxJr4RwqVVGw8o+Lfh/+59TU07+suZn1BWq4fDl5fdgyCNkw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
   function validarEmail(input) {
     var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -100,6 +101,12 @@
       telefoneError.text('');
     }
   }
+  $(document).ready(function () {
+    $('#telefone').inputmask('(99) 9 9999-9999', {
+      removeMaskOnSubmit: true,
+      clearMaskOnLostFocus: true
+    });
+  });
 </script>
 
 
