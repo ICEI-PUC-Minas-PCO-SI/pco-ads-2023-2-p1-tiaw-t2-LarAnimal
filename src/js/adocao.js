@@ -1,3 +1,23 @@
+// Máscara idade
+function mascaraIdade(input) {
+    input.value = input.value.replace(/\D/g, '').substring(0, 2);
+}
+
+// Máscara telefone
+function mascaraTelefone(input) {
+    input.value = input.value.replace(/\D/g, '').substring(0, 11);
+
+    if (input.value.length === 11) {
+        // Máscara DDD
+        input.value = input.value.replace(/^(\d{2})(\d{5})(\d{4})$/, '($1) $2-$3');
+    }
+}
+
+// Máscara para e-mail
+function mascaraEmail(input) {
+
+    input.value = input.value.replace(/[^\w@.]/g, '');
+}
 function salvarNovoPet() {
     var nome = document.getElementById("petNome").value;
     var especie = document.getElementById("petEspecie").value;
@@ -65,4 +85,25 @@ function salvarNovoPet() {
         </div>
         
     `;
+    document.body.appendChild(modalPet);
+
+    document.getElementById("petNome").value = "";
+    document.getElementById("petEspecie").value = "";
+    document.getElementById("petIdade").value = "";
+    document.getElementById("petDescricao").value = "";
+    document.getElementById("donoEmail").value = "";
+    document.getElementById("donoTelefone").value = "";
+    imagemPet.value = "";
 }
+// Ouvintes de eventos
+document.getElementById('petIdade').addEventListener('input', function () {
+    mascaraIdade(this);
+});
+
+document.getElementById('donoEmail').addEventListener('input', function () {
+    mascaraEmail(this);
+});
+
+document.getElementById('donoTelefone').addEventListener('input', function () {
+    mascaraTelefone(this);
+});
