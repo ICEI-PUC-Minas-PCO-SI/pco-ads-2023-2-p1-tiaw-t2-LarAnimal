@@ -152,7 +152,8 @@ input:checked+.slider:before {
 
 
 body {
-    display: block;
+     display: block; 
+
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -160,6 +161,11 @@ body {
     background-color: #f2f2f2;
     font-family: Arial, sans-serif;
 }
+
+.form{
+    display: flex;
+    flex-wrap: wrap;
+} 
 
 .cadastro-container {
     max-width: 400px;
@@ -180,13 +186,16 @@ body {
 .cadastro-form input[type="email"],
 .cadastro-form input[type="password"],
 .cadastro-form input[type="submit"] {
-    width: calc(100% - 20px);
+    width: 49%;
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
+    
 }
+
+
 
 .cadastro-form input[type="submit"] {
     background-color: #F2AA52;
@@ -200,7 +209,7 @@ body {
 }
 
 .cadastro-form .signup-link {
-    display: block;
+    /* display: block; */
     margin-top: 15px;
     text-decoration: none;
     color: #55038C;
