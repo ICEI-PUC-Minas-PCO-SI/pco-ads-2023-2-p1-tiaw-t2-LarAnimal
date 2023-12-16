@@ -56,18 +56,22 @@
     
         <form id="formulario-contato">
             <div class="info">
-                <label for="nome"><strong>Nome completo:</strong></label>
-<input id="nome" type="text" placeholder="Digite seu nome aqui">
+                <h1>CONTATE-NOS</h1>
+                <div class="nome-email">
+                <label for="nome"><strong>Nome:</strong></label>
+                <input id="nome" type="text" placeholder="Digite seu nome aqui">
 <br>
-
-<label for="email"><strong>E-mail:</strong></label>
-<input id="email" type="text" placeholder="Digite seu e-mail aqui" oninput="validarEmail(this)">
-<span id="emailError" style="color: red;"></span>
-<br>
-
 <label for="telefone"><strong>Telefone:</strong></label>
-<input id="telefone" type="tel" placeholder="Digite seu telefone aqui no formato (DDD) 9 ####-####" oninput="validarTelefone(this)">
+<input id="telefone" type="tel" placeholder="Digite seu telefone aqui" oninput="validarTelefone(this)">
 <span id="telefoneError" style="color: red;"></span>
+
+</div>
+<br>
+<div class="email">
+<label for="email"><strong>E-mail:</strong></label>
+<input id="email" type="mail" placeholder="Digite seu e-mail aqui" oninput="validarEmail(this)">
+<span id="emailError" style="color: red;"></span>
+</div>
 <br>
 
 <label for="motivo"><strong>Motivo do Contato:</strong></label>
