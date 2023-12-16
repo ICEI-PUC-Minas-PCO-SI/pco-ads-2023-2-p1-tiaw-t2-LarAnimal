@@ -1,7 +1,9 @@
 /* dark mode */ 
 
 body { 
-
+    background-image: url(../img/pet.webp);
+    background-size: 100vh;
+    background-repeat: no-repeat;
     color: #000000; 
 
 } 
