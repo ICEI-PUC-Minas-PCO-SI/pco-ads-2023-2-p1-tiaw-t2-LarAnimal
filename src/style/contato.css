@@ -200,7 +200,7 @@ body {
 }
 
 #cartao {
-    max-width: 800px;
+    max-width: 500px;
     margin: 20px auto;
     padding: 20px;
     background-color: #fff; 
@@ -241,8 +241,7 @@ body {
   input[type="text"],
   input[type="tel"] {
     width: 300px; 
-    
-    margin-bottom: 10px;
+
   }
 
   input[type="tel"] {
@@ -253,18 +252,8 @@ body {
     
     width: 290px; 
   }
-  input[type="assunt"] {
-    
-    width: 260px; 
-  }
+  
 
-  .email{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-
-  }
   
 
   .info h1{
@@ -281,16 +270,7 @@ body {
     display: flex;
     flex-wrap: wrap;
   }
-  
 
-
-
-.nome-email{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    
-}
 label{
     margin-top: 9px;
 }
