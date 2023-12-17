@@ -372,37 +372,31 @@ a {
 
     #barralat {
         grid-row: 1 / 2;
-
     }
 
     #conteudo {
         display: grid;
         grid-template-columns: 1fr;
-
     }
 
     .barramenu {
         font-size: 9pt;
     }
 
-    .about{
-        width: 92%;
+    .about {
+        width: 100%; 
         background-image: none;
-        flex-wrap: wrap;
-        
+       
     }
 
-    .cardsection{
+    .cardsection {
         text-align: center;
     }
 
-    .historia{
-       display: flex;
-       justify-content: center;
+    .historia {
+        display: flex;
+        justify-content: center;
     }
 
-    
-
-
-
 }
+
