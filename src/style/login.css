@@ -165,6 +165,7 @@ body {
     width: 100vw;
 }
 
+/* Login-container */
 .login-container {
     max-width: 45%;
     padding: 20px;
@@ -172,10 +173,32 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     position: absolute;
-    top: 55%;
-    left: 70%;
+    top: 35%;
+    left: 50%;
     transform: translate(-50%, -50%);
+    transition: left 0.3s ease; /* Movimento suave */
 }
+
+/* Estilos para até 768px */
+@media (max-width: 768px) {
+    .login-container {
+        max-width: 100%;
+        width: 85%;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+/* Estilos para 768px */
+@media (min-width: 769px) {
+    .login-container {
+        max-width: 45%;
+        left: 70%;
+        transform: translateX(-50%);
+    }
+}
+
 
 .login-container h2 {
     margin-bottom: 20px;
