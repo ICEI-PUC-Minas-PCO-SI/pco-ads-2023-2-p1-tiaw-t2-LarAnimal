@@ -6,7 +6,7 @@
 
 
 • **Itallo Otavio**
-Responsável por deixar pagina de Mapa de clientes responsiva e, ajuda em Vercel.
+Responsável por deixar paginas responsivas e, ajuda em Vercel.
 
 • **Kauan Maia**
 
