@@ -191,18 +191,6 @@ input:checked+.slider:before {
     }
 }
 
-/* Estilos padrão para modo retrato */
-.header {
-    font-size: 24px;
-}
-
-/* Estilos para modo paisagem */
-@media screen and (orientation: landscape) {
-    .header {
-        font-size: 18px;
-    }
-}
-
 /* Estilos para telas pequenas */
 @media screen and (max-width: 480px) {
     .container {
