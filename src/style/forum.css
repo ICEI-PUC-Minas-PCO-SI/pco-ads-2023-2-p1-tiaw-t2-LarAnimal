@@ -69,3 +69,37 @@ textarea {
     border: 5px solid #212121;
     margin-bottom: 20px;
 }
+
+ /* Estilos para telas grandes */
+ .container {
+    width: 80%;
+}
+
+/* Estilos para telas médias */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+}
+
+/* Estilos para telas pequenas */
+@media screen and (max-width: 480px) {
+    .container {
+        width: 95%;
+    }
+
+    .header {
+        font-size: 16px;
+    }
+}
+
+/* Estilos para dispositivos móveis */
+@media screen and (max-width: 320px) {
+    .container {
+        width: 100%;
+    }
+
+    .header {
+        font-size: 14px;
+    }
+}
