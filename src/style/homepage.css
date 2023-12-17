@@ -361,7 +361,7 @@ a {
 
 
 
-@media screen {
+@media screen and (min-width: 320px) and (max-width: 945px) {
 
     .carrousel,
     .cardsection {
@@ -372,30 +372,37 @@ a {
 
     #barralat {
         grid-row: 1 / 2;
+
     }
 
     #conteudo {
         display: grid;
         grid-template-columns: 1fr;
+
     }
 
     .barramenu {
         font-size: 9pt;
     }
 
-    .about {
-        width: 100%;
+    .about{
+        width: 92%;
         background-image: none;
+        flex-wrap: wrap;
+        
     }
 
-    .cardsection {
+    .cardsection{
         text-align: center;
     }
 
-    .historia {
-        display: flex;
-        justify-content: center;
+    .historia{
+       display: flex;
+       justify-content: center;
     }
 
-}
+    
 
+
+
+}
