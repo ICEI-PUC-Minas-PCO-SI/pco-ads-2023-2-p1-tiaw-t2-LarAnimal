@@ -276,3 +276,17 @@ header {
     background-color: #d8a76c; 
 
 } 
+
+/* Telas menores que 768px*/
+@media (max-width: 768px) {
+
+    #left-section {
+        display: none;
+    }
+
+    #right-section {
+        flex: 0 0 90%; /* 80% da largura*/
+        margin: 20px auto 0;
+    
+    }
+}
