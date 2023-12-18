@@ -3,6 +3,8 @@
 
 
 • **Jefferson**
+Responsável pela implemetação de forumula matematica da página de doação, validação dos campos das paginas de login e cadastro, criação do pitch de apresentação
+
 
 
 • **Itallo Otavio**
