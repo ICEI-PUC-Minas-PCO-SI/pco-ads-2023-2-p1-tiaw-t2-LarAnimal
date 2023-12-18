@@ -68,5 +68,5 @@ function listarDoacoes() {
         });
 }
 
-setInterval(listarDoacoes, 20000);
+setInterval(listarDoacoes, 1000);
 listarDoacoes();

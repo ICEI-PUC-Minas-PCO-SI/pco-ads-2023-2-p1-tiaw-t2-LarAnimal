@@ -4,7 +4,14 @@
   "posts": [],
   "comentarios": [],
   "avaliacoes": [],
-  "agendamentos": [],
+  "agendamentos": [
+    {
+      "clinicName": "Terra Dos Bichos",
+      "appointmentDate": "2023-12-06",
+      "appointmentTime": "09:16",
+      "id": 1
+    }
+  ],
   "pets": [
     {
       "id": 1
