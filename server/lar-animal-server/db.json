@@ -33,6 +33,13 @@
   ],
   "pets": [
     {
+      "nome": "Diana",
+      "especie": "Vira-lata",
+      "idade": "12",
+      "descricao": "gato encontrado na rua",
+      "imagem": "https://www.petz.com.br/blog//wp-content/uploads/2021/11/enxoval-para-gato-Copia.jpg",
+      "emailDono": "Dono@gmail.com",
+      "telefoneDono": "(12) 12121-2121",
       "id": 1
     }
   ],

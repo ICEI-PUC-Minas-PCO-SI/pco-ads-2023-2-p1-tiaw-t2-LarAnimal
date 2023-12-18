@@ -42,7 +42,6 @@ function salvarNovoPet() {
     var idade = document.getElementById("petIdade").value;
     var descricao = document.getElementById("petDescricao").value;
     var imagemPet = document.getElementById("petImagem");
-    var imagemPetUrl = URL.createObjectURL(imagemPet.files[0]);
     var emailDono = document.getElementById("donoEmail").value;
     var telefoneDono = document.getElementById("donoTelefone").value;
 
@@ -62,7 +61,7 @@ function salvarNovoPet() {
 
     document.getElementById("modalDonoEmail").innerText = emailDono;
     document.getElementById("modalDonoTelefone").innerText = telefoneDono;
-    if (!nome || !especie || !idade || !descricao || !imagemPet.files[0] || !emailDono || !telefoneDono) {
+    if (!nome || !especie || !idade || !descricao || !imagemPet || !emailDono || !telefoneDono) {
         alert("Por favor, preencha todos os campos antes de salvar o novo pet.");
         return;
     }
@@ -70,18 +69,19 @@ function salvarNovoPet() {
     var newCard = document.createElement("div");
     newCard.className = "col";
     newCard.innerHTML = `
-        <div class="card">
-            <div class="card-body text-center" style="background-color: #F2AA52;">
-                <a href="#" data-bs-toggle="modal" data-bs-target="#modalPet${nome}">
-                    <img src="${imagemPetUrl}" class="img-thumbnail" style=" width: 200px; height: 200px;">
-                </a>
-                <h5 class="card-title">${nome}</h5>
-                <p class="card-text">${descricao}</p>
-                <button type="button" class="btn" data-bs-toggle="modal"
-                    style="color: white; background-color:#55038C;" data-bs-target="#modalPet${nome}">Mostrar mais</button>
-            </div>
+    <div class="card">
+        <div class="card-body text-center" style="background-color: #F2AA52;">
+            <a href="#" data-bs-toggle="modal" data-bs-target="#modalPet${nome}">
+                <img src="${imagemPet.value}" class="img-thumbnail" style="width: 200px; height: 200px;">
+            </a>
+            <h5 class="card-title">${nome}</h5>
+            <p class="card-text">${descricao}</p>
+            <button type="button" class="btn" data-bs-toggle="modal"
+                style="color: white; background-color:#55038C;" data-bs-target="#modalPet${nome}">Mostrar mais</button>
         </div>
-    `;
+    </div>
+`;
+
 
     document.querySelector(".row").appendChild(newCard);
 
@@ -102,7 +102,7 @@ function salvarNovoPet() {
                 <div class="modal-body">
                     <p style=" text-align: center; "><strong style="color: #55038C;">Nome:</strong> ${nome}</p>
                     <div class="d-flex justify-content-center">
-                        <img src="${imagemPetUrl}" class="img-thumbnail" style="width: 60%; height: 60%;">
+                        <img src="${imagemPet.value}" class="img-thumbnail" style="width: 200px; height: 200px;">
                     </div>
                     <h3><strong style="color: #55038C;">Espécie/Raça:</strong> ${especie}</h3>
                     <h3><strong style="color: #55038C;">Idade:</strong> ${idade}</h3>
