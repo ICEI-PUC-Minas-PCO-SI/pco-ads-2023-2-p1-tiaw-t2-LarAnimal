@@ -11,6 +11,7 @@ Responsável pela implemetação de forumula matematica da página de doação, 
 Responsável por deixar paginas responsivas e, ajuda em Vercel.
 
 • **Kauan Maia**
+Responsável pela responsividade das páginas, banco de dados, mascara e validação da página de adoção.
 
 
 • **Manuela de Souza**
