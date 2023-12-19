@@ -1,4 +1,4 @@
-const baseUrl = "http://localhost:3333/agendamentos";
+const baseUrl = "https://lar-animal--rhillarycarvalh.repl.co/agendamentos";
 
 async function loadAppointments() {
     try {
