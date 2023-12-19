@@ -8,24 +8,282 @@
     <link rel="stylesheet" href="style/agendamento.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        /* Estilos para o Modo Escuro */
+        body {
+            color: #000000;
+        }
+
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .dark-mode {
+            background-color: #000000;
+            color: #ffffff;
+        }
+
+        .dark-mode .container {
+            border: 1px solid #ffffff;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 25px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .dark-mode .popup-content {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 35px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 27px;
+            width: 27px;
+            left: 0px;
+            background-color: rgb(255, 255, 255);
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked+.slider {
+            background-color: #55038C;
+        }
+
+        input:checked+.slider:before {
+            transform: translateX(26px);
+        }
+
+        body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fffefe;
+            font-size: 1rem;
+        }
+
+        header {
+            background-color: #55038C;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .clinic-card {
+            border: 1px solid #55038C;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: #fff;
+            margin-top: 20px;
+        }
+
+        .clinic-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .clinic-button {
+            background-color: #55038C;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1;
+        }
+
+        .popup-content {
+            background-color: #fff;
+            width: 30%;
+            margin: 100px auto;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .close {
+            color: #55038C;
+            float: right;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        input[type="date"],
+        input[type="time"] {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+            margin-left: 230px;
+        }
+
+        button.agendar-button {
+            display: block;
+            margin: 10px 0;
+            text-align: center;
+            margin-left: 230px;
+        }
+
+        #appointmentsSection {
+            margin-top: 30px;
+        }
+
+        #appointmentsSection h2 {
+            color: #55038C;
+        }
+
+        .appointment-box {
+            border: 1px solid #55038C;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #fff;
+        }
+
+        .appointment-box strong {
+            color: #55038C;
+        }
+
+        .appointment-buttons button {
+            background-color: #55038C;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+
+        #botao-avaliacao {
+            background-color: #55038C;
+            border: 1px solid #ffffff;
+            color: #ffffff;
+            padding: 10px 25px;
+            text-align: center;
+            display: inline-block;
+            margin: 8px 4px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        #botao-avaliacao:hover {
+            background-color: #d8a76c;
+        }
+
+        @media only screen and (max-width: 768px) {
+            body {
+                font-size: 0.9rem;
+            }
+
+            header {
+                padding: 15px;
+            }
+
+            .container {
+                width: 100%;
+            }
+
+            .clinic-card {
+                padding: 15px;
+            }
+
+            .popup-content {
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            input[type="date"],
+            input[type="time"],
+            button.agendar-button {
+                margin: 10px auto;
+            }
+        }
+    </style>
 </head>
 
 <body>
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
-          <div class="vw-plugin-top-wrapper"></div>
-        </div>
-      </div>
-      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-      <script>
-        new window.VLibras.Widget('https://vlibras.gov.br/app');
-      </script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+            <div class="vw-plugin-top-wrapper"></div
 
-      <div id="cabecalho">
-        <nav class="navbar navbar-expand-lg navbar-light px-4" style="background-color: #F2AA52;" data-bs-theme="dark">
+>
+        </div>
+        <!-- Formulário de Contato -->
+        <form id="agendamentoForm" method="POST">
+            <label>
+                Seu email:
+                <input type="email" name="email">
+            </label>
+            <label>
+                Sua mensagem:
+                <textarea name="message"></textarea>
+            </label>
+            <!-- Adicione outros campos do formulário conforme necessário -->
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <div id="cabecalho">
+        <nav class="navbar navbar-expand-md px-4" style="background-color: #F2AA52;" data-bs-theme="dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.html" style="color: #55038C; font-size: 35px; font-weight: 600;">
                     <img src="./img/logo.png" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
@@ -41,13 +299,17 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-md-end" id="collapsibleNavbar">
                     <div class="navbar-nav">
-                        <a class="nav-link active" aria-current="page" href="perguntas.html" style="color: #55038C; font-size: 20px; font-weight: 600;">Perguntas Frequentes</a>
-                        <a class="nav-link active" aria-current="page" href="contato.html" style="color: #55038C; font-size: 20px; font-weight: 600;">Suporte ao Usuario</a>
-                        <a class="nav-link active" aria-current="page" href="educacional.html" style="color: #55038C; font-size: 20px; font-weight: 600;">Area Educacional</a>
-                        <a class="nav-link active" aria-current="page" href="login.html" style="color: #55038C; font-size: 20px; font-weight: 600;">Login</a>
+                        <a class="nav-link active" aria-current="page" href="perguntas.html"
+                            style="color: #55038C; font-size: 20px; font-weight: 600;">Perguntas Frequentes</a>
+                        <a class="nav-link active" aria-current="page" href="contato.html"
+                            style="color: #55038C; font-size: 20px; font-weight: 600;">Suporte ao Usuario</a>
+                        <a class="nav-link active" aria-current="page" href="educacional.html"
+                            style="color: #55038C; font-size: 20px; font-weight: 600;">Area Educacional</a>
+                        <a class="nav-link active" aria-current="page" href="login.html"
+                            style="color: #55038C; font-size: 20px; font-weight: 600;">Login</a>
                     </div>
                 </div>
-            </div>          
+            </div>
         </nav>
     </div>
 
@@ -58,92 +320,118 @@
 
     <!-- Conteúdo Principal -->
     <div class="container">
-    <div class="row">
+        <div class="row">
 
-        <!-- Clínicas Cards -->
-        <div class="col-md-6 col-lg-4 clinic-card">
-            <img class="clinic-img" src="img/climev.jpg" alt="Clinica 1">
-            <h3>Climev</h3>
-            <button class="clinic-button" onclick="showPopup('Climev', 'R. São Mateus 271 - Água Branca')">Agendar</button>
-            <p></p>
-            <a class="clinic-button" href="https://www.google.com/maps?q=R.+São+Mateus+271,+Água+Branca">Ver no Google Maps</a>
+            <!-- Clínicas Cards -->
+            <div class="col-md-6 col-lg-4 clinic-card">
+                <img class="clinic-img" src="img/climev.jpg" alt="Clinica 1">
+                <h3>Climev</h3>
+                <button class="clinic-button" onclick="showPopup('Climev', 'R. São Mateus 271 - Água Branca')">Agendar</button>
+                <p></p>
+                <a class="clinic-button"
+                    href="https://www.google.com/maps?q=R.+São+Mateus+271,+Água+Branca">Ver no Google Maps</a>
+            </div>
+
+            <div class="col-md-6 col-lg-4 clinic-card">
+                <img class="clinic-img" src="img/terradosbichos.jpg" alt="Clinica 2">
+                <h3>Terra Dos Bichos</h3>
+                <button class="clinic-button"
+                    onclick="showPopup('Terra Dos Bichos', 'Av. Dr. João Augusto Fonseca e Silva 876 - Novo Eldorado')">Agendar</button>
+                <p></p>
+                <a class="clinic-button"
+                    href="https://www.google.com/maps?q=Av.+Dr.+João+Augusto+Fonseca+e+Silva+876,+Novo+Eldorado">Ver no
+                    Google Maps</a>
+            </div>
+
+            <div class="col-md-6 col-lg-4 clinic-card">
+                <img class="clinic-img" src="img/petcenter.jpg" alt="Clinica 3">
+                <h3>Pet Center</h3>
+                <button class="clinic-button"
+                    onclick="showPopup('Pet Center', 'R. Marte 830 - Jardim Riacho das Pedras')">Agendar</button>
+                <p></p>
+                <a class="clinic-button"
+                    href="https://www.google.com/maps?q=R.+Marte+830,+Jardim+Riacho+das+Pedras">Ver no Google Maps</a>
+            </div>
         </div>
-        
-        <div class="col-md-6 col-lg-4 clinic-card">
-            <img class="clinic-img" src="img/terradosbichos.jpg" alt="Clinica 2">
-            <h3>Terra Dos Bichos</h3>
-            <button class="clinic-button" onclick="showPopup('Terra Dos Bichos', 'Av. Dr. João Augusto Fonseca e Silva 876 - Novo Eldorado')">Agendar</button>
-            <p></p>
-            <a class="clinic-button" href="https://www.google.com/maps?q=Av.+Dr.+João+Augusto+Fonseca+e+Silva+876,+Novo+Eldorado">Ver no Google Maps</a>
+
+        <!-- Seção para Agendamentos já feitos -->
+        <div class="container" id="appointmentsSection">
+            <h2>Agendamentos</h2>
+            <ul id="appointmentsList"></ul>
         </div>
-        
-        <div class="col-md-6 col-lg-4 clinic-card">
-            <img class="clinic-img" src="img/petcenter.jpg" alt="Clinica 3">
-            <h3>Pet Center</h3>
-            <button class="clinic-button" onclick="showPopup('Pet Center', 'R. Marte 830 - Jardim Riacho das Pedras')">Agendar</button>
-            <p></p>
-            <a class="clinic-button" href="https://www.google.com/maps?q=R.+Marte+830,+Jardim+Riacho+das+Pedras">Ver no Google Maps</a>
-        </div>
-    </div>
 
-    <!-- Seção para Agendamentos já feitos -->
-    <div class="container" id="appointmentsSection">
-        <h2>Agendamentos</h2>
-        <ul id="appointmentsList"></ul>
-    </div>
+        <!-- Popup para agendamento de consulta -->
+        <div class="popup" id="clinicPopup">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup()">×</span>
+                <h2>Agendamento para <span id="clinicName"></span></h2>
+                <label for="appointmentDate">Data:</label>
+                <input type="date" id="appointmentDate" required>
+                <label for="appointmentTime">Horário:</label>
+                <input type="time" id="appointmentTime" required>
+                <button class="agendar-button" onclick="scheduleAppointment()">Agendar</button>
+                </div>
+                </div>
+                </div>
+                <script>
+                    // Modo Escuro
+                    const modeToggle = document.getElementById('modeToggle');
+                    const modeText = document.getElementById('modeText');
+                    const body = document.body;
 
-    <!-- Popup para agendamento de consulta -->
-    <div class="popup" id="clinicPopup">
-        <div class="popup-content">
-            <span class="close" onclick="closePopup()">&times;</span>
-            <h2 id="clinicName"></h2>
-            <p id="clinicAddress"></p>
-            <p>Selecione uma data e horário:</p>
-            <input type="date" id="appointmentDate">
-            <input type="time" id="appointmentTime">
-            <input type="number" style="display: none" id="appointmentId">
-            <button class="agendar-button" id="btn-agendar">Salvar</button>
-        </div>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/agendamento.js"></script>
-    <script>
-const toggleSwitch = document.getElementById('modeToggle');
-const modeText = document.getElementById('modeText');
-const clinicPopup = document.getElementById('clinicPopup'); // Seleciona o modal
+                    modeToggle.addEventListener('change', () => {
+                        body.classList.toggle('dark-mode');
+                        modeText.innerText = body.classList.contains('dark-mode') ? 'Modo Escuro' : 'Modo Claro';
+                    });
 
-toggleSwitch.addEventListener('change', switchTheme);
+                    // Popup
+                    function showPopup(clinicName, clinicAddress) {
+                        document.getElementById('clinicName').innerText = clinicName;
+                        document.getElementById('appointmentDate').value = '';
+                        document.getElementById('appointmentTime').value = '';
+                        document.getElementById('clinicPopup').style.display = 'block';
+                    }
 
-function switchTheme() {
-    if (toggleSwitch.checked) {
-        document.body.classList.add('dark-mode');
-        modeText.innerText = 'Modo Escuro';
-        clinicPopup.classList.add('dark-mode'); // Adiciona classe ao modal
-    } else {
-        document.body.classList.remove('dark-mode');
-        modeText.innerText = 'Modo Claro';
-        clinicPopup.classList.remove('dark-mode'); // Remove classe do modal
-    }
-}
-    </script>
+                    function closePopup() {
+                        document.getElementById('clinicPopup').style.display = 'none';
+                    }
+
+                    // Agendar consulta
+                    function scheduleAppointment() {
+                        const clinicName = document.getElementById('clinicName').innerText;
+                        const appointmentDate = document.getElementById('appointmentDate').value;
+                        const appointmentTime = document.getElementById('appointmentTime').value;
+
+                        if (appointmentDate && appointmentTime) {
+                            const appointmentDetails = ${clinicName} - ${appointmentDate} - ${appointmentTime};
+                            const appointmentsList = document.getElementById('appointmentsList');
+                            const listItem = document.createElement('li');
+                            listItem.textContent = appointmentDetails;
+
+                            // Enviar email
+                            const emailData = {
+                                clinic: clinicName,
+                                date: appointmentDate,
+                                time: appointmentTime,
+                                email: document.querySelector('input[name="email"]').value,
+                                message: document.querySelector('textarea[name="message"]').value
+                            };
+
+                            // Enviar dados para o FormsPree
+                            fetch('https://formspree.io/f/xwkgepgr', {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json'
+                                },
+                                body: JSON.stringify(emailData)
+                            });
+
+                            appointmentsList.appendChild(listItem);
+                            closePopup();
+                        } else {
+                            alert('Por favor, preencha todos os campos de data e hora.');
+                        }
+                    }
+                </script>
 </body>
-
-<footer style="background-color: #F2AA52; color: #55038C; padding: 10px; font-size: small; text-align: center; width: 100%; position: absolute; left: 0;">
-    <div>
-        <p>Gostou do nosso serviço? Avalie-nos!</p>
-        <a href="avaliacao.html"><button id="botao-avaliacao">Avaliar</button></a>
-    </div>
-    <div class="rodape" style="background-color: #F2AA52; color: #55038C; padding: 10px; font-size: small; text-align: center;">
-        <div class="container">
-            <p>&copy; 2023 Lar animal - Todos os direitos reservados</p>
-        </div>
-    </div>
-</footer>
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-GLhlTQ8iKu16Z17tQhiNx6J3Nl3ZuodmeFVnL4u" crossorigin="anonymous"></script>
-</body>
-
 </html>
