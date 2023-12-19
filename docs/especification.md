@@ -94,7 +94,6 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-001| Login De Usuário | ALTA | Jefferson |
 |RF-002| Perfil De Usuário Comum ou Administrador   | ALTA | Jefferson |
 |RF-003| Modulo de doações | ALTA | Kauan |
-|RF-004| Gerenciamento de parceiros   | MÉDIA | Elder|
 |RF-005| Avaliações e Comentários dos Serviços | BAIXA | Manuela |
 |RF-006| Suporte ao usuário   | MÉDIA | Manuela |
 |RF-007| Mapa de Parceiros | BAIXA | Itallo |
