@@ -41,7 +41,7 @@ var novoPet = {};
 // Função para carregar os pets da API e exibir na página
 function carregarPets() {
   
-    const apiUrl = "http://localhost:3333/pets";
+    const apiUrl = "https://lar-animal--rhillarycarvalh.repl.co/pets";
 
     // Use fetch para obter os pets da API
     fetch(apiUrl)
