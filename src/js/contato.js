@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
             motivo
         };
 
-        fetch('http://localhost:3333/contato', {
+        fetch('https://lar-animal--rhillarycarvalh.repl.co/contato', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
