@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    const baseUrl = "http://localhost:3333/usuario";
+    const baseUrl = "https://lar-animal--rhillarycarvalh.repl.co/usuario";
 
     function getDadosUsuario(tipo) {
         const usuario = {
