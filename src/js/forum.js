@@ -1,6 +1,6 @@
 //URL DA API DE DADOS
-URL = 'http://localhost:3333/posts'
-let ULL = "http://localhost:3333/comentarios"
+URL = 'https://lar-animal--rhillarycarvalh.repl.co/posts'
+let ULL = "https://lar-animal--rhillarycarvalh.repl.co/comentarios"
 //============================================================================================================
 //POST - Criar um novo post ou comentário
 let enviarConte = document.getElementById("enviar-content")
