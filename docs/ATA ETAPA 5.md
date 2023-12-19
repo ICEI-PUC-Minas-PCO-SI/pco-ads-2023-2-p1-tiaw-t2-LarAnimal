@@ -1,6 +1,6 @@
 # ATA ETAPA 5
 • **Elder Luis**
-Responsável por correção da responsividade da página de agendamentos e gerenciamento de parceiros, implementação da funcionalidade de envio de formulário de agendamento por e-mail e hospedagem do json no replit 
+Responsável por correção da responsividade da página de agendamentos, implementação da funcionalidade de envio de formulário de agendamento por e-mail e hospedagem do json no replit 
 
 • **Jefferson**
 Responsável pela implemetação de forumula matematica da página de doação, validação dos campos das paginas de login e cadastro, criação do pitch de apresentação, responsividade da pagina de PF E PJ
