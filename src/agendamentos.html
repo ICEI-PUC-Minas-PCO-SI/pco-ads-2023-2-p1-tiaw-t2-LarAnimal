@@ -135,44 +135,24 @@
         .popup {
             display: none;
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 400px;
+            background-color: #fff;
             z-index: 1;
+            padding: 20px;
+            border-radius: 10px;
         }
 
         .popup-content {
-            background-color: #fff;
-            width: 30%;
-            margin: 100px auto;
-            padding: 20px;
-            border-radius: 10px;
             text-align: center;
         }
 
-        .close {
-            color: #55038C;
-            float: right;
-            font-size: 30px;
-            cursor: pointer;
-        }
-
-        input[type="date"],
-        input[type="time"] {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 10px;
-            margin-left: 230px;
-        }
-
-        button.agendar-button {
-            display: block;
-            margin: 10px 0;
-            text-align: center;
-            margin-left: 230px;
+        .popup-content button.agendar-button {
+            width: 100%;
+            margin-top: 15px;
         }
 
         #appointmentsSection {
@@ -221,6 +201,54 @@
             background-color: #d8a76c;
         }
 
+        #email-form {
+            margin-top: 20px;
+        }
+
+        #email-form label,
+        #email-form textarea,
+        #email-form button {
+            margin-bottom: 10px;
+        }
+    
+        #agendamentoForm {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#agendamentoForm label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#agendamentoForm input,
+#agendamentoForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+#agendamentoForm button {
+    background-color: #55038C;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px;
+}
+
+#agendamentoForm button:hover {
+    background-color: #d8a76c;
+}
+
         @media only screen and (max-width: 768px) {
             body {
                 font-size: 0.9rem;
@@ -238,42 +266,15 @@
                 padding: 15px;
             }
 
-            .popup-content {
-                width: 80%;
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-            input[type="date"],
-            input[type="time"],
-            button.agendar-button {
-                margin: 10px auto;
+            .popup {
+                width: 90%;
             }
         }
     </style>
 </head>
 
 <body>
-    <div vw class="enabled">
-        <div vw-access-button class="active"></div>
-        <div vw-plugin-wrapper>
-            <div class="vw-plugin-top-wrapper"></div
-
->
-        </div>
-        <!-- Formulário de Contato -->
-        <form id="agendamentoForm" method="POST">
-            <label>
-                Seu email:
-                <input type="email" name="email">
-            </label>
-            <label>
-                Sua mensagem:
-                <textarea name="message"></textarea>
-            </label>
-            <!-- Adicione outros campos do formulário conforme necessário -->
-            <button type="submit">Enviar</button>
-        </form>
+   
     </div>
 
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
@@ -370,68 +371,101 @@
                 <label for="appointmentTime">Horário:</label>
                 <input type="time" id="appointmentTime" required>
                 <button class="agendar-button" onclick="scheduleAppointment()">Agendar</button>
-                </div>
-                </div>
-                </div>
-                <script>
-                    // Modo Escuro
-                    const modeToggle = document.getElementById('modeToggle');
-                    const modeText = document.getElementById('modeText');
-                    const body = document.body;
+            </div>
+        </div>
 
-                    modeToggle.addEventListener('change', () => {
-                        body.classList.toggle('dark-mode');
-                        modeText.innerText = body.classList.contains('dark-mode') ? 'Modo Escuro' : 'Modo Claro';
-                    });
+        <!-- Formulário de Envio de E-mails -->
+        <div id="email-form">
+            <form id="agendamentoForm" method="POST" action="https://formspree.io/f/xwkgepgr">
+                <label>
+                    Seu email:
+                    <input type="email" name="email">
+                </label>
+                <label>
+                    Envie seus dados de agendamento para a clínica agendada.
+                    <textarea name="message"></textarea>
+                </label>
+                <!-- Adicione outros campos do formulário conforme necessário -->
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
 
-                    // Popup
-                    function showPopup(clinicName, clinicAddress) {
-                        document.getElementById('clinicName').innerText = clinicName;
-                        document.getElementById('appointmentDate').value = '';
-                        document.getElementById('appointmentTime').value = '';
-                        document.getElementById('clinicPopup').style.display = 'block';
-                    }
+    <script>
+        // Modo Escuro
+        const modeToggle = document.getElementById('modeToggle');
+        const modeText = document.getElementById('modeText');
+        const body = document.body;
 
-                    function closePopup() {
-                        document.getElementById('clinicPopup').style.display = 'none';
-                    }
+        modeToggle.addEventListener('change', () => {
+            body.classList.toggle('dark-mode');
+            modeText.innerText = body.classList.contains('dark-mode') ? 'Modo Escuro' : 'Modo Claro';
+        });
 
-                    // Agendar consulta
-                    function scheduleAppointment() {
-                        const clinicName = document.getElementById('clinicName').innerText;
-                        const appointmentDate = document.getElementById('appointmentDate').value;
-                        const appointmentTime = document.getElementById('appointmentTime').value;
+        // Popup
+        function showPopup(clinicName, clinicAddress) {
+            document.getElementById('clinicName').innerText = clinicName;
+            document.getElementById('appointmentDate').value = '';
+            document.getElementById('appointmentTime').value = '';
+            document.getElementById('clinicPopup').style.display = 'block';
+        }
 
-                        if (appointmentDate && appointmentTime) {
-                            const appointmentDetails = ${clinicName} - ${appointmentDate} - ${appointmentTime};
-                            const appointmentsList = document.getElementById('appointmentsList');
-                            const listItem = document.createElement('li');
-                            listItem.textContent = appointmentDetails;
+        function closePopup() {
+            document.getElementById('clinicPopup').style.display = 'none';
+        }
 
-                            // Enviar email
-                            const emailData = {
-                                clinic: clinicName,
-                                date: appointmentDate,
-                                time: appointmentTime,
-                                email: document.querySelector('input[name="email"]').value,
-                                message: document.querySelector('textarea[name="message"]').value
-                            };
+        // Agendar consulta
+        function scheduleAppointment() {
+            const clinicName = document.getElementById('clinicName').innerText;
+            const appointmentDate = document.getElementById('appointmentDate').value;
+            const appointmentTime = document.getElementById('appointmentTime').value;
 
-                            // Enviar dados para o FormsPree
-                            fetch('https://formspree.io/f/xwkgepgr', {
-                                method: 'POST',
-                                headers: {
-                                    'Content-Type': 'application/json'
-                                },
-                                body: JSON.stringify(emailData)
-                            });
+            if (appointmentDate && appointmentTime) {
+                const appointmentDetails = ${clinicName} - ${appointmentDate} - ${appointmentTime};
+                const appointmentsList = document.getElementById('appointmentsList');
+                const listItem = document.createElement('li');
+                listItem.textContent = appointmentDetails;
 
-                            appointmentsList.appendChild(listItem);
-                            closePopup();
-                        } else {
-                            alert('Por favor, preencha todos os campos de data e hora.');
-                        }
-                    }
-                </script>
+                // Enviar email
+                const emailData = {
+                    clinic: clinicName,
+                    date: appointmentDate,
+                    time: appointmentTime,
+                    email: document.querySelector('input[name="email"]').value,
+                    message: document.querySelector('textarea[name="message"]').value
+                };
+
+                // Enviar dados para o FormsPree
+                fetch('https://formspree.io/f/xwkgepgr', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(emailData)
+                });
+
+                appointmentsList.appendChild(listItem);
+                closePopup();
+            } else {
+                alert('Por favor, preencha todos os campos de data e hora.');
+            }
+        }
+
+    </script>
+    
+    <footer
+        style="background-color: #F2AA52; color: #55038C; padding: 10px; font-size: small; text-align: center; width: 100%; position: absolute; left: 0;">
+        <div>
+            <p>Gostou do nosso serviço? Avalie-nos!</p>
+            <a href="avaliacao.html"><button id="botao-avaliacao">Avaliar</button></a>
+        </div>
+        <div class="rodape"
+            style="background-color: #F2AA52; color: #55038C; padding: 10px; font-size: small; text-align: center;">
+            <div class="container">
+                <p>&copy; 2023 Lar animal - Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>
