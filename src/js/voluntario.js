@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
         };
 
         // Simulação do envio dos dados para um servidor (fetch)
-        fetch('http://localhost:3333/voluntarios', {
+        fetch('https://lar-animal--rhillarycarvalh.repl.co/voluntarios', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
