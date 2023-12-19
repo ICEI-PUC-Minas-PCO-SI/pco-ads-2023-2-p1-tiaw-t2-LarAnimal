@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 comment
             };
 
-            fetch('http://localhost:3333/avaliacoes', {
+            fetch('https://lar-animal--rhillarycarvalh.repl.co/avaliacoes', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -70,7 +70,7 @@ const listaAvaliacoesElement = document.getElementById('lista-avaliacoes');
 const totalAvaliacoesElement = document.getElementById('total-avaliacoes');
 
 function listarAvaliacoes() {
-    fetch('http://localhost:3333/avaliacoes')
+    fetch('https://lar-animal--rhillarycarvalh.repl.co/avaliacoes')
         .then(response => response.json())
         .then(avaliacoes => {
             listaAvaliacoesElement.innerHTML = ''; // Limpa a lista para evitar duplicações
