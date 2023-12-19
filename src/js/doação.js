@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
             valor
         };
 
-        fetch('http://localhost:3333/doacoes', {
+        fetch('https://lar-animal--rhillarycarvalh.repl.co/doacoes', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -40,7 +40,7 @@ const listaDoacoesElement = document.getElementById('lista-doacoes');
 const totalArrecadadoElement = document.getElementById('total-arrecadado');
 
 function listarDoacoes() {
-    fetch('http://localhost:3333/doacoes')
+    fetch('https://lar-animal--rhillarycarvalh.repl.co/doacoes')
         .then(response => response.json())
         .then(doacoes => {
             listaDoacoesElement.innerHTML = ''; // Limpa a lista para evitar duplicações
